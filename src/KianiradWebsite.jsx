@@ -1,626 +1,386 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useMemo, useState } from 'react'
+
+const navLinks = [
+  { id: 'home', label: 'Home' },
+  { id: 'services', label: 'Services' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'about', label: 'About' },
+  { id: 'contact', label: 'Contact' },
+]
+
+const services = [
+  {
+    title: 'AI Automation Systems',
+    description:
+      'Design and deploy workflow automations that remove repetitive tasks and save teams hours every week.',
+  },
+  {
+    title: 'Backend Development',
+    description:
+      'Build secure Python/Django backends with clear architecture, reliable APIs, and room to scale.',
+  },
+  {
+    title: 'Telegram Bots',
+    description:
+      'Launch bot experiences for support, sales, and operations with real-time integrations.',
+  },
+  {
+    title: 'SaaS Applications',
+    description:
+      'Ship focused SaaS products quickly with maintainable code, auth, billing, and analytics-ready data.',
+  },
+  {
+    title: 'API Integrations',
+    description:
+      'Connect your stack with CRMs, payment gateways, AI services, and internal tools without fragile glue code.',
+  },
+]
+
+const projects = [
+  {
+    title: 'LeadFlow AI Assistant',
+    category: 'AI',
+    problem: 'Sales teams manually qualified inbound leads and lost response time.',
+    solution: 'Built an AI triage pipeline with scoring, enrichment, and instant routing.',
+    result: 'Cut first-response time by 72% and increased qualified calls by 38%.',
+    stack: ['Python', 'Django', 'OpenAI API', 'PostgreSQL'],
+  },
+  {
+    title: 'OpsPulse Automation Hub',
+    category: 'Backend',
+    problem: 'Operations workflows were spread across spreadsheets and email threads.',
+    solution: 'Created a backend orchestration platform with rule-based automations.',
+    result: 'Reduced manual operations workload by 40% in the first quarter.',
+    stack: ['Django', 'Celery', 'Redis', 'REST API'],
+  },
+  {
+    title: 'SaaS Billing Engine',
+    category: 'SaaS',
+    problem: 'A startup needed reliable subscription management before launch.',
+    solution: 'Delivered billing services, plans, webhooks, and invoice automation.',
+    result: 'Enabled launch on time with near-zero billing support tickets.',
+    stack: ['Python', 'Stripe API', 'Docker', 'React'],
+  },
+  {
+    title: 'SupportBot for Telegram',
+    category: 'Bots',
+    problem: 'Customer support inquiries arrived 24/7 with delayed handling.',
+    solution: 'Implemented a Telegram bot with intent routing and ticket creation.',
+    result: 'Automated 61% of repetitive tickets and improved CSAT turnaround.',
+    stack: ['Python', 'Telegram API', 'FastAPI', 'Webhook Workers'],
+  },
+]
+
+const metrics = [
+  { label: 'Automations Shipped', value: '35+' },
+  { label: 'Avg. Time Saved', value: '18 hrs/week' },
+  { label: 'Delivery Reliability', value: '99.9%' },
+]
+
+const tags = ['All', 'AI', 'Backend', 'SaaS', 'Bots']
 
 export default function KianiradWebsite() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
+  const [filter, setFilter] = useState('All')
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark')
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
+  }, [theme])
 
-  // Close modal on escape key
   useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === 'Escape') setSelectedProject(null);
-    };
-    if (selectedProject) {
-      document.addEventListener('keydown', handleEscape);
-      return () => document.removeEventListener('keydown', handleEscape);
-    }
-  }, [selectedProject]);
+    const onScroll = () => setScrolled(window.scrollY > 12)
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
-  const portfolioItems = [
-    { id: 1, title: 'E-Commerce Platform', category: 'Web Development', image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=500', tall: false },
-    { id: 2, title: 'SaaS Dashboard', category: 'UI/UX Design', image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500', tall: true },
-    { id: 3, title: 'Code Editor Theme', category: 'Development', image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500', tall: true },
-    { id: 4, title: 'Fitness Tracker App', category: 'Mobile Design', image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500', tall: false },
-    { id: 5, title: 'API Console', category: 'Development', image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500', tall: false },
-    { id: 6, title: 'Creative Portfolio', category: 'Web Design', image: 'https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=500', tall: true },
-  ];
-
-  const navLinks = ['Home', 'Projects', 'Services', 'About', 'Contact'];
-
-  // Prevent body scroll when modal is open
   useEffect(() => {
-    if (selectedProject) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  }, [selectedProject]);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      { threshold: 0.4 },
+    )
+
+    navLinks.forEach(({ id }) => {
+      const section = document.getElementById(id)
+      if (section) observer.observe(section)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : 'auto'
+  }, [menuOpen])
+
+  const filteredProjects = useMemo(() => {
+    if (filter === 'All') return projects
+    return projects.filter((project) => project.category === filter)
+  }, [filter])
 
   return (
-    <div style={styles.container}>
-      {/* Navigation */}
-      <nav style={{
-        ...styles.nav,
-        background: scrolled ? 'white' : 'transparent',
-        boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.1)' : 'none',
-        padding: scrolled ? '15px 0' : '25px 0'
-      }}>
-        <div style={styles.navContainer}>
-          <div style={styles.logo}>KIANIRAD</div>
+    <div className="site-shell">
+      <header className={`site-header ${scrolled ? 'site-header--scrolled' : ''}`}>
+        <div className="container nav-wrap">
+          <a href="#home" className="brand">
+            Kianirad
+          </a>
 
-          {/* Desktop Menu */}
-          <ul style={styles.desktopMenu} className="desktop-menu">
-            {navLinks.map((item) => (
-              <li key={item} style={styles.navItem}>
-                <a href={`#${item.toLowerCase()}`} style={styles.navLink}>
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            style={styles.mobileMenuBtn}
-            className="mobile-menu-btn"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? '✕' : '☰'}
-          </button>
-        </div>
-
-        {/* Mobile Menu Dropdown */}
-        {isMenuOpen && (
-          <div style={styles.mobileMenu}>
-            {navLinks.map((item) => (
+          <nav className="desktop-nav" aria-label="Primary navigation">
+            {navLinks.map((link) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                style={styles.mobileNavLink}
-                onClick={() => setIsMenuOpen(false)}
+                key={link.id}
+                href={`#${link.id}`}
+                className={activeSection === link.id ? 'is-active' : ''}
               >
-                {item}
+                {link.label}
               </a>
             ))}
-          </div>
-        )}
-      </nav>
+          </nav>
 
-      {/* Hero Section */}
-      <header style={styles.hero} id="home">
-        <div style={styles.heroContent}>
-          <div style={styles.heroAvatar}>
-            <span style={styles.heroAvatarText}>K</span>
-          </div>
-
-          <h1 style={styles.heroTitle}>Welcome to KIANIRAD</h1>
-
-          <p style={styles.heroSubtitle}>Web Design & Development</p>
-
-          <p style={styles.heroText}>
-            From experimental passion projects to commissioned work for clients, my portfolio holds a diverse selection of creations that represent this dynamic industry.
-          </p>
-
-          <button style={styles.ctaButton}>
-            Explore My Work →
-          </button>
-        </div>
-      </header>
-
-      {/* Services Section */}
-      <section style={styles.section} id="services">
-        <div style={styles.containerInner}>
-          <div style={styles.servicesGrid}>
-            {[
-              { title: 'Web Development', desc: 'Custom websites built with modern technologies', icon: '💻' },
-              { title: 'UI/UX Design', desc: 'Beautiful, user-centered interface design', icon: '🎨' },
-              { title: 'Performance', desc: 'Fast, optimized web applications', icon: '⚡' }
-            ].map((service, idx) => (
-              <div key={idx} style={styles.serviceCard} className="service-card">
-                <div style={styles.serviceIcon}>{service.icon}</div>
-                <h3 style={styles.serviceTitle}>{service.title}</h3>
-                <p style={styles.serviceDesc}>{service.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Grid */}
-      <section style={styles.section} id="projects">
-        <div style={styles.containerInner}>
-          <h2 style={styles.sectionTitle}>Recent Projects</h2>
-
-          <div style={styles.portfolioGrid}>
-            {portfolioItems.map((item) => (
-              <div
-                key={item.id}
-                onClick={() => setSelectedProject(item)}
-                style={{
-                  ...styles.portfolioItem,
-                  gridRow: item.tall ? 'span 2' : 'span 1'
-                }}
-                className="portfolio-item"
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  style={styles.portfolioImage}
-                  loading="lazy"
-                />
-                <div style={styles.portfolioOverlay}>
-                  <div style={styles.portfolioCategory}>{item.category}</div>
-                  <div style={styles.portfolioTitle}>{item.title}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Inspiring Design Section */}
-      <section style={{ ...styles.section, ...styles.whiteBg }} id="about">
-        <div style={styles.containerInner}>
-          <h2 style={styles.sectionTitle}>Inspiring Design</h2>
-          <p style={styles.sectionSubtitle}>
-            Creativity meets functionality in every project
-          </p>
-
-          <div style={styles.designGrid}>
-            {[
-              'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=500',
-              'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500',
-              'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500',
-              'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500'
-            ].map((img, idx) => (
-              <div key={idx} style={styles.designItem} className="design-item">
-                <img
-                  src={img}
-                  alt={`Design showcase ${idx + 1}`}
-                  style={styles.designImage}
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer style={styles.footer} id="contact">
-        <h3 style={styles.footerTitle}>Kianirad Web Design & Development</h3>
-        <a href="mailto:kianirad2020@gmail.com" style={styles.footerLink}>
-          kianirad2020@gmail.com
-        </a>
-        <p style={styles.footerCopy}>
-          ©2024 by Kiani Limited Liability Company.
-        </p>
-      </footer>
-
-      {/* Project Modal */}
-      {selectedProject && (
-        <div
-          onClick={() => setSelectedProject(null)}
-          style={styles.modalOverlay}
-          role="dialog"
-          aria-modal="true"
-        >
-          <div
-            onClick={(e) => e.stopPropagation()}
-            style={styles.modalContent}
-          >
-            <div style={styles.modalHeader}>
-              <div>
-                <div style={styles.modalCategory}>{selectedProject.category}</div>
-                <h2 style={styles.modalTitle}>{selectedProject.title}</h2>
-              </div>
-              <button
-                onClick={() => setSelectedProject(null)}
-                style={styles.modalClose}
-                aria-label="Close modal"
-              >
-                ×
-              </button>
-            </div>
-
-            <img
-              src={selectedProject.image}
-              alt={selectedProject.title}
-              style={styles.modalImage}
-            />
-
-            <p style={styles.modalText}>
-              This project showcases modern web development techniques and design principles, delivering an exceptional user experience with cutting-edge technology.
-            </p>
-
-            <button style={styles.modalButton}>
-              View Live Project
+          <div className="nav-actions">
+            <button
+              type="button"
+              className="theme-toggle"
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              aria-label="Toggle color theme"
+            >
+              {theme === 'dark' ? '☀️' : '🌙'}
+            </button>
+            <a href="#contact" className="btn btn-primary nav-cta">
+              Start Project
+            </a>
+            <button
+              type="button"
+              className="menu-toggle"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
+            >
+              {menuOpen ? 'Close' : 'Menu'}
             </button>
           </div>
         </div>
-      )}
 
-      <style>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-15px); }
-        }
+        {menuOpen && (
+          <nav id="mobile-menu" className="mobile-menu" aria-label="Mobile navigation">
+            {navLinks.map((link) => (
+              <a key={link.id} href={`#${link.id}`} onClick={() => setMenuOpen(false)}>
+                {link.label}
+              </a>
+            ))}
+            <a href="#contact" className="btn btn-primary" onClick={() => setMenuOpen(false)}>
+              Start Project
+            </a>
+          </nav>
+        )}
+      </header>
 
-        @keyframes scaleIn {
-          from { transform: scale(0.9); opacity: 0; }
-          to { transform: scale(1); opacity: 1; }
-        }
+      <main>
+        <section id="home" className="hero">
+          <div className="hero-bg" aria-hidden="true" />
+          <div className="container hero-grid">
+            <div>
+              <p className="eyebrow">AI Systems Architect · Backend Developer · Automation Builder</p>
+              <h1>Building AI-powered systems that automate your business</h1>
+              <p className="lead">
+                I help startups and businesses reduce manual work and scale using backend systems,
+                automation, and AI integrations.
+              </p>
+              <div className="hero-cta-row">
+                <a href="#contact" className="btn btn-primary">
+                  Book a Free Consultation
+                </a>
+                <a href="#projects" className="btn btn-secondary">
+                  View Projects
+                </a>
+              </div>
+              <p className="trust-line">Trusted by founders to ship reliable automation and revenue-ready systems.</p>
+            </div>
+            <div className="hero-panel" role="img" aria-label="Live system outcomes summary">
+              <p className="panel-title">Current delivery focus</p>
+              <ul>
+                <li>AI workflows connected to real business KPIs</li>
+                <li>Scalable Django backends and integrations</li>
+                <li>Telegram bots for support, growth, and operations</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-        .service-card {
-          transition: all 0.3s ease;
-          cursor: pointer;
-        }
+        <section id="services" className="section">
+          <div className="container">
+            <div className="section-head">
+              <h2>Services built for business outcomes</h2>
+              <p>Pick one priority. I design and deliver the technical system behind it.</p>
+            </div>
+            <div className="grid">
+              {services.map((service) => (
+                <article key={service.title} className="card service-card">
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                  <a href="#contact" className="text-link">
+                    Let’s automate your business
+                  </a>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        .service-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
+        <section id="projects" className="section">
+          <div className="container">
+            <div className="section-head projects-head">
+              <h2>Selected projects</h2>
+              <p>Proof of delivery: each project shows problem, solution, and measurable result.</p>
+              <div className="filter-row" role="group" aria-label="Project filters">
+                {tags.map((tag) => (
+                  <button
+                    key={tag}
+                    type="button"
+                    className={`filter-btn ${filter === tag ? 'is-selected' : ''}`}
+                    onClick={() => setFilter(tag)}
+                  >
+                    {tag}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-        .portfolio-item {
-          transition: all 0.3s ease;
-        }
+            <div className="grid">
+              {filteredProjects.map((project) => (
+                <article key={project.title} className="card project-card">
+                  <div className="project-shot" aria-hidden="true">
+                    <span>{project.category}</span>
+                  </div>
+                  <h3>{project.title}</h3>
+                  <p><strong>Problem:</strong> {project.problem}</p>
+                  <p><strong>Solution:</strong> {project.solution}</p>
+                  <p><strong>Result:</strong> {project.result}</p>
+                  <div className="tag-row">
+                    {project.stack.map((item) => (
+                      <span key={item} className="tag">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="action-row">
+                    <a href="#contact" className="btn btn-secondary">
+                      Live Demo
+                    </a>
+                    <a href="#contact" className="btn btn-ghost">
+                      GitHub / Case Study
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className="section-cta-wrap">
+              <a href="#contact" className="btn btn-primary">
+                Start your project
+              </a>
+            </div>
+          </div>
+        </section>
 
-        .portfolio-item:hover {
-          transform: scale(1.02);
-          box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
+        <section id="about" className="section">
+          <div className="container about-grid">
+            <div className="profile-image" role="img" aria-label="Portrait placeholder for Kianirad" />
+            <div>
+              <h2>About Kianirad</h2>
+              <p>
+                AI-focused backend developer building scalable systems, automation tools, and SaaS
+                products. I enjoy turning messy operations into predictable systems teams can trust.
+              </p>
+              <p>
+                Right now I am focused on shipping intelligent automations for startups and growth-stage
+                teams that need real outcomes fast.
+              </p>
+              <a href="#contact" className="btn btn-secondary">
+                Book a call
+              </a>
+            </div>
+          </div>
+        </section>
 
-        .design-item {
-          transition: all 0.3s ease;
-          cursor: pointer;
-        }
+        <section className="section trust-section">
+          <div className="container">
+            <h2>Trust & results</h2>
+            <div className="grid metrics-grid">
+              {metrics.map((metric) => (
+                <article key={metric.label} className="card metric-card">
+                  <p className="metric-value">{metric.value}</p>
+                  <p>{metric.label}</p>
+                </article>
+              ))}
+            </div>
+            <div className="testimonial-placeholder card">
+              <h3>Testimonials</h3>
+              <p>
+                Add verified client testimonials here. No fake reviews used — only real delivery proof.
+              </p>
+              <a href="#contact" className="text-link">
+                Start your project
+              </a>
+            </div>
+          </div>
+        </section>
 
-        .design-item:hover {
-          transform: scale(1.05);
-        }
+        <section id="contact" className="section">
+          <div className="container contact-grid">
+            <div>
+              <h2>Let’s automate your business</h2>
+              <p>
+                Tell me your biggest operational bottleneck and I will propose a practical system plan.
+              </p>
+              <p className="reply-time">I reply within 24 hours.</p>
+              <a href="mailto:kianirad2020@gmail.com" className="text-link">
+                kianirad2020@gmail.com
+              </a>
+              <a href="https://t.me" className="btn btn-secondary telegram-btn">
+                Message on Telegram
+              </a>
+            </div>
+            <form className="card contact-form" onSubmit={(event) => event.preventDefault()}>
+              <label htmlFor="name">Name</label>
+              <input id="name" name="name" type="text" autoComplete="name" required />
 
-        a:hover {
-          color: #667eea !important;
-        }
+              <label htmlFor="email">Email</label>
+              <input id="email" name="email" type="email" autoComplete="email" required />
 
-        @media (max-width: 768px) {
-          .desktop-menu { display: none !important; }
-          .mobile-menu-btn { display: block !important; }
-        }
-      `}</style>
+              <label htmlFor="message">Project goals</label>
+              <textarea id="message" name="message" rows="4" required />
+
+              <button type="submit" className="btn btn-primary">
+                Book a Free Consultation
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer className="site-footer">
+        <div className="container footer-grid">
+          <div>
+            <p className="brand">Kianirad</p>
+            <p>AI systems and backend solutions that help businesses grow faster with less manual work.</p>
+          </div>
+          <div className="footer-links">
+            <a href="mailto:kianirad2020@gmail.com">Email</a>
+            <a href="https://github.com">GitHub</a>
+            <a href="https://linkedin.com">LinkedIn</a>
+          </div>
+          <p>© 2026 Kianirad</p>
+        </div>
+      </footer>
     </div>
-  );
+  )
 }
-
-// Styles object to prevent recreation on every render
-const styles = {
-  container: {
-    minHeight: '100vh',
-    background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)'
-  },
-  nav: {
-    position: 'fixed',
-    width: '100%',
-    top: 0,
-    zIndex: 1000,
-    transition: 'all 0.3s ease'
-  },
-  navContainer: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    padding: '0 30px',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
-  logo: {
-    fontSize: '20px',
-    fontWeight: 'bold',
-    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-    backgroundClip: 'text'
-  },
-  desktopMenu: {
-    display: 'flex',
-    gap: '30px',
-    listStyle: 'none',
-    margin: 0,
-    padding: 0
-  },
-  navItem: {
-    display: 'block'
-  },
-  navLink: {
-    textDecoration: 'none',
-    color: '#333',
-    fontSize: '14px',
-    fontWeight: '500',
-    transition: 'color 0.3s'
-  },
-  mobileMenuBtn: {
-    display: 'none',
-    background: 'none',
-    border: 'none',
-    fontSize: '24px',
-    cursor: 'pointer'
-  },
-  mobileMenu: {
-    position: 'absolute',
-    top: '100%',
-    left: 0,
-    right: 0,
-    background: 'white',
-    padding: '20px',
-    boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '15px'
-  },
-  mobileNavLink: {
-    color: '#333',
-    textDecoration: 'none',
-    fontSize: '16px',
-    padding: '10px 0',
-    borderBottom: '1px solid #eee'
-  },
-  hero: {
-    paddingTop: '150px',
-    paddingBottom: '80px',
-    textAlign: 'center'
-  },
-  heroContent: {
-    maxWidth: '1000px',
-    margin: '0 auto',
-    padding: '0 30px'
-  },
-  heroAvatar: {
-    width: '200px',
-    height: '200px',
-    margin: '0 auto 40px',
-    borderRadius: '50%',
-    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    boxShadow: '0 20px 60px rgba(102, 126, 234, 0.4)',
-    animation: 'float 3s ease-in-out infinite'
-  },
-  heroAvatarText: {
-    color: 'white',
-    fontSize: '80px',
-    fontWeight: 'bold'
-  },
-  heroTitle: {
-    fontSize: '56px',
-    fontWeight: 'bold',
-    marginBottom: '20px',
-    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-    backgroundClip: 'text'
-  },
-  heroSubtitle: {
-    fontSize: '24px',
-    color: '#666',
-    marginBottom: '20px'
-  },
-  heroText: {
-    fontSize: '18px',
-    color: '#888',
-    maxWidth: '700px',
-    margin: '0 auto 40px',
-    lineHeight: '1.6'
-  },
-  ctaButton: {
-    padding: '18px 40px',
-    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    color: 'white',
-    border: 'none',
-    borderRadius: '50px',
-    fontSize: '16px',
-    fontWeight: '600',
-    cursor: 'pointer',
-    boxShadow: '0 10px 30px rgba(102, 126, 234, 0.3)',
-    transition: 'all 0.3s ease'
-  },
-  section: {
-    padding: '60px 30px'
-  },
-  containerInner: {
-    maxWidth: '1200px',
-    margin: '0 auto'
-  },
-  whiteBg: {
-    background: 'white'
-  },
-  servicesGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-    gap: '30px'
-  },
-  serviceCard: {
-    background: 'white',
-    padding: '40px',
-    borderRadius: '20px',
-    boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-  },
-  serviceIcon: {
-    fontSize: '48px',
-    marginBottom: '20px'
-  },
-  serviceTitle: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    marginBottom: '10px',
-    color: '#333'
-  },
-  serviceDesc: {
-    color: '#666',
-    lineHeight: '1.6'
-  },
-  sectionTitle: {
-    fontSize: '42px',
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: '50px',
-    color: '#333'
-  },
-  sectionSubtitle: {
-    color: '#666',
-    fontSize: '18px',
-    maxWidth: '600px',
-    margin: '0 auto 50px',
-    textAlign: 'center'
-  },
-  portfolioGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-    gap: '25px',
-    gridAutoRows: '250px'
-  },
-  portfolioItem: {
-    position: 'relative',
-    borderRadius: '20px',
-    overflow: 'hidden',
-    cursor: 'pointer',
-    boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-  },
-  portfolioImage: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-    display: 'block'
-  },
-  portfolioOverlay: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    padding: '25px',
-    background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)',
-    color: 'white'
-  },
-  portfolioCategory: {
-    fontSize: '12px',
-    color: '#a78bfa',
-    marginBottom: '5px',
-    fontWeight: '600'
-  },
-  portfolioTitle: {
-    fontSize: '20px',
-    fontWeight: 'bold'
-  },
-  designGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-    gap: '25px'
-  },
-  designItem: {
-    borderRadius: '20px',
-    overflow: 'hidden',
-    boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-  },
-  designImage: {
-    width: '100%',
-    height: '280px',
-    objectFit: 'cover',
-    display: 'block'
-  },
-  footer: {
-    background: '#1a1a1a',
-    color: 'white',
-    padding: '50px 30px',
-    textAlign: 'center'
-  },
-  footerTitle: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    marginBottom: '15px'
-  },
-  footerLink: {
-    color: '#a78bfa',
-    textDecoration: 'none',
-    fontSize: '16px'
-  },
-  footerCopy: {
-    color: '#666',
-    marginTop: '20px',
-    fontSize: '14px'
-  },
-  modalOverlay: {
-    position: 'fixed',
-    inset: 0,
-    background: 'rgba(0,0,0,0.8)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '30px',
-    zIndex: 2000,
-    backdropFilter: 'blur(5px)'
-  },
-  modalContent: {
-    background: 'white',
-    borderRadius: '30px',
-    maxWidth: '700px',
-    width: '100%',
-    padding: '40px',
-    animation: 'scaleIn 0.3s ease',
-    maxHeight: '90vh',
-    overflow: 'auto'
-  },
-  modalHeader: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'start',
-    marginBottom: '25px'
-  },
-  modalCategory: {
-    color: '#667eea',
-    fontWeight: '600',
-    fontSize: '14px'
-  },
-  modalTitle: {
-    fontSize: '32px',
-    fontWeight: 'bold',
-    color: '#333',
-    marginTop: '5px'
-  },
-  modalClose: {
-    background: 'none',
-    border: 'none',
-    fontSize: '28px',
-    cursor: 'pointer',
-    color: '#999',
-    lineHeight: 1
-  },
-  modalImage: {
-    width: '100%',
-    borderRadius: '20px',
-    marginBottom: '25px'
-  },
-  modalText: {
-    color: '#666',
-    lineHeight: '1.8',
-    marginBottom: '25px'
-  },
-  modalButton: {
-    padding: '15px 35px',
-    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    color: 'white',
-    border: 'none',
-    borderRadius: '50px',
-    fontSize: '16px',
-    fontWeight: '600',
-    cursor: 'pointer'
-  }
-};
