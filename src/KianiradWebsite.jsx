@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import heroImage from './assets/hero.png';
 
 export default function KianiradWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [imageErrors, setImageErrors] = useState({});
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,15 +27,27 @@ export default function KianiradWebsite() {
   }, [selectedProject]);
 
   const portfolioItems = [
-    { id: 1, title: 'E-Commerce Platform', category: 'Web Development', image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=500', tall: false },
-    { id: 2, title: 'SaaS Dashboard', category: 'UI/UX Design', image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500', tall: true },
-    { id: 3, title: 'Code Editor Theme', category: 'Development', image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500', tall: true },
-    { id: 4, title: 'Fitness Tracker App', category: 'Mobile Design', image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500', tall: false },
-    { id: 5, title: 'API Console', category: 'Development', image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500', tall: false },
-    { id: 6, title: 'Creative Portfolio', category: 'Web Design', image: 'https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=500', tall: true },
+    { id: 1, title: 'E-Commerce Platform', category: 'Web Development', image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=500&q=80&fm=webp', tall: false },
+    { id: 2, title: 'SaaS Dashboard', category: 'UI/UX Design', image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&q=80&fm=webp', tall: true },
+    { id: 3, title: 'Code Editor Theme', category: 'Development', image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&q=80&fm=webp', tall: true },
+    { id: 4, title: 'Fitness Tracker App', category: 'Mobile Design', image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&q=80&fm=webp', tall: false },
+    { id: 5, title: 'API Console', category: 'Development', image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&q=80&fm=webp', tall: false },
+    { id: 6, title: 'Creative Portfolio', category: 'Web Design', image: 'https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=500&q=80&fm=webp', tall: true },
+  ];
+
+  const designImages = [
+    'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=500&q=80&fm=webp',
+    'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&q=80&fm=webp',
+    'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&q=80&fm=webp',
+    'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&q=80&fm=webp'
   ];
 
   const navLinks = ['Home', 'Projects', 'Services', 'About', 'Contact'];
+
+  // Handle image load errors with fallback
+  const handleImageError = (itemId) => {
+    setImageErrors(prev => ({ ...prev, [itemId]: true }));
+  };
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -99,6 +113,15 @@ export default function KianiradWebsite() {
       <header style={styles.hero} id="home">
         <div style={styles.heroContent}>
           <div style={styles.heroAvatar}>
+            <img 
+              src={heroImage} 
+              alt="Kianirad logo" 
+              style={styles.heroAvatarImage}
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextElementSibling.style.display = 'flex';
+              }}
+            />
             <span style={styles.heroAvatarText}>K</span>
           </div>
 
@@ -156,7 +179,14 @@ export default function KianiradWebsite() {
                   alt={item.title}
                   style={styles.portfolioImage}
                   loading="lazy"
+                  decoding="async"
+                  onError={(e) => handleImageError(item.id)}
                 />
+                {imageErrors[item.id] && (
+                  <div style={styles.imageErrorPlaceholder}>
+                    <span>Image unavailable</span>
+                  </div>
+                )}
                 <div style={styles.portfolioOverlay}>
                   <div style={styles.portfolioCategory}>{item.category}</div>
                   <div style={styles.portfolioTitle}>{item.title}</div>
@@ -176,18 +206,14 @@ export default function KianiradWebsite() {
           </p>
 
           <div style={styles.designGrid}>
-            {[
-              'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=500',
-              'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500',
-              'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500',
-              'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500'
-            ].map((img, idx) => (
+            {designImages.map((img, idx) => (
               <div key={idx} style={styles.designItem} className="design-item">
                 <img
                   src={img}
                   alt={`Design showcase ${idx + 1}`}
                   style={styles.designImage}
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}
@@ -236,6 +262,8 @@ export default function KianiradWebsite() {
               src={selectedProject.image}
               alt={selectedProject.title}
               style={styles.modalImage}
+              loading="lazy"
+              decoding="async"
             />
 
             <p style={styles.modalText}>
@@ -393,12 +421,37 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     boxShadow: '0 20px 60px rgba(102, 126, 234, 0.4)',
-    animation: 'float 3s ease-in-out infinite'
+    animation: 'float 3s ease-in-out infinite',
+    position: 'relative'
+  },
+  heroAvatarImage: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    borderRadius: '50%',
+    display: 'block'
   },
   heroAvatarText: {
     color: 'white',
     fontSize: '80px',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    position: 'absolute',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    height: '100%'
+  },
+  imageErrorPlaceholder: {
+    position: 'absolute',
+    inset: 0,
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: 'white',
+    fontSize: '14px',
+    fontWeight: '500'
   },
   heroTitle: {
     fontSize: '56px',
