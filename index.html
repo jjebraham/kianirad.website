@@ -1,13 +1,145 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>kianirad-react-test</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Kianirad Development</title>
+  <meta name="description" content="KIANIRAD Web Design & Development — portfolio of Hadi Kianirad. Explore web design and development projects, plans and pricing." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a class="brand" href="/index.html">KIANIRAD WEB Design &amp; DEVELOPMENT</a>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul>
+      <li><a href="/index.html" class="active">Home</a></li>
+      <li><a href="/index.html#services">Services</a></li>
+      <li><a href="/plans-pricing.html">Plans &amp; Pricing</a></li>
+      <li><a href="/projects.html">Recent Projects</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/consultancy.html">Consultancy</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Hero: image left, dark panel right (same as Wix home) -->
+    <section class="hero">
+      <div class="hero-media">
+        <img src="/images/hero.jpg" alt="Workspace with computer, tablet and phone showing web designs in black and white" />
+      </div>
+      <div class="hero-panel">
+        <h1>Welcome<br />to KIANIRAD<br />Web Design &amp; Development</h1>
+        <p class="hero-sub">Explore My Work</p>
+        <p class="hero-text">
+          From experimental passion projects to commissioned work for clients, my portfolio
+          holds a diverse selection of creations that represent this dynamic industry. I thrive
+          on creative challenges and enjoy building strong relationships along the way.
+          Explore my work below.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section" id="services">
+      <div class="services-head">
+        <h2>Services</h2>
+        <p>
+          I build and run the systems behind small businesses online — from the website
+          people see to the backend, automations and bots doing the work behind it.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service">
+          <h3>Web Design &amp; Development</h3>
+          <p>
+            Custom, responsive websites taken from first wireframe through to launch.
+            Multilingual builds, SEO groundwork, and a site you can update yourself
+            afterwards.
+          </p>
+        </article>
+
+        <article class="service">
+          <h3>Backend &amp; API Development</h3>
+          <p>
+            Python, FastAPI and async services built to handle real traffic. Clean data
+            models, documented endpoints, and integrations with the platforms your
+            business already runs on.
+          </p>
+        </article>
+
+        <article class="service">
+          <h3>AI Automation</h3>
+          <p>
+            Practical automation built on current language models — document processing,
+            customer replies, content pipelines, internal tools. Scoped to the tasks
+            actually costing you hours every week.
+          </p>
+        </article>
+
+        <article class="service">
+          <h3>Telegram Bots &amp; Messaging</h3>
+          <p>
+            Bots that sell, support, qualify leads and broadcast to large audiences.
+            Payments, admin panels, scheduled posting and analytics included.
+          </p>
+        </article>
+
+        <article class="service">
+          <h3>Real-Time Data &amp; Dashboards</h3>
+          <p>
+            Live dashboards and signal systems with transparent, verifiable numbers — the
+            same architecture running behind KriptoFarsi's publicly tracked performance.
+          </p>
+        </article>
+
+        <article class="service">
+          <h3>Hosting &amp; Maintenance</h3>
+          <p>
+            Managed hosting with SSL, automated backups, monitoring and security scanning.
+            Your site stays fast, updated and online long after launch.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="services-cta">
+        <a class="btn-touch" href="/contact.html">Start a Project</a>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section">
+      <h2 class="gallery-title">Inspiring Design</h2>
+      <div class="gallery-grid">
+        <div class="g-item"><img src="/images/gallery-1.jpg" alt="Mobile app designs on several phones" loading="lazy" /></div>
+        <div class="g-item g-tall"><img src="/images/gallery-2.jpg" alt="Designer team working around a table with laptops" loading="lazy" /></div>
+        <div class="g-item"><img src="/images/gallery-3.jpg" alt="Colourful website code on a dark screen" loading="lazy" /></div>
+        <div class="g-item g-tall"><img src="/images/gallery-4.jpg" alt="Sketching mobile wireframes next to a laptop" loading="lazy" /></div>
+        <div class="g-item g-tall"><img src="/images/gallery-5.jpg" alt="Responsive design shown on iMac, laptop, tablet and phone" loading="lazy" /></div>
+        <div class="g-item"><img src="/images/gallery-6.jpg" alt="Three smartphones on pastel pink pedestals" loading="lazy" /></div>
+        <div class="g-item g-tall"><img src="/images/gallery-7.jpg" alt="MacBook with code editor on a clean desk" loading="lazy" /></div>
+        <div class="g-item"><img src="/images/gallery-8.jpg" alt="iMac showing a detailed wolf illustration" loading="lazy" /></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p class="footer-name">Kianirad Web Design &amp; Development</p>
+    <a class="footer-email" href="mailto:kianirad2020@gmail.com">kianirad2020@gmail.com</a>
+    <p class="footer-copy">&copy;<span id="year">2024</span> by Kiani Limited Liability Company .</p>
+  </footer>
+
+  <script type="module" src="/script.js"></script>
+</body>
 </html>

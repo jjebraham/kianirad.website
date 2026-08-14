@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Kianirad Development</title>
+  <meta name="description" content="Contact Kianirad Web Design & Development — Limassol, Cyprus." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a class="brand" href="/index.html">KIANIRAD WEB Design &amp; DEVELOPMENT</a>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/index.html#services">Services</a></li>
+      <li><a href="/plans-pricing.html">Plans &amp; Pricing</a></li>
+      <li><a href="/projects.html">Recent Projects</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html" class="active">Contact</a></li>
+      <li><a href="/consultancy.html">Consultancy</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="contact-layout">
+
+      <!-- Left: contact details -->
+      <div class="contact-info">
+        <h1>CONTACT</h1>
+        <p>Limassol John F kennedy 51 Cyprus</p>
+        <p><a href="mailto:kianirad2020@gmail.com">kianirad2020@gmail.com</a></p>
+        <p><a href="tel:+905392905686">+905392905686</a></p>
+      </div>
+
+      <!-- Right: contact form (sent via FormSubmit to kianirad2020@gmail.com) -->
+      <form class="form-grid ajax-form" action="https://formsubmit.co/ajax/kianirad2020@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New message from kianirad.website contact form" />
+        <input type="hidden" name="_captcha" value="false" />
+
+        <div class="form-field">
+          <label for="name">Enter your name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+        <div class="form-field">
+          <label for="email">Enter your email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="form-field full">
+          <label for="subject">Type the subject</label>
+          <input id="subject" name="subject" type="text" />
+        </div>
+        <div class="form-field full">
+          <label for="message">Type your message here...</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <p class="form-status" role="status"></p>
+        <button class="btn-submit" type="submit">Submit</button>
+      </form>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p class="footer-name">Kianirad Web Design &amp; Development</p>
+    <a class="footer-email" href="mailto:kianirad2020@gmail.com">kianirad2020@gmail.com</a>
+    <p class="footer-copy">&copy;<span id="year">2024</span> by Kiani Limited Liability Company .</p>
+  </footer>
+
+  <script type="module" src="/script.js"></script>
+</body>
+</html>
