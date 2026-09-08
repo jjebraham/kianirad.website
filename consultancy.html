@@ -1,106 +1,259 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Consultancy | Kianirad Development</title>
-  <meta name="description" content="Innovation Consultancy by Kianirad Development — frameworks, prototyping, R&D sprints and more. Make an appointment." />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consultancy | Hadi Kianirad</title>
+<meta name="description" content="AI automation and backend consultancy for service businesses. Fixed scope, fixed price, working software — not a slide deck.">
+<link rel="canonical" href="https://kianirad.website/consultancy.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
 
-  <!-- Header -->
-  <header class="site-header">
-    <a class="brand" href="/index.html">KIANIRAD WEB Design &amp; DEVELOPMENT</a>
-  </header>
+  <aside class="rail">
+    <div>
+      <a class="mark" href="index.html">Hadi Kianirad<span data-i18n="markSub"></span></a>
+      <p class="role" data-i18n="role"></p>
+      <span class="pulse"><span class="dot"></span><span data-i18n="pulse"></span></span>
+    </div>
+    <nav class="railnav">
+      <a href="index.html" data-i18n="navHome">Home</a>
+      <a href="index.html#build" data-i18n="navBuild">What I build</a>
+      <a href="projects.html" data-i18n="navProjects">Projects</a>
+      <a href="consultancy.html" data-i18n="navConsult">Consultancy</a>
+      <a href="about.html" data-i18n="navAbout">About</a>
+      <a href="contact.html" data-i18n="navContact">Contact</a>
+    </nav>
+    <div class="railfoot">
+      <a class="btn" href="contact.html" data-i18n="ctaMain">Book a 20-minute call</a>
+      <div class="toolrow">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+          <button type="button" data-lang="fa" aria-pressed="false">FA</button>
+        </div>
+        <button type="button" class="themebtn" id="themebtn">☾</button>
+      </div>
+    </div>
+  </aside>
 
-  <!-- Navigation -->
-  <nav class="site-nav">
-    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/index.html#services">Services</a></li>
-      <li><a href="/plans-pricing.html">Plans &amp; Pricing</a></li>
-      <li><a href="/projects.html">Recent Projects</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/contact.html">Contact</a></li>
-      <li><a href="/consultancy.html" class="active">Consultancy</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <!-- Intro -->
-    <section class="consultancy-intro">
-      <h1>Consultancy</h1>
-      <p>
-        we understand that innovation is structured rather than random. Our Innovation
-        Consultancy offers tried-and-true frameworks to refine your approach to new products,
-        processes, or business ideas. With our extensive toolkit, we help unearth insights,
-        prototype, and test ideas, making informed decisions before significant investment.
-      </p>
-      <p>Here are a few tools to kickstart the journey:</p>
-      <ul>
-        <li>Discovery and Generative Research</li>
-        <li>Trends and Competitor Analysis</li>
-        <li>Product Prototyping and Testing</li>
-        <li>R&amp;D Sprints</li>
-        <li>Hackathons</li>
-        <li>Customer Behavior Analysis</li>
-        <li>Business Model Exploration and Design</li>
-        <li>Product Roadmap</li>
-      </ul>
+  <main id="main">
+    <section class="pagehead">
+      <h1 class="pagetitle" data-i18n="cTitle">You don't need an AI strategy. You need three hours a day back.</h1>
+      <p class="lede" data-i18n="cLede">Most automation projects fail because they start with the technology instead of the task. I start by finding the specific repetitive job that is costing your team real hours, and I automate that one first — so you see the return before you commit to anything bigger.</p>
+      <a class="btn" href="contact.html" data-i18n="ctaMain">Book a 20-minute call</a>
     </section>
 
-    <!-- Appointment band -->
-    <section class="appointment-section">
-      <div class="appointment-inner">
-        <h2>Make an appointment for consultancy</h2>
-
-        <div class="appointment-grid">
-          <div class="appointment-contact">
-            <p class="ac-label">Phone</p>
-            <p class="ac-value"><a href="tel:+905392905686">+90 539 290 56 86</a></p>
-            <p class="ac-label">Email</p>
-            <p class="ac-value"><a href="mailto:kianirad2020@gmail.com">kianirad2020@gmail.com</a></p>
-          </div>
-
-          <form class="form-grid ajax-form" action="https://formsubmit.co/ajax/kianirad2020@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Consultancy appointment request from kianirad.website" />
-            <input type="hidden" name="_captcha" value="false" />
-
-            <div class="form-field">
-              <label for="first-name">First Name</label>
-              <input id="first-name" name="first_name" type="text" required />
-            </div>
-            <div class="form-field">
-              <label for="last-name">Last Name</label>
-              <input id="last-name" name="last_name" type="text" required />
-            </div>
-            <div class="form-field full">
-              <label for="c-email">Email</label>
-              <input id="c-email" name="email" type="email" required />
-            </div>
-            <div class="form-field full">
-              <label for="c-message">Message</label>
-              <textarea id="c-message" name="message" required></textarea>
-            </div>
-
-            <p class="form-status" role="status"></p>
-            <button class="btn-submit" type="submit">Send</button>
-          </form>
+    <section>
+      <h2 data-i18n="whoH">Who this is for</h2>
+      <p class="lede" data-i18n="whoD">Service businesses with more enquiries than staff to answer them. Clinics, agencies, education consultants, exchange desks, e-commerce operations — anywhere the same conversation is being typed out by hand fifty times a week.</p>
+      <div class="build">
+        <div class="item">
+          <div><h3 data-i18n="w1t">Your team answers the same questions all day</h3>
+          <p data-i18n="w1d">A bot that knows your real prices, policies and availability handles the first ninety per cent, in the customer's own language, and escalates the rest with full context.</p></div>
+          <div class="stack" data-i18n="w1s">Typical outcome: replies in seconds instead of hours</div>
+        </div>
+        <div class="item">
+          <div><h3 data-i18n="w2t">Leads arrive raw and unqualified</h3>
+          <p data-i18n="w2d">An intake flow that asks what your sales people would ask, scores the answers, and delivers a ranked list instead of an inbox.</p></div>
+          <div class="stack" data-i18n="w2s">Typical outcome: fewer calls, better calls</div>
+        </div>
+        <div class="item">
+          <div><h3 data-i18n="w3t">Data lives in five places and agrees with none of them</h3>
+          <p data-i18n="w3d">A small backend that becomes the single source of truth, with documented endpoints so whatever you buy next can plug into it.</p></div>
+          <div class="stack" data-i18n="w3s">Typical outcome: one number, not five</div>
+        </div>
+        <div class="item">
+          <div><h3 data-i18n="w4t">You sell in Turkish, Persian and English and your systems only speak one</h3>
+          <p data-i18n="w4d">This is where most agencies quietly fall over, particularly on right-to-left. It's ordinary work for me.</p></div>
+          <div class="stack" data-i18n="w4s">Typical outcome: one system, three markets</div>
         </div>
       </div>
     </section>
+
+    <section>
+      <h2 data-i18n="howH">How an engagement runs</h2>
+      <p class="lede" data-i18n="howD">Four steps. You can stop after any of them.</p>
+      <ol class="steps">
+        <li>
+          <h3 data-i18n="s1t">A twenty-minute call</h3>
+          <p data-i18n="s1d">Free. You describe what is eating the time; I tell you whether software fixes it. Sometimes the answer is that it doesn't, and I'd rather say so than sell you a project.</p>
+        </li>
+        <li>
+          <h3 data-i18n="s2t">A written scope with a fixed price</h3>
+          <p data-i18n="s2d">What gets built, what it will and won't do, what I need from you, and what it costs. One page, no retainer to read it. If the scope is wrong you say so before anyone spends money.</p>
+        </li>
+        <li>
+          <h3 data-i18n="s3t">Build, with something visible each week</h3>
+          <p data-i18n="s3d">Half up front, half on delivery. You get a working thing you can click every week rather than a status report. Changes inside the scope are included; changes outside it get priced before I start them.</p>
+        </li>
+        <li>
+          <h3 data-i18n="s4t">Handover, then care if you want it</h3>
+          <p data-i18n="s4d">Source code, credentials and documentation are yours. I'll train whoever runs it. Monthly care covers hosting, backups, monitoring and updates, and you can cancel it any time without losing access to your own system.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="faq">
+      <h2 data-i18n="faqH">Straight answers</h2>
+      <details>
+        <summary data-i18n="q1">What if the automation doesn't work?</summary>
+        <p data-i18n="a1">Scope is fixed in writing before I start, including what "working" means. If I deliver something that doesn't meet it, I fix it at my cost. What I won't do is promise a business outcome I don't control — I can guarantee the software answers correctly, not that your market buys more.</p>
+      </details>
+      <details>
+        <summary data-i18n="q2">Do I own what you build?</summary>
+        <p data-i18n="a2">Yes. Code, data and accounts are yours on final payment. I don't hold your hosting hostage, and I'll hand over to another developer without friction if you move on.</p>
+      </details>
+      <details>
+        <summary data-i18n="q3">Will you use my data to train something?</summary>
+        <p data-i18n="a3">No. Your content is used to configure your system and nothing else. If your project involves customer data, I'll tell you exactly which third-party services touch it before we start, so you can decide.</p>
+      </details>
+      <details>
+        <summary data-i18n="q4">How do you invoice, and in what currency?</summary>
+        <p data-i18n="a4">Fixed price in USD or EUR, invoiced in two parts. Turkish clients can be invoiced in lira. Care plans are billed monthly.</p>
+      </details>
+      <details>
+        <summary data-i18n="q5">What don't you take on?</summary>
+        <p data-i18n="a5">Anything I'd be learning on your budget, native mobile apps, and projects where nobody on your side can make a decision. I'd rather refer you to someone better placed than deliver something mediocre slowly.</p>
+      </details>
+    </section>
+
+    <section>
+      <h2 data-i18n="endH">Start with the call</h2>
+      <p class="lede" data-i18n="endD">Twenty minutes, no charge, no deck. Bring the task that annoys you most.</p>
+      <a class="btn" href="contact.html" data-i18n="ctaMain">Book a 20-minute call</a>
+    </section>
   </main>
+</div>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p class="footer-name">Kianirad Web Design &amp; Development</p>
-    <a class="footer-email" href="mailto:kianirad2020@gmail.com">kianirad2020@gmail.com</a>
-    <p class="footer-copy">&copy;<span id="year">2024</span> by Kiani Limited Liability Company .</p>
-  </footer>
+<footer><span data-i18n="foot"></span> · ©2026</footer>
 
-  <script type="module" src="/script.js"></script>
+<script>
+window.PAGE_STRINGS = {
+en:{
+  cTitle:"You don't need an AI strategy. You need three hours a day back.",
+  cLede:"Most automation projects fail because they start with the technology instead of the task. I start by finding the specific repetitive job that is costing your team real hours, and I automate that one first — so you see the return before you commit to anything bigger.",
+  whoH:"Who this is for",
+  whoD:"Service businesses with more enquiries than staff to answer them. Clinics, agencies, education consultants, exchange desks, e-commerce operations — anywhere the same conversation is being typed out by hand fifty times a week.",
+  w1t:"Your team answers the same questions all day",
+  w1d:"A bot that knows your real prices, policies and availability handles the first ninety per cent, in the customer's own language, and escalates the rest with full context.",
+  w1s:"Typical outcome: replies in seconds instead of hours",
+  w2t:"Leads arrive raw and unqualified",
+  w2d:"An intake flow that asks what your sales people would ask, scores the answers, and delivers a ranked list instead of an inbox.",
+  w2s:"Typical outcome: fewer calls, better calls",
+  w3t:"Data lives in five places and agrees with none of them",
+  w3d:"A small backend that becomes the single source of truth, with documented endpoints so whatever you buy next can plug into it.",
+  w3s:"Typical outcome: one number, not five",
+  w4t:"You sell in Turkish, Persian and English and your systems only speak one",
+  w4d:"This is where most agencies quietly fall over, particularly on right-to-left. It's ordinary work for me.",
+  w4s:"Typical outcome: one system, three markets",
+  howH:"How an engagement runs", howD:"Four steps. You can stop after any of them.",
+  s1t:"A twenty-minute call",
+  s1d:"Free. You describe what is eating the time; I tell you whether software fixes it. Sometimes the answer is that it doesn't, and I'd rather say so than sell you a project.",
+  s2t:"A written scope with a fixed price",
+  s2d:"What gets built, what it will and won't do, what I need from you, and what it costs. One page, no retainer to read it. If the scope is wrong you say so before anyone spends money.",
+  s3t:"Build, with something visible each week",
+  s3d:"Half up front, half on delivery. You get a working thing you can click every week rather than a status report. Changes inside the scope are included; changes outside it get priced before I start them.",
+  s4t:"Handover, then care if you want it",
+  s4d:"Source code, credentials and documentation are yours. I'll train whoever runs it. Monthly care covers hosting, backups, monitoring and updates, and you can cancel it any time without losing access to your own system.",
+  faqH:"Straight answers",
+  q1:"What if the automation doesn't work?",
+  a1:"Scope is fixed in writing before I start, including what \u201cworking\u201d means. If I deliver something that doesn't meet it, I fix it at my cost. What I won't do is promise a business outcome I don't control — I can guarantee the software answers correctly, not that your market buys more.",
+  q2:"Do I own what you build?",
+  a2:"Yes. Code, data and accounts are yours on final payment. I don't hold your hosting hostage, and I'll hand over to another developer without friction if you move on.",
+  q3:"Will you use my data to train something?",
+  a3:"No. Your content is used to configure your system and nothing else. If your project involves customer data, I'll tell you exactly which third-party services touch it before we start, so you can decide.",
+  q4:"How do you invoice, and in what currency?",
+  a4:"Fixed price in USD or EUR, invoiced in two parts. Turkish clients can be invoiced in lira. Care plans are billed monthly.",
+  q5:"What don't you take on?",
+  a5:"Anything I'd be learning on your budget, native mobile apps, and projects where nobody on your side can make a decision. I'd rather refer you to someone better placed than deliver something mediocre slowly.",
+  endH:"Start with the call", endD:"Twenty minutes, no charge, no deck. Bring the task that annoys you most."
+},
+tr:{
+  cTitle:"Yapay zekâ stratejisine ihtiyacınız yok. Günde üç saate ihtiyacınız var.",
+  cLede:"Otomasyon projelerinin çoğu, işten değil teknolojiden başladığı için başarısız olur. Ben ekibinizin gerçek saatlerini yiyen o belirli tekrarlı işi bulmakla başlıyorum ve önce onu otomatikleştiriyorum; böylece daha büyük bir şeye söz vermeden önce getirisini görüyorsunuz.",
+  whoH:"Bu kimin için",
+  whoD:"Cevaplayacak personelinden çok talep alan hizmet işletmeleri. Klinikler, ajanslar, eğitim danışmanları, döviz masaları, e-ticaret operasyonları — aynı konuşmanın haftada elli kez elle yazıldığı her yer.",
+  w1t:"Ekibiniz gün boyu aynı soruları cevaplıyor",
+  w1d:"Gerçek fiyatlarınızı, kurallarınızı ve müsaitliğinizi bilen bir bot ilk yüzde doksanı müşterinin kendi dilinde karşılar, kalanını tüm bağlamıyla size aktarır.",
+  w1s:"Tipik sonuç: saatler yerine saniyeler içinde yanıt",
+  w2t:"Talepler ham ve elenmemiş geliyor",
+  w2d:"Satışçılarınızın soracağını soran, cevapları puanlayan ve gelen kutusu yerine sıralanmış bir liste veren bir başvuru akışı.",
+  w2s:"Tipik sonuç: daha az görüşme, daha iyi görüşme",
+  w3t:"Veri beş yerde duruyor ve hiçbiri diğeriyle uyuşmuyor",
+  w3d:"Tek doğru kaynak hâline gelen küçük bir backend; belgelenmiş uç noktalarla, sonradan alacağınız her şey buna bağlanabilir.",
+  w3s:"Tipik sonuç: beş rakam değil, tek rakam",
+  w4t:"Türkçe, Farsça ve İngilizce satıyorsunuz ama sistemleriniz tek dil biliyor",
+  w4d:"Çoğu ajansın özellikle sağdan sola yazımda sessizce tökezlediği yer burası. Benim için sıradan bir iş.",
+  w4s:"Tipik sonuç: tek sistem, üç pazar",
+  howH:"Bir iş nasıl ilerler", howD:"Dört adım. Her adımdan sonra durabilirsiniz.",
+  s1t:"Yirmi dakikalık bir görüşme",
+  s1d:"Ücretsiz. Zamanı neyin yediğini anlatırsınız; yazılımın bunu çözüp çözmediğini söylerim. Bazen cevap hayırdır ve size proje satmaktansa bunu söylemeyi tercih ederim.",
+  s2t:"Sabit fiyatlı, yazılı bir kapsam",
+  s2d:"Ne yapılacak, neyi yapıp neyi yapmayacak, sizden ne gerekiyor ve maliyeti ne. Tek sayfa, okumak için ön ödeme yok. Kapsam yanlışsa, kimse para harcamadan önce söylersiniz.",
+  s3t:"Her hafta görünür bir çıktıyla geliştirme",
+  s3d:"Yarısı peşin, yarısı teslimde. Durum raporu değil, her hafta tıklayabileceğiniz çalışan bir şey alırsınız. Kapsam içindeki değişiklikler dâhildir; dışındakiler başlamadan önce fiyatlanır.",
+  s4t:"Devir, isterseniz sonrasında bakım",
+  s4d:"Kaynak kod, erişim bilgileri ve dokümantasyon sizindir. Sistemi kim işletecekse ona eğitim veririm. Aylık bakım barındırma, yedekleme, izleme ve güncellemeleri kapsar; kendi sisteminize erişimi kaybetmeden istediğiniz zaman iptal edebilirsiniz.",
+  faqH:"Net cevaplar",
+  q1:"Ya otomasyon işe yaramazsa?",
+  a1:"Kapsam, \u201cçalışıyor\u201dun ne demek olduğu dâhil, başlamadan önce yazılı olarak sabitlenir. Bunu karşılamayan bir şey teslim edersem masrafı bana ait olmak üzere düzeltirim. Yapmayacağım şey, kontrolümde olmayan bir ticari sonucu vaat etmek: yazılımın doğru cevap verdiğini garanti ederim, pazarınızın daha çok satın alacağını değil.",
+  q2:"Yapılan iş bana mı ait olur?",
+  a2:"Evet. Son ödemeyle birlikte kod, veri ve hesaplar sizindir. Barındırmanızı rehin tutmam ve ayrılırsanız başka bir geliştiriciye sorunsuz devrederim.",
+  q3:"Verimi bir şeyi eğitmek için kullanır mısınız?",
+  a3:"Hayır. İçeriğiniz yalnızca kendi sisteminizi yapılandırmak için kullanılır. Proje müşteri verisi içeriyorsa, başlamadan önce hangi üçüncü taraf servislerin bu veriye dokunduğunu tek tek söylerim; kararı siz verirsiniz.",
+  q4:"Faturalama nasıl, hangi para biriminde?",
+  a4:"USD veya EUR üzerinden sabit fiyat, iki taksitte faturalanır. Türkiye'deki müşteriler lira olarak faturalandırılabilir. Bakım paketleri aylık faturalanır.",
+  q5:"Neleri almıyorsunuz?",
+  a5:"Sizin bütçenizle öğreneceğim işleri, native mobil uygulamaları ve sizin tarafınızda karar verebilecek kimsenin olmadığı projeleri. Vasat bir işi yavaşça teslim etmektense sizi daha uygun birine yönlendirmeyi tercih ederim.",
+  endH:"Görüşmeyle başlayın", endD:"Yirmi dakika, ücretsiz, sunum yok. En çok canınızı sıkan işi getirin."
+},
+fa:{
+  cTitle:"شما به استراتژی هوش مصنوعی نیاز ندارید. به سه ساعت در روز نیاز دارید.",
+  cLede:"بیشتر پروژه‌های اتوماسیون شکست می‌خورند چون از فناوری شروع می‌کنند نه از کار. من با پیدا کردن همان کار تکراری مشخصی شروع می‌کنم که واقعاً ساعت‌های تیم شما را می‌گیرد و اول همان را خودکار می‌کنم؛ تا پیش از تعهد به چیزی بزرگ‌تر، بازگشتش را ببینید.",
+  whoH:"این برای چه کسی است",
+  whoD:"کسب‌وکارهای خدماتی که تعداد درخواست‌هایشان از تعداد آدم‌های پاسخ‌دهنده بیشتر است. کلینیک‌ها، آژانس‌ها، مشاوران تحصیلی، میزهای صرافی، فروشگاه‌های آنلاین — هرجا یک گفت‌وگوی تکراری هفته‌ای پنجاه بار دستی تایپ می‌شود.",
+  w1t:"تیم شما تمام روز به یک سؤال جواب می‌دهد",
+  w1d:"رباتی که قیمت‌ها، قوانین و ظرفیت واقعی شما را می‌داند، نود درصد اول را به زبان خود مشتری پاسخ می‌دهد و بقیه را با تمام بافت گفت‌وگو به شما ارجاع می‌دهد.",
+  w1s:"نتیجه‌ی معمول: پاسخ در چند ثانیه به‌جای چند ساعت",
+  w2t:"سرنخ‌ها خام و غربال‌نشده می‌رسند",
+  w2d:"یک جریان ثبت درخواست که همان چیزی را می‌پرسد که تیم فروش شما می‌پرسد، پاسخ‌ها را امتیاز می‌دهد و به‌جای یک صندوق ورودی، فهرستی اولویت‌بندی‌شده تحویل می‌دهد.",
+  w2s:"نتیجه‌ی معمول: تماس کمتر، تماس بهتر",
+  w3t:"داده در پنج جا هست و هیچ‌کدام با هم نمی‌خوانند",
+  w3d:"یک بک‌اند کوچک که به تنها مرجع درست تبدیل می‌شود، با مستندات مشخص تا هرچه بعداً خریدید بتواند به آن وصل شود.",
+  w3s:"نتیجه‌ی معمول: یک عدد، نه پنج عدد",
+  w4t:"به ترکی، فارسی و انگلیسی می‌فروشید ولی سیستم‌تان فقط یک زبان بلد است",
+  w4d:"همین‌جاست که بیشتر آژانس‌ها بی‌سروصدا زمین می‌خورند، مخصوصاً در راست‌به‌چپ. برای من کار روزمره است.",
+  w4s:"نتیجه‌ی معمول: یک سیستم، سه بازار",
+  howH:"یک همکاری چطور پیش می‌رود", howD:"چهار مرحله. بعد از هر کدام می‌توانید متوقف شوید.",
+  s1t:"یک گفت‌وگوی بیست‌دقیقه‌ای",
+  s1d:"رایگان. شما می‌گویید چه چیزی وقت را می‌بلعد؛ من می‌گویم نرم‌افزار حلش می‌کند یا نه. گاهی جواب منفی است و ترجیح می‌دهم همان را بگویم تا اینکه پروژه‌ای به شما بفروشم.",
+  s2t:"یک شرح کار مکتوب با قیمت قطعی",
+  s2d:"چه ساخته می‌شود، چه کاری می‌کند و چه کاری نمی‌کند، از شما چه لازم دارم و هزینه‌اش چقدر است. یک صفحه، و برای خواندنش پیش‌پرداختی لازم نیست. اگر شرح کار غلط باشد، پیش از خرج شدن پول می‌گویید.",
+  s3t:"ساخت، با چیزی قابل‌دیدن در هر هفته",
+  s3d:"نیمی پیش‌پرداخت، نیمی هنگام تحویل. هر هفته به‌جای گزارش وضعیت، چیزی می‌گیرید که می‌شود رویش کلیک کرد. تغییرات داخل شرح کار شامل است؛ تغییرات بیرون آن پیش از شروع قیمت‌گذاری می‌شود.",
+  s4t:"تحویل، و بعد نگهداری اگر بخواهید",
+  s4d:"کد، دسترسی‌ها و مستندات مال شماست. به هر کسی که سیستم را می‌گرداند آموزش می‌دهم. نگهداری ماهانه شامل میزبانی، پشتیبان‌گیری، پایش و به‌روزرسانی است و هر زمان بدون از دست دادن دسترسی به سیستم خودتان قابل لغو است.",
+  faqH:"پاسخ‌های بی‌تعارف",
+  q1:"اگر اتوماسیون کار نکند چه؟",
+  a1:"شرح کار پیش از شروع به‌صورت مکتوب قطعی می‌شود، از جمله اینکه «کار کردن» یعنی چه. اگر چیزی تحویل بدهم که آن را برآورده نکند، با هزینه‌ی خودم درستش می‌کنم. کاری که نمی‌کنم، وعده دادن نتیجه‌ای تجاری است که در کنترل من نیست: تضمین می‌کنم نرم‌افزار درست پاسخ بدهد، نه اینکه بازار شما بیشتر بخرد.",
+  q2:"مالکیت چیزی که می‌سازید با من است؟",
+  a2:"بله. با پرداخت نهایی، کد، داده و حساب‌ها مال شماست. میزبانی شما را گروگان نمی‌گیرم و اگر بروید، بدون دردسر به برنامه‌نویس دیگری تحویل می‌دهم.",
+  q3:"از داده‌ی من برای آموزش چیزی استفاده می‌کنید؟",
+  a3:"نه. محتوای شما فقط برای پیکربندی سیستم خودتان استفاده می‌شود. اگر پروژه داده‌ی مشتری داشته باشد، پیش از شروع دقیقاً می‌گویم کدام سرویس‌های شخص ثالث با آن سروکار دارند تا خودتان تصمیم بگیرید.",
+  q4:"صورتحساب چطور و به چه ارزی است؟",
+  a4:"قیمت قطعی به دلار یا یورو، در دو بخش. مشتریان ترکیه می‌توانند به لیر فاکتور بگیرند. طرح‌های نگهداری ماهانه صورتحساب می‌شوند.",
+  q5:"چه کارهایی را قبول نمی‌کنید؟",
+  a5:"کارهایی که باید با بودجه‌ی شما یاد بگیرم، اپلیکیشن‌های موبایل نیتیو، و پروژه‌هایی که در سمت شما کسی نیست که تصمیم بگیرد. ترجیح می‌دهم شما را به آدم مناسب‌تری معرفی کنم تا کاری متوسط را کند تحویل بدهم.",
+  endH:"با همان گفت‌وگو شروع کنید", endD:"بیست دقیقه، بدون هزینه، بدون ارائه. همان کاری را بیاورید که بیشتر از همه اذیت‌تان می‌کند."
+}
+};
+</script>
+<script src="assets/site.js"></script>
 </body>
 </html>
