@@ -18,6 +18,31 @@
 <meta name="twitter:title" content="Hadi Kianirad — Backend, bots and automation, Istanbul">
 <meta name="twitter:description" content="Python backends, Telegram bots and AI automation for businesses in Istanbul and beyond. Systems that keep running.">
 <meta name="twitter:image" content="https://www.kianirad.website/og-image.png">
+<script type="application/ld+json">
+[
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Hadi Kianirad",
+    "jobTitle":"Backend and automation engineer",
+    "url":"https://www.kianirad.website/",
+    "address":{"@type":"PostalAddress","addressLocality":"Istanbul","addressCountry":"TR"},
+    "knowsLanguage":["English","Turkish","Persian"],
+    "sameAs":["https://github.com/jjebraham","https://t.me/amirkiaaani"]
+  },
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"Hadi Kianirad",
+    "url":"https://www.kianirad.website/",
+    "description":"Python backends, Telegram bots and AI automation for businesses in Istanbul and beyond.",
+    "address":{"@type":"PostalAddress","addressLocality":"Istanbul","addressCountry":"TR"},
+    "areaServed":"Istanbul",
+    "availableLanguage":["English","Turkish","Persian"],
+    "sameAs":["https://github.com/jjebraham","https://t.me/amirkiaaani"]
+  }
+]
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
@@ -38,6 +63,7 @@
       <div class="heroactions"><a class="btn" href="#scope" data-i18n="ctaScope">Estimate your project</a><a class="btn btn-quiet" href="#proof" data-i18n="ctaProof">See what I've built</a></div>
       <div class="console"><header><span class="dot"></span><b>hadi_demo_bot</b><span class="who" data-i18n="botStatus">online — try it</span></header><div class="thread" id="thread" aria-live="polite"></div><div class="chips" id="chips"></div></div>
     </section>
+    <span id="services" aria-hidden="true"></span>
     <section id="build">
       <h2 data-i18n="buildH">What I build</h2><p class="lede" data-i18n="buildLede">Five things, done properly, in the languages your customers actually speak.</p>
       <div class="build">
@@ -54,7 +80,7 @@
       <div class="cases"><article class="case"><span class="tag" data-i18n="c1tag">Real-time data · integrity auditing</span><h3>KriptoFarsi</h3><p data-i18n="c1d">A Persian-language market platform with a data pipeline refreshing every five minutes and a public signal history that can be audited against posts on Telegram and X.</p><a class="visit" href="https://kriptofarsi.com" target="_blank" rel="noopener">kriptofarsi.com</a></article><article class="case"><span class="tag" data-i18n="c2tag">Lead qualification · Persian</span><h3>TRstudy</h3><p data-i18n="c2d">A Telegram bot that qualifies Persian-speaking students applying to Turkish universities.</p><a class="visit" href="https://t.me/trstudy_bot" target="_blank" rel="noopener">t.me/trstudy_bot</a></article></div>
       <p style="margin-block-start:24px;"><a class="btn btn-quiet" href="projects.html" data-i18n="allProjects">All projects</a></p>
     </section>
-    <section id="scope"><h2 data-i18n="scopeH">Scope and price</h2><p class="lede" data-i18n="scopeLede">Tick what you need. You get a range, not a number, because an honest estimate before a conversation is a range.</p><div class="scoper"><div class="opts" id="opts"></div><div class="tally"><div class="k" data-i18n="tallyK">Indicative project range</div><div class="amount" id="amount">—</div><div class="weeks" id="weeks" data-i18n="tallyEmpty">Nothing selected yet.</div><a class="btn" href="contact.html" data-i18n="ctaQuote">Get a fixed quote</a><p class="note" data-i18n="tallyNote">Fixed price agreed before work starts. Half up front, half on delivery.</p></div></div></section>
+    <section id="scope"><h2 data-i18n="scopeH">Scope and price</h2><p class="lede" data-i18n="scopeLede">Tick what you need. You get a range, not a number, because an honest estimate before a conversation is a range.</p><div class="scoper"><div class="opts" id="opts"></div><div class="tally"><div class="k" data-i18n="tallyK">Indicative project range</div><div class="amount" id="amount">—</div><div class="weeks" id="weeks" data-i18n="tallyEmpty">Nothing selected yet.</div><a class="btn" id="quote-link" href="contact.html" data-i18n="ctaQuote">Get a fixed quote</a><p class="note" data-i18n="tallyNote">Fixed price agreed before work starts. Half up front, half on delivery.</p></div></div></section>
   </main>
 </div>
 <footer><span data-i18n="foot">Kiani Limited Liability Company · Istanbul · English, Türkçe, فارسی</span><span dir="ltr"> · ©2026</span></footer>
@@ -77,10 +103,11 @@ fa:{h1:"کسب‌وکار شما باید ساعت سه بامداد هم کار
   function botSays(text,then){if(KR.reduce){say(text,"bot");if(then)then();return;}var t=document.createElement("div");t.className="typing";t.innerHTML="<i></i><i></i><i></i>";thread.appendChild(t);setTimeout(function(){t.remove();say(text,"bot");if(then)then();},620);}
   function resetDemo(){thread.innerHTML="";say(KR.t("demoIntro"),"bot");setChips(FLOW.map(function(f){return{label:KR.t(f.label),on:function(){pick(f);}};}));}
   function pick(f){say(KR.t(f.label),"me");setChips([]);botSays(KR.t(f.reply),function(){setChips([{label:KR.t("demoFollow"),on:function(){say(KR.t("demoFollow"),"me");setChips([]);botSays(KR.t("demoFollowR"),function(){setChips([{label:KR.t("demoCta"),on:function(){location.href="contact.html";}},{label:KR.t("demoRestart"),plain:true,on:resetDemo}]);});}},{label:KR.t("demoRestart"),plain:true,on:resetDemo}]);});}
-  var optsEl=document.getElementById("opts"),amountEl=document.getElementById("amount"),weeksEl=document.getElementById("weeks"),chosen={};
+  var optsEl=document.getElementById("opts"),amountEl=document.getElementById("amount"),weeksEl=document.getElementById("weeks"),quoteLink=document.getElementById("quote-link"),chosen={};
   var ITEMS=[{k:"site",t:"optSite",d:"optSiteD"},{k:"api",t:"optApi",d:"optApiD"},{k:"bot",t:"optBot",d:"optBotD"},{k:"ai",t:"optAi",d:"optAiD"},{k:"multi",t:"optMulti",d:"optMultiD"},{k:"care",t:"optCare",d:"optCareD"}];
+  function updateQuoteLink(range){var keys=ITEMS.filter(function(it){return !!chosen[it.k];}).map(function(it){return it.k;});if(!keys.length){quoteLink.href="contact.html";return;}var q=new URLSearchParams();q.set("services",keys.join(","));if(range)q.set("range",range);quoteLink.href="contact.html?"+q.toString();}
   function buildOpts(){optsEl.innerHTML="";ITEMS.forEach(function(it){var p=P[it.k],lab=document.createElement("label");lab.className="opt";var input=document.createElement("input");input.type="checkbox";input.checked=!!chosen[it.k];input.addEventListener("change",function(){chosen[it.k]=input.checked;tally();});var box=document.createElement("span"),t1=document.createElement("span"),t2=document.createElement("span");t1.className="t";t1.textContent=KR.t(it.t);t2.className="d";t2.textContent=KR.t(it.d);box.appendChild(t1);box.appendChild(document.createElement("br"));box.appendChild(t2);var r=document.createElement("span");r.className="r";r.textContent=p.monthlyLo?KR.money(p.monthlyLo)+"–"+KR.money(p.monthlyHi):KR.money(p.lo)+"–"+KR.money(p.hi);lab.appendChild(input);lab.appendChild(box);lab.appendChild(r);optsEl.appendChild(lab);});tally();}
-  function tally(){var lo=0,hi=0,weeks=0,mlo=0,mhi=0,any=false;ITEMS.forEach(function(it){if(!chosen[it.k])return;any=true;var p=P[it.k];if(p.monthlyLo){mlo+=p.monthlyLo;mhi+=p.monthlyHi;return;}lo+=p.lo;hi+=p.hi;if(p.weeks>weeks)weeks=p.weeks;});if(!any){amountEl.textContent="—";weeksEl.textContent=KR.t("tallyEmpty");return;}var parts=[];if(hi>0)parts.push(KR.money(lo)+" – "+KR.money(hi));if(mhi>0)parts.push(KR.t("plusCare").replace("{m}",KR.money(mlo)+"–"+KR.money(mhi)));amountEl.textContent=parts.join(" ");weeksEl.textContent=weeks>0?KR.t("weeksTxt").replace("{n}",String(weeks)):"";}
+  function tally(){var lo=0,hi=0,weeks=0,mlo=0,mhi=0,any=false;ITEMS.forEach(function(it){if(!chosen[it.k])return;any=true;var p=P[it.k];if(p.monthlyLo){mlo+=p.monthlyLo;mhi+=p.monthlyHi;return;}lo+=p.lo;hi+=p.hi;if(p.weeks>weeks)weeks=p.weeks;});if(!any){amountEl.textContent="—";weeksEl.textContent=KR.t("tallyEmpty");updateQuoteLink("");return;}var parts=[];if(hi>0)parts.push(KR.money(lo)+" – "+KR.money(hi));if(mhi>0)parts.push(KR.t("plusCare").replace("{m}",KR.money(mlo)+"–"+KR.money(mhi)));var range=parts.join(" ");amountEl.textContent=range;weeksEl.textContent=weeks>0?KR.t("weeksTxt").replace("{n}",String(weeks)):"";updateQuoteLink(range);}
   KR.onChange(function(){buildOpts();resetDemo();});buildOpts();resetDemo();
 })();
 </script>
