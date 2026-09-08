@@ -1,81 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Kianirad Development</title>
-  <meta name="description" content="Contact Kianirad Web Design & Development — Limassol, Cyprus." />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Hadi Kianirad</title>
+<meta name="description" content="Book a 20-minute call with Hadi Kianirad — backend, Telegram bots and AI automation, Istanbul.">
+<link rel="canonical" href="https://kianirad.website/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
 
-  <!-- Header -->
-  <header class="site-header">
-    <a class="brand" href="/index.html">KIANIRAD WEB Design &amp; DEVELOPMENT</a>
-  </header>
-
-  <!-- Navigation -->
-  <nav class="site-nav">
-    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/index.html#services">Services</a></li>
-      <li><a href="/plans-pricing.html">Plans &amp; Pricing</a></li>
-      <li><a href="/projects.html">Recent Projects</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/contact.html" class="active">Contact</a></li>
-      <li><a href="/consultancy.html">Consultancy</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <div class="contact-layout">
-
-      <!-- Left: contact details -->
-      <div class="contact-info">
-        <h1>CONTACT</h1>
-        <p>Limassol John F kennedy 51 Cyprus</p>
-        <p><a href="mailto:kianirad2020@gmail.com">kianirad2020@gmail.com</a></p>
-        <p><a href="tel:+905392905686">+905392905686</a></p>
-      </div>
-
-      <!-- Right: contact form (sent via FormSubmit to kianirad2020@gmail.com) -->
-      <form class="form-grid ajax-form" action="https://formsubmit.co/ajax/kianirad2020@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="New message from kianirad.website contact form" />
-        <input type="hidden" name="_captcha" value="false" />
-
-        <div class="form-field">
-          <label for="name">Enter your name</label>
-          <input id="name" name="name" type="text" required />
-        </div>
-        <div class="form-field">
-          <label for="email">Enter your email</label>
-          <input id="email" name="email" type="email" required />
-        </div>
-        <div class="form-field full">
-          <label for="subject">Type the subject</label>
-          <input id="subject" name="subject" type="text" />
-        </div>
-        <div class="form-field full">
-          <label for="message">Type your message here...</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-
-        <p class="form-status" role="status"></p>
-        <button class="btn-submit" type="submit">Submit</button>
-      </form>
-
+  <aside class="rail">
+    <div>
+      <a class="mark" href="index.html">Hadi Kianirad<span data-i18n="markSub"></span></a>
+      <p class="role" data-i18n="role"></p>
+      <span class="pulse"><span class="dot"></span><span data-i18n="pulse"></span></span>
     </div>
+    <nav class="railnav">
+      <a href="index.html" data-i18n="navHome">Home</a>
+      <a href="index.html#build" data-i18n="navBuild">What I build</a>
+      <a href="projects.html" data-i18n="navProjects">Projects</a>
+      <a href="consultancy.html" data-i18n="navConsult">Consultancy</a>
+      <a href="about.html" data-i18n="navAbout">About</a>
+      <a href="contact.html" data-i18n="navContact">Contact</a>
+    </nav>
+    <div class="railfoot">
+      <div class="toolrow">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+          <button type="button" data-lang="fa" aria-pressed="false">FA</button>
+        </div>
+        <button type="button" class="themebtn" id="themebtn">☾</button>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main">
+    <section class="pagehead">
+      <h1 class="pagetitle" data-i18n="kTitle">Tell me what's eating your week.</h1>
+      <p class="lede" data-i18n="kLede">I reply to everything within one working day, in English, Turkish or Persian. If your project isn't a fit for me I'll say so and point you somewhere better — that reply costs you nothing either.</p>
+    </section>
+
+    <section>
+      <h2 data-i18n="fastH">Fastest ways to reach me</h2>
+      <div class="contactgrid">
+        <a href="#" data-kr="telegram" style="text-decoration:none;">
+          <span class="k" data-i18n="kTg">Telegram — quickest</span>
+          <span class="v">@</span>
+        </a>
+        <a href="#" data-kr="email">
+          <span class="k" data-i18n="kEmail">Email</span>
+          <span class="v"></span>
+        </a>
+        <a href="#" data-kr="github" target="_blank" rel="noopener">
+          <span class="k" data-i18n="kGh">Code</span>
+          <span class="v"></span>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2 data-i18n="formH">Or write it here</h2>
+      <p class="lede" data-i18n="formLede">Three fields. The more concrete the last one, the more useful my first reply will be.</p>
+
+      <div class="form">
+        <div class="field"><label for="name" data-i18n="lName">Your name</label><input id="name" type="text" autocomplete="name"></div>
+        <div class="field"><label for="reply" data-i18n="lReply">Email or Telegram — however you'd like me to answer</label><input id="reply" type="text" autocomplete="email"></div>
+        <div class="field"><label for="need" data-i18n="lNeed">What do you need?</label><select id="need"><option value="bot" data-i18n="oBot">A Telegram bot</option><option value="api" data-i18n="oApi">A backend or API</option><option value="ai" data-i18n="oAi">AI automation</option><option value="site" data-i18n="oSite">A website</option><option value="care" data-i18n="oCare">Hosting and maintenance</option><option value="other" data-i18n="oOther">Something else</option></select></div>
+        <div class="field"><label for="msg" data-i18n="lMsg">What's the task that keeps costing you time?</label><textarea id="msg" data-i18n-attr="placeholder:phMsg" placeholder="For example: we get about 60 enquiries a week on Instagram and Telegram, all asking the same five questions about price and availability, and two people spend their mornings answering them."></textarea></div>
+        <div><button type="button" class="btn" id="send" data-i18n="btnSend">Send it</button><p class="formstatus" id="status" role="status"></p></div>
+        <p class="formnote" data-i18n="formNote">No newsletter, no automated sequence, no sales call booked without you asking for one.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 data-i18n="timeH">Practical details</h2>
+      <div class="prose"><p data-i18n="time1">I'm in Istanbul, GMT+3 — the same working day as Europe, the Gulf and most of Central Asia. Calls happen on whatever you already use: Telegram, Google Meet, WhatsApp or a phone line.</p><p data-i18n="time2">The first call is twenty minutes and free. You don't need to prepare anything except the problem.</p></div>
+    </section>
   </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p class="footer-name">Kianirad Web Design &amp; Development</p>
-    <a class="footer-email" href="mailto:kianirad2020@gmail.com">kianirad2020@gmail.com</a>
-    <p class="footer-copy">&copy;<span id="year">2024</span> by Kiani Limited Liability Company .</p>
-  </footer>
-
-  <script type="module" src="/script.js"></script>
+</div>
+<footer><span data-i18n="foot"></span> · ©2026</footer>
+<script>
+window.PAGE_STRINGS = {
+en:{kTitle:"Tell me what's eating your week.",kLede:"I reply to everything within one working day, in English, Turkish or Persian. If your project isn't a fit for me I'll say so and point you somewhere better — that reply costs you nothing either.",fastH:"Fastest ways to reach me",kTg:"Telegram — quickest",kEmail:"Email",kGh:"Code",formH:"Or write it here",formLede:"Three fields. The more concrete the last one, the more useful my first reply will be.",lName:"Your name",lReply:"Email or Telegram — however you'd like me to answer",lNeed:"What do you need?",lMsg:"What's the task that keeps costing you time?",phMsg:"For example: we get about 60 enquiries a week on Instagram and Telegram, all asking the same five questions about price and availability, and two people spend their mornings answering them.",oBot:"A Telegram bot",oApi:"A backend or API",oAi:"AI automation",oSite:"A website",oCare:"Hosting and maintenance",oOther:"Something else",btnSend:"Send it",formNote:"No newsletter, no automated sequence, no sales call booked without you asking for one.",stMissing:"Add your name, a way to reach you, and a line about the task.",stSending:"Sending…",stSent:"Sent. You'll hear from me within one working day.",stMail:"Opening your email app with the message ready to send.",stFail:"That didn't send. Please email or Telegram me instead — both are above.",timeH:"Practical details",time1:"I'm in Istanbul, GMT+3 — the same working day as Europe, the Gulf and most of Central Asia. Calls happen on whatever you already use: Telegram, Google Meet, WhatsApp or a phone line.",time2:"The first call is twenty minutes and free. You don't need to prepare anything except the problem."},
+tr:{kTitle:"Haftanızı neyin yediğini anlatın.",kLede:"Her mesaja bir iş günü içinde İngilizce, Türkçe veya Farsça cevap veriyorum. Projeniz bana uygun değilse bunu söyler ve sizi daha iyi bir yere yönlendiririm; o cevap da size hiçbir şeye mal olmaz.",fastH:"Bana en hızlı ulaşma yolları",kTg:"Telegram — en hızlısı",kEmail:"E-posta",kGh:"Kod",formH:"Ya da buradan yazın",formLede:"Üç alan. Sonuncusu ne kadar somut olursa, ilk cevabım o kadar işinize yarar.",lName:"Adınız",lReply:"E-posta veya Telegram — size nasıl dönmemi isterseniz",lNeed:"Neye ihtiyacınız var?",lMsg:"Sürekli vaktinizi alan iş ne?",phMsg:"Örneğin: haftada yaklaşık 60 mesaj geliyor, hepsi fiyat ve müsaitlik hakkında aynı beş soruyu soruyor ve iki kişi sabahlarını bunları cevaplayarak geçiriyor.",oBot:"Telegram botu",oApi:"Backend veya API",oAi:"Yapay zekâ otomasyonu",oSite:"Web sitesi",oCare:"Barındırma ve bakım",oOther:"Başka bir şey",btnSend:"Gönder",formNote:"Bülten yok, otomatik e-posta dizisi yok, siz istemeden ayarlanan satış görüşmesi yok.",stMissing:"Adınızı, size ulaşabileceğim bir yolu ve işi anlatan bir satır ekleyin.",stSending:"Gönderiliyor…",stSent:"Gönderildi. Bir iş günü içinde size döneceğim.",stMail:"E-posta uygulamanız mesaj hazır hâlde açılıyor.",stFail:"Gönderilemedi. Lütfen yukarıdaki e-posta veya Telegram üzerinden yazın.",timeH:"Pratik bilgiler",time1:"İstanbul'dayım, GMT+3 — Avrupa, Körfez ve Orta Asya'nın büyük kısmıyla aynı iş günü. Görüşmeler zaten kullandığınız yerde olur: Telegram, Google Meet, WhatsApp ya da telefon.",time2:"İlk görüşme yirmi dakika ve ücretsiz. Sorunun dışında hazırlamanız gereken bir şey yok."},
+fa:{kTitle:"بگویید چه چیزی هفته‌ی شما را می‌بلعد.",kLede:"به همه‌ی پیام‌ها ظرف یک روز کاری پاسخ می‌دهم، به انگلیسی، ترکی یا فارسی. اگر پروژه‌تان با من جور نباشد همان را می‌گویم و جای بهتری معرفی می‌کنم؛ آن پاسخ هم برای شما هزینه‌ای ندارد.",fastH:"سریع‌ترین راه‌های تماس",kTg:"تلگرام — سریع‌ترین",kEmail:"ایمیل",kGh:"کد",formH:"یا همین‌جا بنویسید",formLede:"سه فیلد. هرچه آخری مشخص‌تر باشد، اولین پاسخ من به‌دردبخورتر خواهد بود.",lName:"نام شما",lReply:"ایمیل یا تلگرام — هرطور که دوست دارید جواب بدهم",lNeed:"به چه چیزی نیاز دارید؟",lMsg:"کدام کار مدام وقت شما را می‌گیرد؟",phMsg:"مثلاً: هفته‌ای حدود ۶۰ پیام می‌گیریم که همه همان پنج سؤال قیمت و ظرفیت را می‌پرسند و دو نفر صبح‌هایشان را صرف جواب دادن می‌کنند.",oBot:"ربات تلگرام",oApi:"بک‌اند یا API",oAi:"اتوماسیون هوش مصنوعی",oSite:"وب‌سایت",oCare:"میزبانی و نگهداری",oOther:"چیز دیگری",btnSend:"ارسال",formNote:"نه خبرنامه‌ای، نه دنباله‌ی ایمیل خودکاری، نه جلسه‌ی فروشی که خودتان نخواسته باشید.",stMissing:"نام، یک راه تماس و یک خط درباره‌ی کار را بنویسید.",stSending:"در حال ارسال…",stSent:"ارسال شد. ظرف یک روز کاری از من خبر می‌گیرید.",stMail:"برنامه‌ی ایمیل شما با پیام آماده باز می‌شود.",stFail:"ارسال نشد. لطفاً از راه ایمیل یا تلگرام بالا بنویسید.",timeH:"جزئیات عملی",time1:"من در استانبول هستم، GMT+3 — همان روز کاری اروپا، خلیج و بیشتر آسیای میانه. گفت‌وگو روی همان بستری انجام می‌شود که خودتان استفاده می‌کنید: تلگرام، گوگل میت، واتساپ یا تلفن.",time2:"اولین گفت‌وگو بیست دقیقه و رایگان است. جز خود مسئله لازم نیست چیزی آماده کنید."}
+};
+</script>
+<script src="assets/site.js"></script>
+<script>
+(function(){"use strict";var btn=document.getElementById("send");var statusEl=document.getElementById("status");function val(id){return document.getElementById(id).value.trim();}btn.addEventListener("click",function(){var name=val("name"),reply=val("reply"),msg=val("msg");var needSel=document.getElementById("need");var need=needSel.options[needSel.selectedIndex].textContent;if(!name||!reply||!msg){statusEl.textContent=KR.t("stMissing");return;}var payload={name:name,contact:reply,need:need,message:msg,lang:KR.lang,page:location.href};var endpoint=KR.config.formEndpoint;if(!endpoint){statusEl.textContent=KR.t("stMail");var body="Name: "+name+"\nContact: "+reply+"\nNeeds: "+need+"\n\n"+msg;location.href="mailto:"+KR.config.email+"?subject="+encodeURIComponent("Project enquiry — "+name)+"&body="+encodeURIComponent(body);return;}statusEl.textContent=KR.t("stSending");btn.disabled=true;fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)}).then(function(r){if(!r.ok)throw new Error("bad status");statusEl.textContent=KR.t("stSent");["name","reply","msg"].forEach(function(id){document.getElementById(id).value="";});}).catch(function(){statusEl.textContent=KR.t("stFail");}).then(function(){btn.disabled=false;});});})();
+</script>
 </body>
 </html>
