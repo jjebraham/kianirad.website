@@ -1,145 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Kianirad Development</title>
-  <meta name="description" content="KIANIRAD Web Design & Development — portfolio of Hadi Kianirad. Explore web design and development projects, plans and pricing." />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hadi Kianirad — Backend, bots and automation, Istanbul</title>
+<meta name="description" content="Python backends, Telegram bots and AI automation for businesses in Istanbul and beyond. 14+ systems in production. English, Turkish and Persian.">
+<link rel="canonical" href="https://kianirad.website/index.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-
-  <!-- Header -->
-  <header class="site-header">
-    <a class="brand" href="/index.html">KIANIRAD WEB Design &amp; DEVELOPMENT</a>
-  </header>
-
-  <!-- Navigation -->
-  <nav class="site-nav">
-    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-    <ul>
-      <li><a href="/index.html" class="active">Home</a></li>
-      <li><a href="/index.html#services">Services</a></li>
-      <li><a href="/plans-pricing.html">Plans &amp; Pricing</a></li>
-      <li><a href="/projects.html">Recent Projects</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/contact.html">Contact</a></li>
-      <li><a href="/consultancy.html">Consultancy</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <!-- Hero: image left, dark panel right (same as Wix home) -->
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
+  <aside class="rail">
+    <div><a class="mark" href="index.html">Hadi Kianirad<span data-i18n="markSub">Systems that keep running</span></a><p class="role" data-i18n="role">Backend and automation engineer. Istanbul.</p><span class="pulse"><span class="dot"></span><span data-i18n="pulse">14+ systems in production</span></span></div>
+    <nav class="railnav"><a href="index.html#build" data-i18n="navBuild">What I build</a><a href="projects.html" data-i18n="navProjects">Projects</a><a href="consultancy.html" data-i18n="navConsult">Consultancy</a><a href="about.html" data-i18n="navAbout">About</a><a href="contact.html" data-i18n="navContact">Contact</a></nav>
+    <div class="railfoot"><a class="btn" href="contact.html" data-i18n="ctaMain">Book a 20-minute call</a><div class="toolrow"><div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="tr" aria-pressed="false">TR</button><button type="button" data-lang="fa" aria-pressed="false">FA</button></div><button type="button" class="themebtn" id="themebtn">☾</button></div></div>
+  </aside>
+  <main id="main">
     <section class="hero">
-      <div class="hero-media">
-        <img src="/images/hero.jpg" alt="Workspace with computer, tablet and phone showing web designs in black and white" />
-      </div>
-      <div class="hero-panel">
-        <h1>Welcome<br />to KIANIRAD<br />Web Design &amp; Development</h1>
-        <p class="hero-sub">Explore My Work</p>
-        <p class="hero-text">
-          From experimental passion projects to commissioned work for clients, my portfolio
-          holds a diverse selection of creations that represent this dynamic industry. I thrive
-          on creative challenges and enjoy building strong relationships along the way.
-          Explore my work below.
-        </p>
+      <h1 class="display" data-i18n="h1">Your business should still be working at 3am.</h1>
+      <p data-i18n-html="heroP">I'm Hadi Kianirad, a Python engineer in Istanbul. I build the backends, Telegram bots and AI automations that answer your customers, qualify your leads and move your data while you sleep. <strong>More than fourteen of them are running in production right now.</strong></p>
+      <div class="heroactions"><a class="btn" href="#scope" data-i18n="ctaScope">Estimate your project</a><a class="btn btn-quiet" href="#proof" data-i18n="ctaProof">See what I've built</a></div>
+      <div class="console"><header><span class="dot"></span><b>hadi_demo_bot</b><span class="who" data-i18n="botStatus">online — try it</span></header><div class="thread" id="thread" aria-live="polite"></div><div class="chips" id="chips"></div></div>
+    </section>
+    <section id="build">
+      <h2 data-i18n="buildH">What I build</h2><p class="lede" data-i18n="buildLede">Five things, done properly, in the languages your customers actually speak.</p>
+      <div class="build">
+        <div class="item"><div><h3 data-i18n="b1t">Telegram bots that do real work</h3><p data-i18n="b1d">Selling, support, lead qualification, admin panels and scheduled broadcasts to lists in the tens of thousands.</p></div><div class="stack">Python · aiogram · Telegram Bot API · payments</div></div>
+        <div class="item"><div><h3 data-i18n="b2t">Backends and APIs</h3><p data-i18n="b2d">Async services with clean data models and documented endpoints, wired into what your business already runs on.</p></div><div class="stack">FastAPI · async Python · SQLite / Postgres · GCP · DigitalOcean</div></div>
+        <div class="item"><div><h3 data-i18n="b3t">AI automation that removes hours</h3><p data-i18n="b3d">Document processing, drafted replies, content pipelines, internal tools.</p></div><div class="stack">LLM APIs · retrieval · queues · webhooks</div></div>
+        <div class="item"><div><h3 data-i18n="b4t">Websites in three alphabets</h3><p data-i18n="b4d">English, Turkish and Persian, including proper right-to-left layout. Switch the language on the left and watch it happen.</p></div><div class="stack">HTML · CSS · JS · i18n · RTL · Core Web Vitals</div></div>
+        <div class="item"><div><h3 data-i18n="b5t">Hosting and care after launch</h3><p data-i18n="b5d">SSL, automated backups, monitoring, security scanning and updates.</p></div><div class="stack">LiteSpeed · Imunify · nightly backups · uptime alerts</div></div>
       </div>
     </section>
-
-    <!-- Services -->
-    <section class="services-section" id="services">
-      <div class="services-head">
-        <h2>Services</h2>
-        <p>
-          I build and run the systems behind small businesses online — from the website
-          people see to the backend, automations and bots doing the work behind it.
-        </p>
-      </div>
-
-      <div class="services-grid">
-
-        <article class="service">
-          <h3>Web Design &amp; Development</h3>
-          <p>
-            Custom, responsive websites taken from first wireframe through to launch.
-            Multilingual builds, SEO groundwork, and a site you can update yourself
-            afterwards.
-          </p>
-        </article>
-
-        <article class="service">
-          <h3>Backend &amp; API Development</h3>
-          <p>
-            Python, FastAPI and async services built to handle real traffic. Clean data
-            models, documented endpoints, and integrations with the platforms your
-            business already runs on.
-          </p>
-        </article>
-
-        <article class="service">
-          <h3>AI Automation</h3>
-          <p>
-            Practical automation built on current language models — document processing,
-            customer replies, content pipelines, internal tools. Scoped to the tasks
-            actually costing you hours every week.
-          </p>
-        </article>
-
-        <article class="service">
-          <h3>Telegram Bots &amp; Messaging</h3>
-          <p>
-            Bots that sell, support, qualify leads and broadcast to large audiences.
-            Payments, admin panels, scheduled posting and analytics included.
-          </p>
-        </article>
-
-        <article class="service">
-          <h3>Real-Time Data &amp; Dashboards</h3>
-          <p>
-            Live dashboards and signal systems with transparent, verifiable numbers — the
-            same architecture running behind KriptoFarsi's publicly tracked performance.
-          </p>
-        </article>
-
-        <article class="service">
-          <h3>Hosting &amp; Maintenance</h3>
-          <p>
-            Managed hosting with SSL, automated backups, monitoring and security scanning.
-            Your site stays fast, updated and online long after launch.
-          </p>
-        </article>
-
-      </div>
-
-      <div class="services-cta">
-        <a class="btn-touch" href="/contact.html">Start a Project</a>
-      </div>
+    <section id="proof">
+      <h2 data-i18n="proofH">Proof</h2><p class="lede" data-i18n="proofLede">Systems that are live, not mockups.</p>
+      <div class="figures"><div class="fig"><b>14+</b><span data-i18n="f1">Telegram bots in production</span></div><div class="fig"><b>3</b><span data-i18n="f2">Languages I ship in, including RTL</span></div><div class="fig"><b>~18,000</b><span data-i18n="f3">Subscribers on a channel I run</span></div><div class="fig"><b>GMT+3</b><span data-i18n="f4">Istanbul, overlapping Europe and the Gulf</span></div></div>
+      <div class="cases"><article class="case"><span class="tag" data-i18n="c1tag">Real-time data · integrity auditing</span><h3>KriptoFarsi</h3><p data-i18n="c1d">A Persian-language market platform with a data pipeline refreshing every five minutes and a public signal history that can be audited against posts on Telegram and X.</p><a class="visit" href="https://kriptofarsi.com" target="_blank" rel="noopener">kriptofarsi.com</a></article><article class="case"><span class="tag" data-i18n="c2tag">Lead qualification · Persian</span><h3>TRstudy</h3><p data-i18n="c2d">A Telegram bot that qualifies Persian-speaking students applying to Turkish universities.</p><a class="visit" href="https://t.me/trstudy_bot" target="_blank" rel="noopener">t.me/trstudy_bot</a></article></div>
+      <p style="margin-block-start:24px;"><a class="btn btn-quiet" href="projects.html" data-i18n="allProjects">All projects</a></p>
     </section>
-
-    <!-- Gallery -->
-    <section class="gallery-section">
-      <h2 class="gallery-title">Inspiring Design</h2>
-      <div class="gallery-grid">
-        <div class="g-item"><img src="/images/gallery-1.jpg" alt="Mobile app designs on several phones" loading="lazy" /></div>
-        <div class="g-item g-tall"><img src="/images/gallery-2.jpg" alt="Designer team working around a table with laptops" loading="lazy" /></div>
-        <div class="g-item"><img src="/images/gallery-3.jpg" alt="Colourful website code on a dark screen" loading="lazy" /></div>
-        <div class="g-item g-tall"><img src="/images/gallery-4.jpg" alt="Sketching mobile wireframes next to a laptop" loading="lazy" /></div>
-        <div class="g-item g-tall"><img src="/images/gallery-5.jpg" alt="Responsive design shown on iMac, laptop, tablet and phone" loading="lazy" /></div>
-        <div class="g-item"><img src="/images/gallery-6.jpg" alt="Three smartphones on pastel pink pedestals" loading="lazy" /></div>
-        <div class="g-item g-tall"><img src="/images/gallery-7.jpg" alt="MacBook with code editor on a clean desk" loading="lazy" /></div>
-        <div class="g-item"><img src="/images/gallery-8.jpg" alt="iMac showing a detailed wolf illustration" loading="lazy" /></div>
-      </div>
-    </section>
+    <section id="scope"><h2 data-i18n="scopeH">Scope and price</h2><p class="lede" data-i18n="scopeLede">Tick what you need. You get a range, not a number, because an honest estimate before a conversation is a range.</p><div class="scoper"><div class="opts" id="opts"></div><div class="tally"><div class="k" data-i18n="tallyK">Indicative project range</div><div class="amount" id="amount">—</div><div class="weeks" id="weeks" data-i18n="tallyEmpty">Nothing selected yet.</div><a class="btn" href="contact.html" data-i18n="ctaQuote">Get a fixed quote</a><p class="note" data-i18n="tallyNote">Fixed price agreed before work starts. Half up front, half on delivery.</p></div></div></section>
   </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p class="footer-name">Kianirad Web Design &amp; Development</p>
-    <a class="footer-email" href="mailto:kianirad2020@gmail.com">kianirad2020@gmail.com</a>
-    <p class="footer-copy">&copy;<span id="year">2024</span> by Kiani Limited Liability Company .</p>
-  </footer>
-
-  <script type="module" src="/script.js"></script>
+</div>
+<footer><span data-i18n="foot"></span> · ©2026</footer>
+<script>
+window.PAGE_STRINGS={
+en:{h1:"Your business should still be working at 3am.",heroP:"I'm Hadi Kianirad, a Python engineer in Istanbul. I build the backends, Telegram bots and AI automations that answer your customers, qualify your leads and move your data while you sleep. <strong>More than fourteen of them are running in production right now.</strong>",ctaScope:"Estimate your project",ctaProof:"See what I've built",botStatus:"online — try it",buildH:"What I build",buildLede:"Five things, done properly, in the languages your customers actually speak.",b1t:"Telegram bots that do real work",b1d:"Selling, support, lead qualification, admin panels and scheduled broadcasts to lists in the tens of thousands. Payments and analytics included, so you can change a price without calling me.",b2t:"Backends and APIs",b2d:"Async services with clean data models and documented endpoints, wired into the platforms your business already runs on. Built to survive real traffic rather than a demo.",b3t:"AI automation that removes hours",b3d:"Document processing, drafted replies, content pipelines, internal tools. Scoped to the tasks costing your team hours every week, not to a buzzword.",b4t:"Websites in three alphabets",b4d:"Fast, responsive, SEO-ready builds in English, Turkish and Persian, including proper right-to-left layout rather than a mirrored afterthought. Switch the language on the left and watch it happen.",b5t:"Hosting and care after launch",b5d:"SSL, automated backups, monitoring, security scanning and updates. The part most freelancers disappear from is the part I stay for.",proofH:"Proof",proofLede:"Systems that are live, not mockups.",f1:"Telegram bots in production",f2:"Languages I ship in, including RTL",f3:"Subscribers on a channel I run",f4:"Istanbul, overlapping Europe and the Gulf",c1tag:"Real-time data · integrity auditing",c1d:"A Persian-language market platform with a data pipeline refreshing every five minutes and a public signal history that can be audited against posts on Telegram and X. I later built a replay engine that re-audits the entire history, and used it to find and correct a sign-convention bug in my own production code.",c2tag:"Lead qualification · Persian",c2d:"A Telegram bot that talks to Persian-speaking students applying to Turkish universities, asks what an admissions agent would ask, and hands over a qualified lead instead of a cold enquiry.",allProjects:"All projects",scopeH:"Scope and price",scopeLede:"Tick what you need. You get a range, not a number, because an honest estimate before a conversation is a range.",tallyK:"Indicative project range",tallyEmpty:"Nothing selected yet.",ctaQuote:"Get a fixed quote",tallyNote:"Fixed price agreed before work starts. Half up front, half on delivery. Care plans are billed monthly and can be cancelled any time.",weeksTxt:"About {n} weeks of work.",plusCare:"plus {m} / month",optSite:"Website",optSiteD:"Design, build and launch",optApi:"Backend or API",optApiD:"FastAPI service, database, integrations",optBot:"Telegram bot",optBotD:"Support, sales or lead qualification",optAi:"AI automation",optAiD:"Replaces a repeating manual task",optMulti:"Multilingual and RTL",optMultiD:"Turkish, Persian or Arabic",optCare:"Hosting and care",optCareD:"Monthly, cancel any time",demoIntro:"Hello. I'm a small demo of the kind of bot I build. What would you want yours to do?",d1:"Answer customers 24/7",d1r:"Then it needs your real answers, not guesses. I load your prices, policies and FAQs, and it replies in the customer's own language — Turkish, Persian or English. Anything it can't answer is handed to you with the whole conversation attached.",d2:"Qualify leads",d2r:"It asks the four or five questions your sales team always asks, scores the answers, and drops a ready lead into your sheet, CRM or inbox. You stop opening cold enquiries.",d3:"Take payments",d3r:"Catalogue, cart, checkout and receipt, all inside Telegram, plus an admin panel where you change prices yourself. No app to install, no card page to build.",d4:"Reach a big list",d4r:"Scheduled broadcasts to tens of thousands of subscribers, with delivery and click tracking. I run a channel with about 18,000 people on it, so this part is not theory.",demoFollow:"What would that cost?",demoFollowR:"Most bots land between $1,200 and $3,500, depending on payments and admin needs. There's an estimator further down this page, or we can just talk.",demoCta:"Book a call",demoRestart:"Start over"},
+tr:{h1:"İşiniz gece üçte de çalışıyor olmalı.",heroP:"Ben Hadi Kianirad, İstanbul'da çalışan bir Python mühendisiyim. Siz uyurken müşterilerinize cevap veren, potansiyel müşterilerinizi eleyen ve verinizi taşıyan backend sistemleri, Telegram botları ve yapay zekâ otomasyonları kuruyorum. <strong>Şu anda on dörtten fazlası canlıda çalışıyor.</strong>",ctaScope:"Projenizi hesaplayın",ctaProof:"Yaptıklarımı görün",botStatus:"çevrimiçi — deneyin",buildH:"Neler yapıyorum",buildLede:"Beş iş, düzgün yapılmış hâliyle ve müşterilerinizin gerçekten konuştuğu dillerde.",b1t:"Gerçekten iş yapan Telegram botları",b1d:"Satış, destek, müşteri eleme, yönetim paneli ve on binlerce kişilik listelere zamanlanmış gönderim. Ödeme ve analitik dâhil; fiyatı değiştirmek için beni aramanız gerekmez.",b2t:"Backend ve API'ler",b2d:"Temiz veri modelleri ve belgelenmiş uç noktalarla asenkron servisler; işletmenizin zaten kullandığı platformlara bağlanır. Demo için değil, gerçek trafiğe dayanmak için kurulur.",b3t:"Saat kazandıran yapay zekâ otomasyonu",b3d:"Belge işleme, hazır cevap taslakları, içerik hatları, iç araçlar. Bir moda kelimeye göre değil, ekibinizin her hafta saatlerini yiyen işlere göre kapsamlandırılır.",b4t:"Üç alfabede web siteleri",b4d:"İngilizce, Türkçe ve Farsça; hızlı, mobil uyumlu, SEO'ya hazır. Sağdan sola yazım düzgün biçimde kurulur, sonradan eklenmiş bir ayna değil. Soldaki dil düğmesini deneyin.",b5t:"Yayın sonrası barındırma ve bakım",b5d:"SSL, otomatik yedekleme, izleme, güvenlik taraması ve güncellemeler. Çoğu serbest çalışanın kaybolduğu kısım, benim kaldığım kısım.",proofH:"Kanıt",proofLede:"Maket değil, canlı çalışan sistemler.",f1:"Canlıdaki Telegram botu",f2:"Yayınladığım dil, RTL dâhil",f3:"Yönettiğim bir kanaldaki abone",f4:"İstanbul; Avrupa ve Körfez ile aynı saatlerde",c1tag:"Gerçek zamanlı veri · bütünlük denetimi",c1d:"Farsça bir piyasa platformu: beş dakikada bir yenilenen veri hattı ve Telegram ile X'teki herkese açık paylaşımlarla denetlenebilen bir sinyal geçmişi. Sonrasında tüm geçmişi yeniden denetleyen bir replay motoru yazdım ve kendi canlı kodumdaki bir işaret kuralı hatasını bununla bulup düzelttim.",c2tag:"Müşteri eleme · Farsça",c2d:"Türkiye'deki üniversitelere başvuran Farsça konuşan öğrencilerle konuşan, bir danışmanın soracağı soruları soran ve soğuk bir başvuru yerine elenmiş bir aday teslim eden Telegram botu.",allProjects:"Tüm projeler",scopeH:"Kapsam ve fiyat",scopeLede:"İhtiyacınız olanı işaretleyin. Tek bir rakam değil bir aralık görürsünüz; çünkü görüşmeden önceki dürüst tahmin bir aralıktır.",tallyK:"Yaklaşık proje aralığı",tallyEmpty:"Henüz seçim yapılmadı.",ctaQuote:"Sabit teklif alın",tallyNote:"Sabit fiyat işe başlamadan önce belirlenir. Yarısı peşin, yarısı teslimde. Bakım paketleri aylık faturalanır, istediğiniz zaman iptal edilir.",weeksTxt:"Yaklaşık {n} haftalık iş.",plusCare:"artı ayda {m}",optSite:"Web sitesi",optSiteD:"Tasarım, geliştirme ve yayın",optApi:"Backend veya API",optApiD:"FastAPI servisi, veritabanı, entegrasyon",optBot:"Telegram botu",optBotD:"Destek, satış veya müşteri eleme",optAi:"Yapay zekâ otomasyonu",optAiD:"Tekrar eden bir manuel işi devralır",optMulti:"Çok dillilik ve RTL",optMultiD:"Türkçe, Farsça veya Arapça",optCare:"Barındırma ve bakım",optCareD:"Aylık, istediğiniz zaman iptal",demoIntro:"Merhaba. Yaptığım botların küçük bir örneğiyim. Sizinki ne yapsın isterdiniz?",d1:"Müşterilere 7/24 cevap versin",d1r:"O zaman tahminlere değil, sizin gerçek cevaplarınıza ihtiyacı var. Fiyatlarınızı, kurallarınızı ve sık sorulanları yüklerim; bot müşterinin kendi dilinde yanıt verir: Türkçe, Farsça veya İngilizce. Cevaplayamadığı her şey, tüm konuşmayla birlikte size iletilir.",d2:"Müşteri adaylarını elesin",d2r:"Satış ekibinizin her seferinde sorduğu dört beş soruyu sorar, cevapları puanlar ve hazır bir adayı tablonuza, CRM'inize veya gelen kutunuza bırakır. Artık soğuk başvuru açmazsınız.",d3:"Ödeme alsın",d3r:"Katalog, sepet, ödeme ve fiş; hepsi Telegram içinde. Üstüne fiyatları kendiniz değiştirdiğiniz bir yönetim paneli. Kurulacak uygulama, yazılacak ödeme sayfası yok.",d4:"Büyük bir listeye ulaşsın",d4r:"On binlerce aboneye zamanlanmış gönderim, teslim ve tıklama takibiyle. Yaklaşık 18.000 kişilik bir kanalı ben yönetiyorum, yani bu kısım teori değil.",demoFollow:"Bunun maliyeti ne olur?",demoFollowR:"Botların çoğu, ödeme ve yönetim ihtiyacına göre 1.200 ile 3.500 dolar arasında çıkıyor. Sayfanın altında bir hesaplayıcı var, ya da doğrudan konuşabiliriz.",demoCta:"Görüşme ayarla",demoRestart:"Baştan başla"},
+fa:{h1:"کسب‌وکار شما باید ساعت سه بامداد هم کار کند.",heroP:"من هادی کیانی‌راد هستم؛ مهندس پایتون در استانبول. بک‌اند، ربات تلگرام و اتوماسیون هوش مصنوعی می‌سازم که وقتی شما خواب هستید به مشتری‌هایتان پاسخ می‌دهد، سرنخ‌ها را غربال می‌کند و داده‌ها را جابه‌جا می‌کند. <strong>همین حالا بیش از چهارده مورد از آن‌ها در حال اجراست.</strong>",ctaScope:"پروژه‌تان را برآورد کنید",ctaProof:"کارهایم را ببینید",botStatus:"آنلاین — امتحان کنید",buildH:"چه می‌سازم",buildLede:"پنج کار، درست انجام‌شده، به همان زبانی که مشتری شما حرف می‌زند.",b1t:"ربات‌های تلگرامی که واقعاً کار می‌کنند",b1d:"فروش، پشتیبانی، غربال سرنخ، پنل مدیریت و ارسال زمان‌بندی‌شده به فهرست‌های ده‌ها هزار نفری. پرداخت و تحلیل هم هست، تا برای تغییر یک قیمت مجبور نباشید به من زنگ بزنید.",b2t:"بک‌اند و API",b2d:"سرویس‌های ناهم‌زمان با مدل داده‌ی تمیز و مستندات مشخص، متصل به همان بستری که کسب‌وکار شما از قبل روی آن کار می‌کند. ساخته‌شده برای ترافیک واقعی، نه برای دمو.",b3t:"اتوماسیونی که ساعت‌ها را آزاد می‌کند",b3d:"پردازش اسناد، پیش‌نویس پاسخ‌ها، خط تولید محتوا و ابزارهای داخلی. دامنه‌اش را کارهایی تعیین می‌کند که هر هفته وقت تیم شما را می‌گیرد، نه یک واژه‌ی مد روز.",b4t:"وب‌سایت در سه الفبا",b4d:"انگلیسی، ترکی و فارسی؛ سریع، واکنش‌گرا و آماده‌ی سئو. راست‌به‌چپ به‌شکل درست پیاده می‌شود، نه به‌صورت یک قرینه‌ی سرهم‌بندی‌شده. زبان را از کنار همین صفحه عوض کنید.",b5t:"میزبانی و نگهداری پس از انتشار",b5d:"SSL، پشتیبان‌گیری خودکار، پایش، اسکن امنیتی و به‌روزرسانی. همان بخشی که بیشتر فریلنسرها غیب می‌شوند، بخشی است که من می‌مانم.",proofH:"نمونه‌ کار",proofLede:"سیستم‌هایی که زنده‌اند، نه ماکت.",f1:"ربات تلگرام در حال اجرا",f2:"زبانی که با آن تحویل می‌دهم، شامل راست‌به‌چپ",f3:"عضو در کانالی که خودم اداره می‌کنم",f4:"استانبول؛ هم‌ساعت با اروپا و خلیج",c1tag:"داده‌ی بی‌درنگ · حسابرسی صحت",c1d:"یک پلتفرم بازار فارسی‌زبان با خط داده‌ای که هر پنج دقیقه به‌روز می‌شود و تاریخچه عمومی سیگنال‌ها که می‌توان آن را با پست‌های تلگرام و X تطبیق و بررسی کرد. بعدتر موتوری برای بازپخش و حسابرسی کل تاریخچه ساختم و با همان، یک خطای قرارداد علامت را در کد اجرایی خودم پیدا و اصلاح کردم.",c2tag:"غربال سرنخ · فارسی",c2d:"رباتی تلگرامی که با دانشجویان فارسی‌زبان متقاضی دانشگاه‌های ترکیه گفت‌وگو می‌کند، همان پرسش‌هایی را می‌پرسد که یک مشاور می‌پرسد و به‌جای یک درخواست سرد، یک متقاضی غربال‌شده تحویل می‌دهد.",allProjects:"همه‌ی پروژه‌ها",scopeH:"برآورد و هزینه",scopeLede:"آنچه لازم دارید را علامت بزنید. نتیجه یک بازه است نه یک عدد، چون برآورد صادقانه پیش از گفت‌وگو همیشه یک بازه است.",tallyK:"بازه‌ی تقریبی پروژه",tallyEmpty:"هنوز چیزی انتخاب نشده.",ctaQuote:"دریافت قیمت قطعی",tallyNote:"قیمت قطعی پیش از شروع کار توافق می‌شود. نیمی پیش‌پرداخت، نیمی هنگام تحویل. طرح نگهداری ماهانه است و هر زمان قابل لغو.",weeksTxt:"حدود {n} هفته کار.",plusCare:"به‌علاوه‌ی ماهی {m}",optSite:"وب‌سایت",optSiteD:"طراحی، ساخت و انتشار",optApi:"بک‌اند یا API",optApiD:"سرویس FastAPI، پایگاه داده، اتصال‌ها",optBot:"ربات تلگرام",optBotD:"پشتیبانی، فروش یا غربال سرنخ",optAi:"اتوماسیون هوش مصنوعی",optAiD:"جای یک کار دستی تکراری را می‌گیرد",optMulti:"چندزبانه و راست‌به‌چپ",optMultiD:"ترکی، فارسی یا عربی",optCare:"میزبانی و نگهداری",optCareD:"ماهانه، هر زمان قابل لغو",demoIntro:"سلام. من نمونه‌ی کوچکی از رباتی هستم که می‌سازم. دوست دارید مال شما چه کاری بکند؟",d1:"شبانه‌روز جواب مشتری را بدهد",d1r:"در این صورت به پاسخ‌های واقعی شما نیاز دارد، نه حدس. قیمت‌ها، قوانین و پرسش‌های پرتکرارتان را بار می‌زنم و ربات به زبان خود مشتری جواب می‌دهد: ترکی، فارسی یا انگلیسی. هرچه نتواند پاسخ دهد، همراه کل گفت‌وگو به شما تحویل می‌شود.",d2:"سرنخ‌ها را غربال کند",d2r:"همان چهار پنج پرسشی را می‌پرسد که تیم فروش شما همیشه می‌پرسد، پاسخ‌ها را امتیاز می‌دهد و یک سرنخ آماده را در شیت، CRM یا ایمیل شما می‌گذارد. دیگر درخواست سرد باز نمی‌کنید.",d3:"پرداخت بگیرد",d3r:"فهرست محصول، سبد خرید، پرداخت و رسید، همه داخل تلگرام؛ به‌علاوه‌ی پنلی که خودتان قیمت را در آن عوض می‌کنید. نه اپلیکیشنی برای نصب، نه صفحه‌ی پرداختی برای ساختن.",d4:"به فهرست بزرگ پیام بدهد",d4r:"ارسال زمان‌بندی‌شده به ده‌ها هزار عضو، با گزارش تحویل و کلیک. کانالی با حدود ۱۸٬۰۰۰ عضو را خودم اداره می‌کنم، پس این بخش تئوری نیست.",demoFollow:"هزینه‌اش چقدر می‌شود؟",demoFollowR:"بیشتر ربات‌ها بسته به پرداخت و پنل مدیریت، بین ۱٬۲۰۰ تا ۳٬۵۰۰ دلار درمی‌آید. پایین‌تر در همین صفحه یک برآوردگر هست، یا می‌توانیم مستقیم حرف بزنیم.",demoCta:"رزرو گفت‌وگو",demoRestart:"از نو"}
+};
+</script>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  "use strict";
+  var P=KR.config.prices;
+  var thread=document.getElementById("thread"),chips=document.getElementById("chips");
+  var FLOW=[{label:"d1",reply:"d1r"},{label:"d2",reply:"d2r"},{label:"d3",reply:"d3r"},{label:"d4",reply:"d4r"}];
+  function say(text,who){var el=document.createElement("div");el.className="msg "+who;el.textContent=text;thread.appendChild(el);}
+  function setChips(list){chips.innerHTML="";list.forEach(function(c){var b=document.createElement("button");b.type="button";b.className="chip"+(c.plain?" plain":"");b.textContent=c.label;b.addEventListener("click",c.on);chips.appendChild(b);});}
+  function botSays(text,then){if(KR.reduce){say(text,"bot");if(then)then();return;}var t=document.createElement("div");t.className="typing";t.innerHTML="<i></i><i></i><i></i>";thread.appendChild(t);setTimeout(function(){t.remove();say(text,"bot");if(then)then();},620);}
+  function resetDemo(){thread.innerHTML="";say(KR.t("demoIntro"),"bot");setChips(FLOW.map(function(f){return{label:KR.t(f.label),on:function(){pick(f);}};}));}
+  function pick(f){say(KR.t(f.label),"me");setChips([]);botSays(KR.t(f.reply),function(){setChips([{label:KR.t("demoFollow"),on:function(){say(KR.t("demoFollow"),"me");setChips([]);botSays(KR.t("demoFollowR"),function(){setChips([{label:KR.t("demoCta"),on:function(){location.href="contact.html";}},{label:KR.t("demoRestart"),plain:true,on:resetDemo}]);});}},{label:KR.t("demoRestart"),plain:true,on:resetDemo}]);});}
+  var optsEl=document.getElementById("opts"),amountEl=document.getElementById("amount"),weeksEl=document.getElementById("weeks"),chosen={};
+  var ITEMS=[{k:"site",t:"optSite",d:"optSiteD"},{k:"api",t:"optApi",d:"optApiD"},{k:"bot",t:"optBot",d:"optBotD"},{k:"ai",t:"optAi",d:"optAiD"},{k:"multi",t:"optMulti",d:"optMultiD"},{k:"care",t:"optCare",d:"optCareD"}];
+  function buildOpts(){optsEl.innerHTML="";ITEMS.forEach(function(it){var p=P[it.k],lab=document.createElement("label");lab.className="opt";var input=document.createElement("input");input.type="checkbox";input.checked=!!chosen[it.k];input.addEventListener("change",function(){chosen[it.k]=input.checked;tally();});var box=document.createElement("span"),t1=document.createElement("span"),t2=document.createElement("span");t1.className="t";t1.textContent=KR.t(it.t);t2.className="d";t2.textContent=KR.t(it.d);box.appendChild(t1);box.appendChild(document.createElement("br"));box.appendChild(t2);var r=document.createElement("span");r.className="r";r.textContent=p.monthlyLo?KR.money(p.monthlyLo)+"–"+KR.money(p.monthlyHi):KR.money(p.lo)+"–"+KR.money(p.hi);lab.appendChild(input);lab.appendChild(box);lab.appendChild(r);optsEl.appendChild(lab);});tally();}
+  function tally(){var lo=0,hi=0,weeks=0,mlo=0,mhi=0,any=false;ITEMS.forEach(function(it){if(!chosen[it.k])return;any=true;var p=P[it.k];if(p.monthlyLo){mlo+=p.monthlyLo;mhi+=p.monthlyHi;return;}lo+=p.lo;hi+=p.hi;if(p.weeks>weeks)weeks=p.weeks;});if(!any){amountEl.textContent="—";weeksEl.textContent=KR.t("tallyEmpty");return;}var parts=[];if(hi>0)parts.push(KR.money(lo)+" – "+KR.money(hi));if(mhi>0)parts.push(KR.t("plusCare").replace("{m}",KR.money(mlo)+"–"+KR.money(mhi)));amountEl.textContent=parts.join(" ");weeksEl.textContent=weeks>0?KR.t("weeksTxt").replace("{n}",String(weeks)):"";}
+  KR.onChange(function(){buildOpts();resetDemo();});buildOpts();resetDemo();
+})();
+</script>
 </body>
 </html>
