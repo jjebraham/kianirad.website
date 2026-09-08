@@ -1,45 +1,39 @@
-# KIANIRAD Web Design & Development
+# Kianirad.website
 
-Personal portfolio website rebuilt as a plain HTML/CSS/JS multi-page site (Vite),
-matching the design of the previous Wix version
-(https://ahkr19003.wixsite.com/kiani-development/).
+Personal portfolio for Hadi Kianirad, built as a lightweight multi-page HTML/CSS/JavaScript site with Vite.
 
 ## Pages
 
-| File                | Page                                   |
-|---------------------|----------------------------------------|
-| `index.html`        | Home — hero + "Inspiring Design" gallery |
-| `plans-pricing.html`| Plans & Pricing — Basic / Pro / Exclusive |
-| `projects.html`     | Recent Projects                        |
-| `about.html`        | About (BIO)                            |
-| `contact.html`      | Contact + form                         |
-| `consultancy.html`  | Consultancy + appointment form         |
+- `index.html` — home, services, proof, interactive demo and project estimator
+- `projects.html` — selected live projects
+- `consultancy.html` — consultancy offering and process
+- `about.html` — background and working style
+- `contact.html` — Telegram, email, GitHub and enquiry form
+- `plans-pricing.html` — redirects to the estimator on the home page
 
-Shared assets: `styles.css`, `script.js`, images in `public/images/`.
+Shared front-end assets live in `assets/site.css` and `assets/site.js`.
+
+## Contact configuration
+
+The main contact details are defined once in `assets/site.js`:
+
+- Email: `kianirad2020@gmail.com`
+- Telegram: `@amirkiaaani`
+- GitHub: `jjebraham`
+
+The contact form currently opens a pre-filled email. A POST endpoint can be added later by setting `formEndpoint` in `assets/site.js`.
 
 ## Run locally
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173
+npm run dev
 ```
 
-## Build & deploy
+## Build
 
 ```bash
-npm run build      # outputs static files to dist/
+npm run build
 ```
 
-Upload the **contents of `dist/`** to your web server document root.
-(A ready-made `dist/` is included — you can upload it directly without building.)
-
-## Notes
-
-- **Buy Now buttons** link to the Contact page (no payment provider wired up).
-- **Contact / appointment forms** use the free [FormSubmit](https://formsubmit.co)
-  service and send to `kianirad2020@gmail.com`. The first submission triggers a
-  one-time activation email from FormSubmit — click the confirmation link in it
-  once, and the forms will work from then on. No server-side code needed.
-- The footer year updates automatically via `script.js`.
-- Fonts: [Jost](https://fonts.google.com/specimen/Jost) (Google Fonts, headings)
-  + Helvetica/Arial (body), matching the Wix look.
+Vite outputs the production site to `dist/`. Deploy the contents of `dist/` to the server document root.
