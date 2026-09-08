@@ -86,6 +86,7 @@
         <div class="field"><label for="reply" data-i18n="lReply">Email or Telegram — however you'd like me to answer</label><input id="reply" type="text" autocomplete="email"></div>
         <div class="field"><label for="need" data-i18n="lNeed">What do you need?</label><select id="need"><option value="bot" data-i18n="oBot">A Telegram bot</option><option value="api" data-i18n="oApi">A backend or API</option><option value="ai" data-i18n="oAi">AI automation</option><option value="site" data-i18n="oSite">A website</option><option value="care" data-i18n="oCare">Hosting and maintenance</option><option value="other" data-i18n="oOther">Something else</option></select></div>
         <div class="field"><label for="msg" data-i18n="lMsg">What's the task that keeps costing you time?</label><textarea id="msg" data-i18n-attr="placeholder:phMsg" placeholder="For example: we get about 60 enquiries a week on Instagram and Telegram, all asking the same five questions about price and availability, and two people spend their mornings answering them."></textarea></div>
+        <div aria-hidden="true" style="position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
         <div><button type="button" class="btn" id="send" data-i18n="btnSend">Send it</button><p class="formstatus" id="status" role="status"></p></div>
         <p class="formnote" data-i18n="formNote">No newsletter, no automated sequence, no sales call booked without you asking for one.</p>
       </div>
@@ -109,7 +110,7 @@ fa:{kTitle:"بگویید چه چیزی هفته‌ی شما را می‌بلعد
 <script>
 (function(){
   "use strict";
-  var btn=document.getElementById("send"),statusEl=document.getElementById("status"),msgEl=document.getElementById("msg"),needSel=document.getElementById("need");
+  var btn=document.getElementById("send"),statusEl=document.getElementById("status"),msgEl=document.getElementById("msg"),needSel=document.getElementById("need"),honeypot=document.getElementById("website");
   function val(id){return document.getElementById(id).value.trim();}
 
   var params=new URLSearchParams(location.search),rawServices=params.get("services")||"",range=params.get("range")||"";
@@ -138,7 +139,7 @@ fa:{kTitle:"بگویید چه چیزی هفته‌ی شما را می‌بلعد
     var name=val("name"),reply=val("reply"),msg=val("msg");
     var need=needSel.options[needSel.selectedIndex].textContent;
     if(!name||!reply||!msg){statusEl.textContent=KR.t("stMissing");return;}
-    var payload={name:name,contact:reply,need:need,message:msg,lang:KR.lang,page:location.href};
+    var payload={name:name,contact:reply,need:need,message:msg,lang:KR.lang,page:location.href,website:honeypot.value};
     var endpoint=KR.config.formEndpoint;
     if(!endpoint){statusEl.textContent=KR.t("stMail");var body="Name: "+name+"\nContact: "+reply+"\nNeeds: "+need+"\n\n"+msg;location.href="mailto:"+KR.config.email+"?subject="+encodeURIComponent("Project enquiry — "+name)+"&body="+encodeURIComponent(body);return;}
     statusEl.textContent=KR.t("stSending");btn.disabled=true;
