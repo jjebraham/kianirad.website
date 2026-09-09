@@ -4,22 +4,27 @@ Business portfolio for Hadi Kianirad, built as a lightweight multi-page static H
 
 ## Production architecture
 
-There is **no production build step** and no application server. The source HTML, `assets/`, images and root metadata files are deployed directly to the web root and served by Nginx behind Cloudflare.
+There is **no npm/Vite production build step** and no application server for the public site. HTML, `assets/`, images and root metadata files are deployed directly to the Nginx document root behind Cloudflare.
 
 Production URL: `https://www.kianirad.website/`
 
-The apex host should redirect permanently to `www`.
+The apex host must redirect permanently to `www`.
 
-## Pages
+## Public pages
 
 - `index.html` — home, services, proof, interactive bot demo and project estimator
 - `projects.html` — selected live projects
 - `consultancy.html` — consultancy offering, process and FAQ
 - `about.html` — background and working style
 - `contact.html` — Telegram, email, GitHub and enquiry form
-- `plans-pricing.html` — redirects to the estimator on the home page and should remain `noindex`
+- `privacy.html` — plain-language privacy/KVKK information
+- `status.html` — static public status snapshot; populated only with systems approved for public reporting
+- `plans-pricing.html` — redirects to the estimator and remains `noindex`
+- `tr/klinikler-icin-telegram-botu.html` — Turkish clinic landing page
 
-Shared front-end assets live in:
+Static Turkish and Persian copies of the core pages live under `tr/` and `fa/`.
+
+Shared front-end assets:
 
 - `assets/site.css`
 - `assets/site.js`
@@ -34,11 +39,24 @@ Current contact configuration in `assets/site.js`:
 - Telegram: `@amirkiaaani`
 - GitHub: `jjebraham`
 
-The contact form falls back to a pre-filled email while `formEndpoint` is blank. Do not put secrets in this repository.
+The contact form falls back to a pre-filled email while `formEndpoint` is blank. The optional Telegram-forwarding FastAPI service is documented under `server/`. Never put its bot token or chat ID in Git.
+
+## Static language generation
+
+`build_i18n.py` reads the existing `BASE` dictionary in `assets/site.js` and each page's `PAGE_STRINGS`. It generates baked `/tr/` and `/fa/` pages, self-canonicals and reciprocal `hreflang` tags without hand-copying translations.
+
+`build_sitemap.py` rebuilds `sitemap.xml` from the public files that actually exist.
+
+GitHub Actions runs both scripts automatically when the source dictionaries or core pages change and commits generated pages back to `main`.
+
+Manual regeneration is also possible:
+
+```bash
+python3 build_i18n.py
+python3 build_sitemap.py
+```
 
 ## Local preview
-
-Any simple static HTTP server is sufficient, for example:
 
 ```bash
 python3 -m http.server 8000
@@ -46,16 +64,36 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000/`.
 
-## Deploy
+## Production deploy
 
-Pull the repository, then copy the static site files directly to the configured Nginx document root. Do **not** run `npm install` or `npm run build` for production deployment.
+Pull `main`, then sync only public files to the Nginx document root. Do **not** run `npm install` or `npm run build`.
+
+```bash
+cd /home/kianirad2020/kianirad.website
+git pull --ff-only
+
+sudo rsync -a --delete \
+  --exclude='.git/' \
+  --exclude='.github/' \
+  --exclude='.gitignore' \
+  --exclude='README.md' \
+  --exclude='server/' \
+  --exclude='build_i18n.py' \
+  --exclude='build_sitemap.py' \
+  --exclude='status.json' \
+  ./ /var/www/kianirad-react-dist/
+
+sudo nginx -t && sudo systemctl reload nginx
+```
 
 After deploying:
 
-1. Purge the Cloudflare cache.
+1. Purge Cloudflare cache.
 2. Check EN, TR and FA in a private window.
 3. Check light and dark themes.
-4. Confirm Persian switches the page to RTL.
+4. Confirm Persian pages are RTL even with JavaScript disabled.
 5. Confirm the browser console is free of errors.
 6. Confirm `/assets/site.js`, `/favicon.ico`, `/og-image.png`, `/robots.txt` and `/sitemap.xml` return HTTP 200.
-7. Confirm the apex host redirects to `https://www.kianirad.website/` with HTTP 301.
+7. Confirm `/tr/` and `/fa/` return HTTP 200.
+8. Confirm the apex host redirects to `https://www.kianirad.website/` with HTTP 301.
+9. Confirm an unknown URL returns the styled `404.html` with an actual HTTP 404 status.
