@@ -217,6 +217,14 @@ def replace_canonical(src: str, url: str) -> str:
     return re.sub(r'<link rel="canonical" href="[^"]+">', f'<link rel="canonical" href="{url}">', src, count=1)
 
 
+def ensure_privacy_link(src: str) -> str:
+    """Keep Privacy crawlable/no-JS while site.js still owns the translation at runtime."""
+    if 'class="privacy-link"' in src:
+        return src
+    replacement = ' · <a class="privacy-link" href="/privacy.html" data-i18n="navPrivacy">Privacy</a></footer>'
+    return re.sub(r'</footer>', replacement, src, count=1)
+
+
 def bake_text(src: str, key: str, value: str, html_mode: bool = False) -> str:
     attr = "data-i18n-html" if html_mode else "data-i18n"
     escaped = value if html_mode else html.escape(value, quote=False)
@@ -275,10 +283,10 @@ def build():
         if not path.exists():
             print(f"skip missing: {name}")
             continue
-        source = path.read_text(encoding="utf-8")
+        source = ensure_privacy_link(path.read_text(encoding="utf-8"))
         page_strings = parse_object(source, "window.PAGE_STRINGS")
 
-        # Keep reciprocal hreflang tags on the English source page too.
+        # Keep reciprocal hreflang tags and a static Privacy link on the English source page too.
         english = replace_hreflang(source, name)
         english = replace_canonical(english, page_url("en", name))
         path.write_text(english, encoding="utf-8")
