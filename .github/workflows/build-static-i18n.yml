@@ -1,0 +1,48 @@
+name: Build static language pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'projects.html'
+      - 'consultancy.html'
+      - 'about.html'
+      - 'contact.html'
+      - 'privacy.html'
+      - 'assets/site.js'
+      - 'build_i18n.py'
+      - 'build_sitemap.py'
+      - '.github/workflows/build-static-i18n.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate translated pages and sitemap
+        run: |
+          python3 build_i18n.py
+          python3 build_sitemap.py
+          git diff --check
+      - name: Commit generated files
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html projects.html consultancy.html about.html contact.html privacy.html tr/ fa/ sitemap.xml
+          if git diff --cached --quiet; then
+            echo 'Generated pages already up to date.'
+          else
+            git commit -m 'Generate static Turkish and Persian pages'
+            git push
+          fi
