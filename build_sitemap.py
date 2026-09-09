@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parent
 BASE = "https://www.kianirad.website"
 CORE = ["index.html", "projects.html", "consultancy.html", "about.html", "contact.html"]
 EXTRA = ["privacy.html", "status.html"]
+TRANSLATED_EXTRA = ["privacy.html"]
 
 
 def url_for(path: Path) -> str:
@@ -24,7 +25,7 @@ def url_for(path: Path) -> str:
 def main():
     candidates = [ROOT / name for name in CORE + EXTRA]
     for lang in ("tr", "fa"):
-        candidates.extend(ROOT / lang / name for name in CORE)
+        candidates.extend(ROOT / lang / name for name in CORE + TRANSLATED_EXTRA)
     candidates.append(ROOT / "tr" / "klinikler-icin-telegram-botu.html")
 
     paths = []
