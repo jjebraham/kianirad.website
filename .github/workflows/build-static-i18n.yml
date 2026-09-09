@@ -12,6 +12,7 @@ on:
       - 'privacy.html'
       - 'assets/site.js'
       - 'build_i18n.py'
+      - 'build_seo.py'
       - 'build_sitemap.py'
       - '.github/workflows/build-static-i18n.yml'
   workflow_dispatch:
@@ -30,9 +31,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Generate translated pages and sitemap
+      - name: Generate translated pages, SEO and sitemap
         run: |
           python3 build_i18n.py
+          python3 build_seo.py
           python3 build_sitemap.py
           git diff --check
       - name: Commit generated files
@@ -43,6 +45,6 @@ jobs:
           if git diff --cached --quiet; then
             echo 'Generated pages already up to date.'
           else
-            git commit -m 'Generate static Turkish and Persian pages'
+            git commit -m 'Generate static language and SEO updates'
             git push
           fi
