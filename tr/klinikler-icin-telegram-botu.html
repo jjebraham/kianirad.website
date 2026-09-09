@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr" data-static-lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klinikler için Telegram Botu | Hadi Kianirad</title>
+<meta name="description" content="İstanbul'daki klinikler için tekrar eden fiyat, müsaitlik ve süreç sorularını karşılayan çok dilli Telegram botları.">
+<link rel="canonical" href="https://www.kianirad.website/tr/klinikler-icin-telegram-botu.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23137F72'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial,sans-serif' font-size='40' font-weight='800' fill='white'%3EK%3C/text%3E%3C/svg%3E">
+<link rel="alternate icon" href="/favicon.ico">
+<meta property="og:title" content="Klinikler için Telegram Botu | Hadi Kianirad">
+<meta property="og:description" content="Tekrar eden hasta sorularını otomatik karşılayan, gerektiğinde ekibe devreden Telegram botu.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.kianirad.website/tr/klinikler-icin-telegram-botu.html">
+<meta property="og:image" content="https://www.kianirad.website/og-image.png">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Klinikler için Telegram Botu | Hadi Kianirad">
+<meta name="twitter:description" content="Tekrar eden hasta sorularını otomatik karşılayan, gerektiğinde ekibe devreden Telegram botu.">
+<meta name="twitter:image" content="https://www.kianirad.website/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe geç</a>
+<div class="shell">
+  <aside class="rail">
+    <div><a class="mark" href="../index.html">Hadi Kianirad<span data-i18n="markSub">Çalışmaya devam eden sistemler</span></a><p class="role" data-i18n="role">Backend ve otomasyon mühendisi. İstanbul.</p><span class="pulse"><span class="dot"></span><span data-i18n="pulse">14+ sistem canlıda</span></span></div>
+    <nav class="railnav"><a href="../index.html" data-i18n="navHome">Ana sayfa</a><a href="../projects.html" data-i18n="navProjects">Projeler</a><a href="../consultancy.html" data-i18n="navConsult">Danışmanlık</a><a href="../about.html" data-i18n="navAbout">Hakkımda</a><a href="../contact.html" data-i18n="navContact">İletişim</a></nav>
+    <div class="railfoot"><div class="toolrow"><button type="button" class="themebtn" id="themebtn">☾</button></div></div>
+  </aside>
+  <main id="main">
+    <section class="hero">
+      <h1 class="display">Ekibiniz aynı hasta sorularını günde onlarca kez yazmak zorunda değil.</h1>
+      <p>Fiyat, müsaitlik, işlem öncesi hazırlık ve genel süreç hakkında aynı sorular Instagram ve Telegram'da tekrar tekrar geliyor. Bir Telegram botu bu ilk görüşmeyi sizin onayladığınız yanıtlarla yürütür; cevaplayamadığı veya hassas olan konuları doğrudan ekibinize devreder.</p>
+      <div class="heroactions"><a class="btn" href="../contact.html?services=bot">Kliniğiniz için konuşalım</a></div>
+      <div class="console">
+        <header><span class="dot"></span><b>clinic_demo_bot</b><span class="who">çevrimiçi — deneyin</span></header>
+        <div class="thread" id="clinicThread" aria-live="polite"></div>
+        <div class="chips" id="clinicChips"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sorun bot eksikliği değil, tekrar eden iş.</h2>
+      <p class="lede">Bir ekip üyesi aynı fiyat ve müsaitlik bilgisini tekrar tekrar yazıyorsa, zamanını tıbbi karar gerektirmeyen bir iletişim işine harcıyor demektir.</p>
+      <div class="build">
+        <div class="item"><div><h3>İlk soruları karşılar</h3><p>Bot, sizin verdiğiniz fiyat aralıklarını, çalışma saatlerini, konum bilgisini ve sık sorulan süreç bilgilerini kullanır. Bilmediği şeyi uydurmaz.</p></div><div class="stack">Telegram · Türkçe · Farsça · İngilizce</div></div>
+        <div class="item"><div><h3>Uygun talebi toplar</h3><p>İşlem türü, tercih edilen tarih, iletişim dili ve geri dönüş yolu gibi sizin belirlediğiniz soruları sorup başvuruyu düzenli biçimde ekibinize aktarır.</p></div><div class="stack">lead intake · yönlendirme · kayıt</div></div>
+        <div class="item"><div><h3>Tıbbi karar vermeye çalışmaz</h3><p>Tanı, kişiye özel tıbbi tavsiye veya klinik değerlendirme gerektiren sorular otomatik cevap kapsamının dışında tutulur ve insana devredilir.</p></div><div class="stack">sınırlar · insan devri · kontrollü yanıtlar</div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Nasıl kurulur?</h2>
+      <ol class="steps">
+        <li><h3>Gerçek soruları çıkarırız</h3><p>Ekibinizin son haftalarda tekrar tekrar cevapladığı soruları toplarız.</p></li>
+        <li><h3>Onaylı cevapları yazarız</h3><p>Bot yalnızca kliniğinizin verdiği fiyat, politika ve süreç bilgileriyle çalışır.</p></li>
+        <li><h3>Devir kurallarını belirleriz</h3><p>Hangi durumda insan devreye girecek, hangi bilgiler toplanacak ve talep kime gidecek açıkça tanımlanır.</p></li>
+        <li><h3>Yayına alır ve izleriz</h3><p>Gerçek görüşmelerde nerede takıldığını görür, içerik ve akışı gerektiğinde güncelleriz.</p></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Maliyet</h2>
+      <p class="lede">Sitedeki mevcut ön tahmin aralığı bir Telegram botu için <strong>$1.200–$3.500</strong>. Ödeme, yönetim paneli, çok dillilik ve dış sistem entegrasyonları kapsamı değiştirir. İş başlamadan önce kapsam ve sabit fiyat yazılı olarak netleşir.</p>
+    </section>
+
+    <section>
+      <h2>İlk adım: kullandığınız gerçek mesajlardan başlayalım.</h2>
+      <p class="lede">Bana ekibinizin tekrar tekrar cevapladığı üç ila beş örnek soru gönderin. Botun nerede fayda sağlayacağını ve nerede insanın kalması gerektiğini birlikte netleştirelim.</p>
+      <a class="btn" href="../contact.html?services=bot">Kliniğiniz için konuşalım</a>
+    </section>
+  </main>
+</div>
+<footer><span>Hadi Kianirad · İstanbul · Türkçe, English, فارسی</span><span dir="ltr"> · ©2026</span> · <a href="/privacy.html">Gizlilik</a></footer>
+<script>
+window.PAGE_STRINGS={en:{},tr:{},fa:{}};
+</script>
+<script src="../assets/site.js"></script>
+<script>
+(function(){
+  "use strict";
+  var thread=document.getElementById("clinicThread"),chips=document.getElementById("clinicChips");
+  var items=[
+    {q:"Fiyat ne kadar?",a:"Fiyat işlem türüne göre değişiyor. Size doğru bilgiyi vermek için önce hangi işlemle ilgilendiğinizi seçelim; ardından kliniğin onayladığı fiyat bilgisini gösterebilirim."},
+    {q:"Bu hafta boşluk var mı?",a:"Müsaitlik bilgisini bağlı takvimden kontrol edecek şekilde kurulabilirim. Takvim bağlantısı yoksa tercih ettiğiniz günü toplar ve ekibe hazır bir talep olarak iletirim."},
+    {q:"İyileşme süresi ne kadar?",a:"Bu soru kişiye ve işleme göre klinik değerlendirme gerektirebilir. Genel, klinik tarafından onaylanmış bilgiyi gösterebilir; kişiye özel değerlendirme için sizi ekibe aktarırım."}
+  ];
+  function say(text,who){var el=document.createElement("div");el.className="msg "+who;el.textContent=text;thread.appendChild(el);}
+  function render(){thread.innerHTML="";chips.innerHTML="";say("Merhaba. Kliniğe gelmeden önce ne öğrenmek istersiniz?","bot");items.forEach(function(it){var b=document.createElement("button");b.type="button";b.className="chip";b.textContent=it.q;b.addEventListener("click",function(){say(it.q,"me");say(it.a,"bot");});chips.appendChild(b);});}
+  render();
+})();
+</script>
+</body>
+</html>
