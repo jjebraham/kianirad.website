@@ -11,8 +11,11 @@ on:
       - 'contact.html'
       - 'privacy.html'
       - 'assets/site.js'
+      - 'assets/ui-v2.css'
+      - 'assets/ui-v2.js'
       - 'build_i18n.py'
       - 'build_seo.py'
+      - 'build_ui.py'
       - 'build_sitemap.py'
       - '.github/workflows/build-static-i18n.yml'
   workflow_dispatch:
@@ -31,20 +34,21 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Generate translated pages, SEO and sitemap
+      - name: Generate translated pages, SEO, UI and sitemap
         run: |
           python3 build_i18n.py
           python3 build_seo.py
+          python3 build_ui.py
           python3 build_sitemap.py
           git diff --check
       - name: Commit generated files
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html projects.html consultancy.html about.html contact.html privacy.html tr/ fa/ sitemap.xml
+          git add index.html projects.html consultancy.html about.html contact.html privacy.html 404.html plans-pricing.html status.html tr/ fa/ sitemap.xml
           if git diff --cached --quiet; then
             echo 'Generated pages already up to date.'
           else
-            git commit -m 'Generate static language and SEO updates'
+            git commit -m 'Generate static language SEO and UI updates'
             git push
           fi
