@@ -12,6 +12,10 @@ var KR = (function () {
     telegram: "amirkiaaani",             // <-- your real Telegram username, no @
     github: "jjebraham",
 
+    // TODO: set the real Cal.com/Calendly URL here when JJ supplies it.
+    // While blank, "Book a 20-minute call" links keep their contact.html fallback.
+    bookingUrl: "",
+
     // Leave blank ("") and the contact form opens a pre-filled email instead.
     // Put a URL here (your own FastAPI endpoint, Formspree, Web3Forms...) to POST instead.
     formEndpoint: "",
@@ -126,6 +130,15 @@ var KR = (function () {
     });
   }
 
+  function fillBookingLinks() {
+    if (!CONFIG.bookingUrl) return;
+    document.querySelectorAll('a[data-i18n="ctaMain"]').forEach(function (a) {
+      a.href = CONFIG.bookingUrl;
+      a.target = "_blank";
+      a.rel = "noopener";
+    });
+  }
+
   function ensurePrivacyLink() {
     document.querySelectorAll("footer").forEach(function (footer) {
       if (footer.querySelector(".privacy-link")) return;
@@ -205,6 +218,7 @@ var KR = (function () {
 
     ensurePrivacyLink();
     fillConfigSlots();
+    fillBookingLinks();
     markCurrentNav();
 
     var staticLang = document.documentElement.getAttribute("data-static-lang");
