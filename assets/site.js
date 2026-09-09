@@ -40,6 +40,7 @@ var KR = (function () {
       navConsult: "Consultancy",
       navAbout: "About",
       navContact: "Contact",
+      navPrivacy: "Privacy",
       ctaMain: "Book a 20-minute call",
       foot: "Kiani Limited Liability Company · Istanbul · English, Türkçe, فارسی"
     },
@@ -53,6 +54,7 @@ var KR = (function () {
       navConsult: "Danışmanlık",
       navAbout: "Hakkımda",
       navContact: "İletişim",
+      navPrivacy: "Gizlilik",
       ctaMain: "20 dakikalık görüşme ayarla",
       foot: "Kiani Limited Liability Company · İstanbul · English, Türkçe, فارسی"
     },
@@ -66,6 +68,7 @@ var KR = (function () {
       navConsult: "مشاوره",
       navAbout: "درباره من",
       navContact: "تماس",
+      navPrivacy: "حریم خصوصی",
       ctaMain: "رزرو گفت‌وگوی ۲۰ دقیقه‌ای",
       foot: "شرکت کیانی · استانبول · English, Türkçe, فارسی"
     }
@@ -120,6 +123,19 @@ var KR = (function () {
       var slot = el.querySelector(".v");
       if (slot) slot.textContent = text;
       else el.textContent = text;
+    });
+  }
+
+  function ensurePrivacyLink() {
+    document.querySelectorAll("footer").forEach(function (footer) {
+      if (footer.querySelector(".privacy-link")) return;
+      footer.appendChild(document.createTextNode(" · "));
+      var link = document.createElement("a");
+      link.className = "privacy-link";
+      link.href = "/privacy.html";
+      link.setAttribute("data-i18n", "navPrivacy");
+      link.textContent = BASE.en.navPrivacy;
+      footer.appendChild(link);
     });
   }
 
@@ -187,11 +203,15 @@ var KR = (function () {
       else if (tb) tb.textContent = window.matchMedia("(prefers-color-scheme: dark)").matches ? "☀" : "☾";
     } catch (e) {}
 
+    ensurePrivacyLink();
     fillConfigSlots();
     markCurrentNav();
 
-    var savedLang = "en";
-    try { savedLang = localStorage.getItem("kr-lang") || "en"; } catch (e) {}
+    var staticLang = document.documentElement.getAttribute("data-static-lang");
+    var savedLang = staticLang || "en";
+    if (!staticLang) {
+      try { savedLang = localStorage.getItem("kr-lang") || "en"; } catch (e) {}
+    }
     apply(savedLang);
   }
 
