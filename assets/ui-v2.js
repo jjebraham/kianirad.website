@@ -32,137 +32,173 @@
       h: "Ú†Ø·ÙˆØ± Ø¨Ø§ Ù‡Ù… Ú©Ø§Ø± Ù…ÛŒâ€ŒÚ©Ù†ÛŒÙ…",
       d: "ÙØ±Ø§ÛŒÙ†Ø¯ÛŒ Ú©ÙˆØªØ§Ù‡ Ùˆ Ø´ÙØ§Ù: Ù…Ø³Ø¦Ù„Ù‡ Ø±Ø§ Ø¨ÙÙ‡Ù…ÛŒÙ…ØŒ Ø±ÛŒØ³Ú© Ø±Ø§ Ù…Ø´Ø®Øµ Ú©Ù†ÛŒÙ…ØŒ Ø¬Ù„ÙˆÛŒ Ú†Ø´Ù… Ø´Ù…Ø§ Ø¨Ø³Ø§Ø²ÛŒÙ… Ùˆ Ø¨Ø¹Ø¯ Ø§Ø² Ø§Ù†ØªØ´Ø§Ø± Ø³Ø§Ù„Ù… Ù†Ú¯Ù‡Ø´ Ø¯Ø§Ø±ÛŒÙ….",
       steps: [
-        ["Ø´Ù†Ø§Ø®Øª","Ø¯Ø± ÛŒÚ© Ú¯ÙØªâ€ŒÙˆÚ¯ÙˆÛˆ6ì¶ì6+ö`¶ã6`¶aø #6)öã6ªv)ö,H6*¶ªv,v)ö,vã6b6)öã6a¸ #6ªvaÈ6(¶ã6)È6b6)ö`¶.v)öbÈ6*6)öã6+È6*6)È6a¶,vax #6)ö`v,¶)ö,H6+va6-6b6+È6,v)È6av-6+¶-H6avã8 #6ªva¶ã6aKˆ—KˆÈ¶`¶ã6av*ˆ6*ö)ö*6*ˆ‹¶av+v+öb6+öaö#6`¶ã6av*¶#6av,ö)¶b6a6ã6*¸ #6aö)È6b6av,v,¶aö)öã6ªv)ö,H6`¶*6a6)ö,ˆ6-6,vb6.H6*6aø #6-vb6,v*ˆ6avªv*¶b6*6av-6+¶-H6avã8 #6-6b6+Ëˆ—KˆÈ¶,ö)ö+¶*ˆ‹¶aö,H6aö`v*¶aÈ6ã6ªH6a¶,ö+¶aø #6ã6`¶)ö*6a6)ö,ö*¶`v)ö+öaÈ6avã8 #6*6ã6a¶ã6+ö#6a¶aÈ6`v`¶-È6«ö,¶)ö,v-6b6-¶.vã6*‹ˆ—KˆÈ¶)öa¶*¶-6)ö,H6b6a¶«öaö+ö)ö,vã‹¶*¶+vb6ã6a6ªv)öava6#6o¶)öã6-6#6o¶-6*¶ã6*6)öa¸ #6«öã6,vã6b6+ö,H6-vb6,v*ˆ6a¶ã6)ö,ˆ6a¶«öaö+ö)ö,vã6o¶,È6)ö,ˆ6)öa¶*¶-6)ö,Kˆ—BˆKˆXÚˆ¶`va¶)öb6,vã8 #6aö)È‚ˆBˆNÂ‚ˆ[˜İ[Ûˆ[™Ê
-HÂˆ˜\ˆH
-Ú[™İË’Ôˆ	‰ˆÔ‹›[™ÊHØİ[Y[™Øİ[Y[[[Y[›[™È™[ˆÂˆ™]\›ˆ“ĞÑTÔÖÛHÈˆ™[ˆÂˆB‚ˆ[˜İ[Ûˆ™[™\”›ØÙ\ÜÊ
-HÂˆ˜\ˆÙXİ[ÛˆHØİ[Y[™Ù][[Y[RY
-œ›ØÙ\ÜË]ŒˆŠNÂˆYˆ
-\ÙXİ[ÛŠH™]\›Âˆ˜\ˆH“ĞÑTÔÖÛ[™Ê
-WNÂˆÙXİ[Û‹œ]Y\TÙ[XİÜŠšˆŠK^ÛÛ[HšÂˆÙXİ[Û‹œ]Y\TÙ[XİÜŠ‹›YHŠK^ÛÛ[H™ÂˆÙXİ[Û‹œ]Y\TÙ[XİÜ[
-‹œ›ØÙ\ÜËXØ\™ŠK™›Ü‘XXÚ
-[˜İ[Ûˆ
-Ø\™JHÂˆØ\™œ]Y\TÙ[XİÜŠ‹›ˆŠK^ÛÛ[Hİš[™ÊH
-ÈJKœYİ\
-‹ŒŠNÂˆØ\™œ]Y\TÙ[XİÜŠšÈŠK^ÛÛ[Hœİ\ÖÚWVÌNÂˆØ\™œ]Y\TÙ[XİÜŠœŠK^ÛÛ[Hœİ\ÖÚWVÌWNÂˆJNÂˆ˜\ˆX\œ]YYHHØİ[Y[œ]Y\TÙ[XİÜŠ‹XÚ[X\œ]YYK]Ü˜\ŠNÂˆYˆ
-X\œ]YYJHX\œ]YYKœÙ]]šX]J˜\šXK[X™[‹XÚ
-NÂˆB‚ˆ[˜İ[ÛˆY›ØÙ\ÜĞ[™X\œ]YYJ
-HÂˆ˜\ˆ›ÛÙˆHØİ[Y[™Ù][[Y[RY
-œ›ÛÙˆŠNÂˆ˜\ˆØÛÜHHØİ[Y[™Ù][[Y[RY
-œØÛÜHŠNÂˆ˜\ˆZ[HØİ[Y[™Ù][[Y[RY
-˜Z[ŠNÂˆYˆ
-\›ÛÙˆ\ØÛÜHXZ[
-H™]\›Â‚ˆYˆ
-YØİ[Y[œ]Y\TÙ[XİÜŠ‹XÚ[X\œ]YYK]Ü˜\ŠJHÂˆ˜\ˆÜ˜\HØİ[Y[˜Ü™X]Q[[Y[
-™]ˆŠNÂˆÜ˜\˜Û\ÜÓ˜[YHHXÚ[X\œ]YYK]Ü˜\ÂˆÜ˜\œÙ]]šX]Jœ›ÛH‹œ™YÚ[ÛˆŠNÂˆ˜\ˆ˜XÚÈHØİ[Y[˜Ü™X]Q[[Y[
-™]ˆŠNÂˆ˜XÚË˜Û\ÜÓ˜[YHHXÚ[X\œ]YYHÂˆ˜XÚËœÙ]]šX]J˜\šXKZY[ˆ‹YHŠNÂˆPÒ˜ÛÛ˜Ø]
-PÒ
-K™›Ü‘XXÚ
-[˜İ[Ûˆ
-˜[YJHÂˆ˜\ˆÜ[ˆHØİ[Y[˜Ü™X]Q[[Y[
-œÜ[ˆŠNÂˆÜ[‹^ÛÛ[H˜[YNÂˆ˜XÚË˜\[™Ú[
-Ü[ŠNÂˆJNÂˆÜ˜\˜\[™Ú[
-˜XÚÊNÂˆZ[œ\™[›ÙKš[œÙ\™Y›Ü™JÜ˜\Z[
-NÂˆB‚ˆYˆ
-YØİ[Y[™Ù][[Y[RY
-œ›ØÙ\ÜË]ŒˆŠJHÂˆ˜\ˆÙXİ[ÛˆHØİ[Y[˜Ü™X]Q[[Y[
-œÙXİ[ÛˆŠNÂˆÙXİ[Û‹šYHœ›ØÙ\ÜË]ŒˆÂˆÙXİ[Û‹˜Û\ÜÓ˜[YHHœ›ØÙ\ÜË]ŒˆÂˆ˜\ˆHØİ[Y[˜Ü™X]Q[[Y[
-šˆŠNÂˆ˜\ˆHØİ[Y[˜Ü™X]Q[[Y[
-œŠNÂˆ˜Û\ÜÓ˜[YHH›YHÂˆ˜\ˆÜšYHØİ[Y[˜Ü™X]Q[[Y[
-™]ˆŠNÂˆÜšY˜Û\ÜÓ˜[YHHœ›ØÙ\ÜËYÜšYÂˆ›Üˆ
-˜\ˆHHÈHÈJÊÊHÂˆ˜\ˆØ\™HØİ[Y[˜Ü™X]Q[[Y[
-˜\XÛHŠNÂˆØ\™˜Û\ÜÓ˜[YHHœ›ØÙ\ÜËXØ\™ÂˆØ\™š[›™\’SH	ÏÜ[ˆÛ\ÜÏH›ˆÜÜ[ÏÚÏÜ‰ÎÂˆÜšY˜\[™Ú[
-Ø\™
-NÂˆBˆÙXİ[Û‹˜\[™Ú[
-
-NÂˆÙXİ[Û‹˜\[™Ú[
-
-NÂˆÙXİ[Û‹˜\[™Ú[
-ÜšY
-NÂˆØÛÜKœ\™[›ÙKš[œÙ\™Y›Ü™JÙXİ[Û‹ØÛÜJNÂˆB‚ˆ™[™\”›ØÙ\ÜÊ
-NÂˆYˆ
-Ú[™İË’Ôˆ	‰ˆÔ‹›ÛÚ[™ÙJHÔ‹›ÛÚ[™ÙJ™[™\”›ØÙ\ÜÊNÂˆB‚ˆ[˜İ[ÛˆØØ[^™Y[X™\Š˜[YJHÂˆ˜\ˆH[™Ê
-NÂˆ˜\ˆØØ[HHOOH™˜HˆÈ™˜KRTˆˆˆ
-OOHˆˆÈ‹Uˆˆˆ™[‹UTÈŠNÂˆ™]\›ˆ™]È[“[X™\‘›Ü›X]
-ØØ[KÛX^[][Qœ˜Xİ[Û‘YÚ]ÎŒJK™›Ü›X]
-˜[YJNÂˆB‚ˆ[˜İ[Ûˆ[š[X]Tİ]
-[
-HÂˆYˆ
-[™]\Ù]šÜÛİ[YOOHŒHŠH™]\›Âˆ˜\ˆ˜]ÈH[^ÛÛ[š[J
-NÂˆ˜\ˆHH˜]Ë›X]Ú
-×Šß¸¢bOÊJ×JÊJ
-ÏÊIÊNÂˆYˆ
-[JH™]\›Âˆ˜\ˆ\™Ù]H[X™\ŠVÌ—Kœ™\XÙJËÙËˆŠJNÂˆYˆ
-S[X™\‹š\Ñš[š]J\™Ù]
-JH™]\›Âˆ[™]\Ù]šÜÛİ[YHŒHÂˆ˜\ˆ™Yš^HVÌWHˆÂˆ˜\ˆİY™š^HVÌ×HˆÂˆYˆ
-™YXÙJHÂˆ[^ÛÛ[H™Yš^
-ÈØØ[^™Y[X™\Š\™Ù]
-H
-ÈİY™š^Âˆ™]\›ÂˆBˆ˜\ˆİ\H\™›Ü›X[˜ÙK››İÊ
-NÂˆ˜\ˆ\˜][ÛˆHMLÂˆ[˜İ[Ûˆœ˜[YJ›İÊHÂˆ˜\ˆHX]›Z[ŠK
-›İÈHİ\
-HÈ\˜][ÛŠNÂˆ˜\ˆX\ÙYHHHX]œİÊHHÊNÂˆ[^ÛÛ[H™Yš^
-ÈØØ[^™Y[X™\ŠX]œ›İ[™
-\™Ù]
-ˆX\ÙY
-JH
-ÈİY™š^ÂˆYˆ
-JH™\]Y\İ[š[X][Û‘œ˜[YJœ˜[YJNÂˆBˆ™\]Y\İ[š[X][Û‘œ˜[YJœ˜[YJNÂˆB‚ˆ[˜İ[Ûˆ[š]Ûİ[Ê
-HÂˆ˜\ˆİ]ÈH\œ˜^Kœ›İİ\KœÛXÙK˜Ø[
-Øİ[Y[œ]Y\TÙ[XİÜ[
-‹™šYÈˆŠJNÂˆYˆ
-\İ]Ë›[™İ
-H™]\›ÂˆYˆ
-™YXÙHJ’[\œÙXİ[Û“ØœÙ\™\ˆˆ[ˆÚ[™İÊJHÂˆİ]Ë™›Ü‘XXÚ
-[š[X]Tİ]
-NÂˆ™]\›ÂˆBˆ˜\ˆØœÙ\™\ˆH™]È[\œÙXİ[Û“ØœÙ\™\Š[˜İ[Ûˆ
-[šY\ÊHÂˆ[šY\Ë™›Ü‘XXÚ
-[˜İ[Ûˆ
-[JHÂˆYˆ
-Y[Kš\Ò[\œÙXİ[™ÊH™]\›Âˆ[š[X]Tİ]
-[K\™Ù]
-NÂˆØœÙ\™\‹[›ØœÙ\™J[K\™Ù]
-NÂˆJNÂˆKİ™\ÚÛ‹M_JNÂˆİ]Ë™›Ü‘XXÚ
-[˜İ[Ûˆ
-[
-HÈØœÙ\™\‹›ØœÙ\™J[
-NÈJNÂˆB‚ˆ[˜İ[Ûˆ[š]™]™X[
+        ["Ø´Ù†Ø§Ø®Øª","Ø¯Ø± ÛŒÚ© Ú¯ÙØªâ€ŒÙˆÚ¯ÙˆÛŒ Û²Û° Ø¯Ù‚ÛŒÙ‚Ù‡â€ŒØ§ÛŒ Ú©Ø§Ø± ØªÚ©Ø±Ø§Ø±ÛŒ Ùˆ Ø§ÛŒÙ†â€ŒÚ©Ù‡ Ø¢ÛŒØ§ ÙˆØ§Ù‚Ø¹Ø§Ù‹ Ø¨Ø§ÛŒØ¯ Ø¨Ø§ Ù†Ø±Ù…â€ŒØ§ÙØ²Ø§Ø± Ø­Ù„ Ø´ÙˆØ¯ Ø±Ø§ Ù…Ø´Ø®Øµ Ù…ÛŒâ€ŒÚ©Ù†ÛŒÙ…."],
+        ["Ù‚ÛŒÙ…Øª Ø«Ø§Ø¨Øª","Ù…Ø­Ø¯ÙˆØ¯Ù‡ØŒ Ù‚ÛŒÙ…ØªØŒ Ù…Ø³Ø¦ÙˆÙ„ÛŒØªâ€ŒÙ‡Ø§ Ùˆ Ù…Ø±Ø²Ù‡Ø§ÛŒ Ú©Ø§Ø± Ù‚Ø¨Ù„ Ø§Ø² Ø´Ø±ÙˆØ¹ Ø¨Ù‡â€ŒØµÙˆØ±Øª Ù…Ú©ØªÙˆØ¨ Ù…Ø´Ø®Øµ Ù…ÛŒâ€ŒØ´ÙˆØ¯."],
+        ["Ø³Ø§Ø®Øª","Ù‡Ø± Ù‡ÙØªÙ‡ ÛŒÚ© Ù†Ø³Ø®Ù‡â€ŒÛŒ Ù‚Ø§Ø¨Ù„ Ø§Ø³ØªÙØ§Ø¯Ù‡ Ù…ÛŒâ€ŒØ¨ÛŒÙ†ÛŒØ¯ØŒ Ù†Ù‡ ÙÙ‚Ø· Ú¯Ø²Ø§Ø±Ø´ ÙˆØ¶Ø¹ÛŒØª."],
+        ["Ø§Ù†ØªØ´Ø§Ø± Ùˆ Ù†Ú¯Ù‡Ø¯Ø§Ø±ÛŒ","ØªØ­ÙˆÛŒÙ„ Ú©Ø§Ù…Ù„ØŒ Ù¾Ø§ÛŒØ´ØŒ Ù¾Ø´ØªÛŒØ¨Ø§Ù†â€ŒÚ¯ÛŒØ±ÛŒ Ùˆ Ø¯Ø± ØµÙˆØ±Øª Ù†ÛŒØ§Ø² Ù†Ú¯Ù‡Ø¯Ø§Ø±ÛŒ Ù¾Ø³ Ø§Ø² Ø§Ù†ØªØ´Ø§Ø±."]
+      ],
+      tech: "ÙÙ†Ø§ÙˆØ±ÛŒâ€ŒÙ‡Ø§"
+    }
+  };
 
-HÂˆËÈ™]™X[[İ[Ûˆ\ÈHÛY\YÙH[š[˜Ù[Y[Û›KˆÛÛ[YÙ\ÈİXÚ\ÈÛÛXİˆËÈ]\İ™[XZ[ˆš\ÚX›H]™[ˆYˆ[\œÙXİ[Û“ØœÙ\™\ˆ\È[˜]˜Z[X›HÜˆZ\Ø™Z]™\Ë‚ˆYˆ
-YØİ[Y[™Ù][[Y[RY
-œ›ÛÙˆŠHYØİ[Y[™Ù][[Y[RY
-œØÛÜHŠJH™]\›Â‚ˆ˜\ˆ›Ù\ÈH\œ˜^Kœ›İİ\KœÛXÙK˜Ø[
-Øİ[Y[œ]Y\TÙ[XİÜ[
-ˆ›XZ[ˆˆÙXİ[Û››İ
-š\›ÊK˜Ø\ÙK˜Z[š][Kœ›ØÙ\ÜËXØ\™‚ˆ
-JNÂˆYˆ
-[›Ù\Ë›[™İ™YXÙHJ’[\œÙXİ[Û“ØœÙ\™\ˆˆ[ˆÚ[™İÊJH™]\›Â‚ˆ˜\ˆØœÙ\™\ÂˆHÂˆØœÙ\™\ˆH™]È[\œÙXİ[Û“ØœÙ\™\Š[˜İ[Ûˆ
-[šY\ÊHÂˆ[šY\Ë™›Ü‘XXÚ
-[˜İ[Ûˆ
-[JHÂˆYˆ
-Y[Kš\Ò[\œÙXİ[™ÊH™]\›Âˆ[K\™Ù]˜Û\ÜÓ\İ˜Y
-š\Ë]š\ÚX›HŠNÂˆØœÙ\™\‹[›ØœÙ\™J[K\™Ù]
-NÂˆJNÂˆKÜ›ÛİX\™Ú[ˆŒMÉH‹™\ÚÛ‹ŒJNÂˆHØ]Ú
-JHÂˆ™]\›ÂˆB‚ˆ›Ù\Ë™›Ü‘XXÚ
-[˜İ[Ûˆ
-[
-HÂˆ[˜Û\ÜÓ\İ˜Y
-šÜ‹\™]™X[ŠNÂˆØœÙ\™\‹›ØœÙ\™J[
-NÂˆJNÂ‚ˆËÈ˜Z[Ü[ˆ[š[X][ÛœÈ]\İ™]™\ˆ™HX›HÈX]™H™X[ÛÛ[[š\ÚX›K‚ˆÚ[™İËœÙ][Y[İ]
-[˜İ[Ûˆ
+  function lang() {
+    var l = (window.KR && KR.lang) || document.documentElement.lang || "en";
+    return PROCESS[l] ? l : "en";
+  }
 
-HÂˆ›Ù\Ë™›Ü‘XXÚ
-[˜İ[Ûˆ
-[
-HÈ[˜Û\ÜÓ\İ˜Y
-š\Ë]š\ÚX›HŠNÈJNÂˆKMŒ
-NÂˆB‚ˆ[˜İ[Ûˆİ\
+  function renderProcess() {
+    var section = document.getElementById("process-v2");
+    if (!section) return;
+    var t = PROCESS[lang()];
+    section.querySelector("h2").textContent = t.h;
+    section.querySelector(".lede").textContent = t.d;
+    section.querySelectorAll(".process-card").forEach(function (card, i) {
+      card.querySelector(".n").textContent = String(i + 1).padStart(2, "0");
+      card.querySelector("h3").textContent = t.steps[i][0];
+      card.querySelector("p").textContent = t.steps[i][1];
+    });
+    var marquee = document.querySelector(".tech-marquee-wrap");
+    if (marquee) marquee.setAttribute("aria-label", t.tech);
+  }
 
-HÂˆY›ØÙ\ÜĞ[™X\œ]YYJ
-NÂˆ[š]Ûİ[Ê
-NÂˆ[š]™]™X[
+  function addProcessAndMarquee() {
+    var proof = document.getElementById("proof");
+    var scope = document.getElementById("scope");
+    var build = document.getElementById("build");
+    if (!proof || !scope || !build) return;
 
-NÂˆB‚ˆYˆ
-Øİ[Y[œ™XYTİ]HOOH›ØY[™ÈŠHÂˆØİ[Y[˜Y]™[\İ[™\Š‘ÓPÛÛ[ØYY‹İ\ÛÛ˜ÙNY_JNÂˆH[ÙHÂˆİ\
+    if (!document.querySelector(".tech-marquee-wrap")) {
+      var wrap = document.createElement("div");
+      wrap.className = "tech-marquee-wrap";
+      wrap.setAttribute("role", "region");
+      var track = document.createElement("div");
+      track.className = "tech-marquee";
+      track.setAttribute("aria-hidden", "true");
+      TECH.concat(TECH).forEach(function (name) {
+        var span = document.createElement("span");
+        span.textContent = name;
+        track.appendChild(span);
+      });
+      wrap.appendChild(track);
+      build.parentNode.insertBefore(wrap, build);
+    }
 
-NÂˆBŸJJ
-NÂ
+    if (!document.getElementById("process-v2")) {
+      var section = document.createElement("section");
+      section.id = "process-v2";
+      section.className = "process-v2";
+      var h = document.createElement("h2");
+      var d = document.createElement("p");
+      d.className = "lede";
+      var grid = document.createElement("div");
+      grid.className = "process-grid";
+      for (var i = 0; i < 4; i++) {
+        var card = document.createElement("article");
+        card.className = "process-card";
+        card.innerHTML = '<span class="n"></span><h3></h3><p></p>';
+        grid.appendChild(card);
+      }
+      section.appendChild(h);
+      section.appendChild(d);
+      section.appendChild(grid);
+      scope.parentNode.insertBefore(section, scope);
+    }
+
+    renderProcess();
+    if (window.KR && KR.onChange) KR.onChange(renderProcess);
+  }
+
+  function localizedNumber(value) {
+    var l = lang();
+    var locale = l === "fa" ? "fa-IR" : (l === "tr" ? "tr-TR" : "en-US");
+    return new Intl.NumberFormat(locale, {maximumFractionDigits:0}).format(value);
+  }
+
+  function animateStat(el) {
+    if (el.dataset.krCounted === "1") return;
+    var raw = el.textContent.trim();
+    var m = raw.match(/^([~â‰ˆ]?)([\d,]+)(\+?)$/);
+    if (!m) return;
+    var target = Number(m[2].replace(/,/g, ""));
+    if (!Number.isFinite(target)) return;
+    el.dataset.krCounted = "1";
+    var prefix = m[1] || "";
+    var suffix = m[3] || "";
+    if (reduce) {
+      el.textContent = prefix + localizedNumber(target) + suffix;
+      return;
+    }
+    var start = performance.now();
+    var duration = 950;
+    function frame(now) {
+      var p = Math.min(1, (now - start) / duration);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = prefix + localizedNumber(Math.round(target * eased)) + suffix;
+      if (p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  function initCounts() {
+    var stats = Array.prototype.slice.call(document.querySelectorAll(".fig b"));
+    if (!stats.length) return;
+    if (reduce || !("IntersectionObserver" in window)) {
+      stats.forEach(animateStat);
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        animateStat(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, {threshold:.55});
+    stats.forEach(function (el) { observer.observe(el); });
+  }
+
+  function initReveal() {
+    // Reveal motion is a homepage enhancement only. Content pages such as Contact
+    // must remain visible even if IntersectionObserver is unavailable or misbehaves.
+    if (!document.getElementById("proof") || !document.getElementById("scope")) return;
+
+    var nodes = Array.prototype.slice.call(document.querySelectorAll(
+      "main > section:not(.hero), .case, .build .item, .process-card"
+    ));
+    if (!nodes.length || reduce || !("IntersectionObserver" in window)) return;
+
+    var observer;
+    try {
+      observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, {rootMargin:"0px 0px -7% 0px", threshold:.08});
+    } catch (e) {
+      return;
+    }
+
+    nodes.forEach(function (el) {
+      el.classList.add("kr-reveal");
+      observer.observe(el);
+    });
+
+    // Fail open: animations must never be able to leave real content invisible.
+    window.setTimeout(function () {
+      nodes.forEach(function (el) { el.classList.add("is-visible"); });
+    }, 1600);
+  }
+
+  function start() {
+    addProcessAndMarquee();
+    initCounts();
+    initReveal();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start, {once:true});
+  } else {
+    start();
+  }
+})();
