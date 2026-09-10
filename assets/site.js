@@ -80,10 +80,11 @@ var KR = (function () {
 
   /* ---------- 3. Machinery ---------- */
   var LANGS = ["en", "tr", "fa"];
+  var CORE_PAGES = ["/", "/index.html", "/projects.html", "/consultancy.html", "/about.html", "/contact.html", "/privacy.html"];
   var dict = {};
   var lang = "en";
   var listeners = [];
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var reduce = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
 
   // merge page-specific strings (set as window.PAGE_STRINGS before this file loads)
   (function merge() {
@@ -102,6 +103,21 @@ var KR = (function () {
   }
 
   function money(n) { return "$" + Number(n).toLocaleString("en-US"); }
+
+  function prefersDark() {
+    return !!(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  }
+
+  function languagePath(next) {
+    if (LANGS.indexOf(next) === -1) return null;
+    var path = location.pathname || "/";
+    path = path.replace(/^\/(?:tr|fa)(?=\/)/, "");
+    if (!path) path = "/";
+    if (CORE_PAGES.indexOf(path) === -1) return null;
+    if (path === "/index.html") path = "/";
+    if (next === "en") return path;
+    return path === "/" ? "/" + next + "/" : "/" + next + path;
+  }
 
   function fillConfigSlots() {
     document.querySelectorAll("[data-kr]").forEach(function (el) {
@@ -173,8 +189,11 @@ var KR = (function () {
       if (v) el.setAttribute(pair[0], v);
     });
 
-    document.querySelectorAll(".lang button").forEach(function (b) {
-      b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang));
+    document.querySelectorAll(".lang [data-lang]").forEach(function (b) {
+      var active = b.getAttribute("data-lang") === lang;
+      b.setAttribute("aria-pressed", String(active));
+      if (active) b.setAttribute("aria-current", "page");
+      else b.removeAttribute("aria-current");
     });
 
     listeners.forEach(function (fn) { try { fn(lang); } catch (e) { console.error(e); } });
@@ -182,9 +201,16 @@ var KR = (function () {
   }
 
   function setTheme(theme) {
+    if (theme !== "dark" && theme !== "light") theme = prefersDark() ? "dark" : "light";
     document.documentElement.setAttribute("data-theme", theme);
+    document.documentElement.style.colorScheme = theme;
     var b = document.getElementById("themebtn");
-    if (b) b.textContent = (theme === "dark") ? "☀" : "☾";
+    if (b) {
+      b.textContent = (theme === "dark") ? "☀" : "☾";
+      b.setAttribute("aria-pressed", String(theme === "dark"));
+      b.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+      b.title = b.getAttribute("aria-label");
+    }
     try { localStorage.setItem("kr-theme", theme); } catch (e) {}
   }
 
@@ -197,24 +223,35 @@ var KR = (function () {
   }
 
   function init() {
-    document.querySelectorAll(".lang button").forEach(function (b) {
-      b.addEventListener("click", function () { apply(b.getAttribute("data-lang")); });
+    document.querySelectorAll(".lang [data-lang]").forEach(function (b) {
+      b.addEventListener("click", function (event) {
+        var next = b.getAttribute("data-lang");
+        var target = languagePath(next);
+        if (target && location.protocol !== "file:" && location.pathname !== target) {
+          if (event && event.preventDefault) event.preventDefault();
+          try { localStorage.setItem("kr-lang", next); } catch (e) {}
+          location.assign(target + location.search + location.hash);
+          return;
+        }
+        apply(next);
+      });
     });
 
     var tb = document.getElementById("themebtn");
     if (tb) {
       tb.addEventListener("click", function () {
         var cur = document.documentElement.getAttribute("data-theme");
-        if (!cur) cur = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        if (!cur) cur = prefersDark() ? "dark" : "light";
         setTheme(cur === "dark" ? "light" : "dark");
       });
     }
 
     try {
       var savedTheme = localStorage.getItem("kr-theme");
-      if (savedTheme) setTheme(savedTheme);
-      else if (tb) tb.textContent = window.matchMedia("(prefers-color-scheme: dark)").matches ? "☀" : "☾";
-    } catch (e) {}
+      setTheme(savedTheme || (prefersDark() ? "dark" : "light"));
+    } catch (e) {
+      setTheme(prefersDark() ? "dark" : "light");
+    }
 
     ensurePrivacyLink();
     fillConfigSlots();
