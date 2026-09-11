@@ -20,6 +20,12 @@ var KR = (function () {
     // Put a URL here (your own FastAPI endpoint, Formspree, Web3Forms...) to POST instead.
     formEndpoint: "",
 
+    // TODO: paste the analytics script URL here once a provider is chosen
+    // (Cloudflare Web Analytics beacon, Plausible, GoatCounter...).
+    // Blank = nothing is loaded. Some providers also need data-* attributes;
+    // add them in loadAnalytics() below if so.
+    analyticsScript: "",
+
     // Project price ranges in USD, and rough weeks of work.
     // Change these numbers once; every language and page updates.
     prices: {
@@ -80,7 +86,7 @@ var KR = (function () {
 
   /* ---------- 3. Machinery ---------- */
   var LANGS = ["en", "tr", "fa"];
-  var CORE_PAGES = ["/", "/index.html", "/projects.html", "/consultancy.html", "/about.html", "/contact.html", "/privacy.html"];
+  var CORE_PAGES = ["/", "/index.html", "/projects.html", "/consultancy.html", "/about.html", "/contact.html", "/privacy.html", "/status.html"];
   var dict = {};
   var lang = "en";
   var listeners = [];
@@ -102,7 +108,19 @@ var KR = (function () {
     return (dict[lang] && dict[lang][key] !== undefined) ? dict[lang][key] : (dict.en[key] || "");
   }
 
-  function money(n) { return "$" + Number(n).toLocaleString("en-US"); }
+  var FA_DIGITS = "۰۱۲۳۴۵۶۷۸۹"; // ۰۱۲۳۴۵۶۷۸۹
+
+  // Locale-aware number formatting: FA gets Persian digits with the ٬
+  // thousands separator, TR gets tr-TR grouping, EN gets en-US grouping.
+  function fmtNum(n) {
+    var grouped = Number(n).toLocaleString(lang === "tr" ? "tr-TR" : "en-US");
+    if (lang !== "fa") return grouped;
+    return grouped.replace(/,/g, "٬").replace(/\d/g, function (d) {
+      return FA_DIGITS.charAt(Number(d));
+    });
+  }
+
+  function money(n) { return "$" + fmtNum(n); }
 
   function prefersDark() {
     return !!(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
@@ -153,6 +171,16 @@ var KR = (function () {
       a.target = "_blank";
       a.rel = "noopener";
     });
+  }
+
+  // Inject the analytics script only when CONFIG.analyticsScript is set.
+  // TODO: if the chosen provider needs extra data-* attributes, add them here.
+  function loadAnalytics() {
+    if (!CONFIG.analyticsScript) return;
+    var s = document.createElement("script");
+    s.defer = true;
+    s.src = CONFIG.analyticsScript;
+    document.head.appendChild(s);
   }
 
   function ensurePrivacyLink() {
@@ -256,6 +284,7 @@ var KR = (function () {
     ensurePrivacyLink();
     fillConfigSlots();
     fillBookingLinks();
+    loadAnalytics();
     markCurrentNav();
 
     var staticLang = document.documentElement.getAttribute("data-static-lang");
@@ -270,6 +299,7 @@ var KR = (function () {
     config: CONFIG,
     t: t,
     money: money,
+    fmtNum: fmtNum,
     reduce: reduce,
     get lang() { return lang; },
     onChange: function (fn) { listeners.push(fn); },

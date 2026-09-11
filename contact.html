@@ -123,7 +123,7 @@ fa:{kTitle:"بگویید چه چیزی هفته‌ی شما را می‌بلعد
   var btn=document.getElementById("send"),statusEl=document.getElementById("status"),msgEl=document.getElementById("msg"),needSel=document.getElementById("need"),honeypot=document.getElementById("website");
   function val(id){return document.getElementById(id).value.trim();}
 
-  var params=new URLSearchParams(location.search),rawServices=params.get("services")||"",range=params.get("range")||"";
+  var params=new URLSearchParams(location.search),rawServices=params.get("opts")||params.get("services")||"",range=params.get("range")||"";
   var allowed={site:true,api:true,bot:true,ai:true,multi:true,care:true};
   var services=rawServices.split(",").filter(function(k){return allowed[k];});
   var labelKey={site:"pfSite",api:"pfApi",bot:"pfBot",ai:"pfAi",multi:"pfMulti",care:"pfCare"};

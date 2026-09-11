@@ -20,6 +20,8 @@
 <meta property="og:url" content="https://www.kianirad.website/tr/contact.html">
 <meta property="og:image" content="https://www.kianirad.website/og-image.png">
 <meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fa_IR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="İletişim | Hadi Kianirad">
 <meta name="twitter:description" content="İşletmenizin zamanını alan işi anlatın; Türkçe, İngilizce veya Farsça iletişim kurun.">
@@ -123,7 +125,7 @@ fa:{kTitle:"بگویید چه چیزی هفته‌ی شما را می‌بلعد
   var btn=document.getElementById("send"),statusEl=document.getElementById("status"),msgEl=document.getElementById("msg"),needSel=document.getElementById("need"),honeypot=document.getElementById("website");
   function val(id){return document.getElementById(id).value.trim();}
 
-  var params=new URLSearchParams(location.search),rawServices=params.get("services")||"",range=params.get("range")||"";
+  var params=new URLSearchParams(location.search),rawServices=params.get("opts")||params.get("services")||"",range=params.get("range")||"";
   var allowed={site:true,api:true,bot:true,ai:true,multi:true,care:true};
   var services=rawServices.split(",").filter(function(k){return allowed[k];});
   var labelKey={site:"pfSite",api:"pfApi",bot:"pfBot",ai:"pfAi",multi:"pfMulti",care:"pfCare"};
