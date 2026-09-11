@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inject the shared UI v2 stylesheet and progressive JS into public HTML pages."""
+"""Inject the shared UI v2 and Kimi progressive enhancement assets into public HTML pages."""
 from __future__ import annotations
 
 import re
@@ -18,8 +18,18 @@ def inject(path: Path) -> None:
     text = re.sub(r"\n?<!-- ui-v2-js:start -->.*?<!-- ui-v2-js:end -->\n?", "\n", text, flags=re.S)
 
     prefix = asset_prefix(path)
-    css = f'<!-- ui-v2-css:start -->\n<link rel="stylesheet" href="{prefix}/ui-v2.css">\n<!-- ui-v2-css:end -->'
-    js = f'<!-- ui-v2-js:start -->\n<script src="{prefix}/ui-v2.js"></script>\n<!-- ui-v2-js:end -->'
+    css = (
+        '<!-- ui-v2-css:start -->\n'
+        f'<link rel="stylesheet" href="{prefix}/ui-v2.css">\n'
+        f'<link rel="stylesheet" href="{prefix}/kimi-effects.css">\n'
+        '<!-- ui-v2-css:end -->'
+    )
+    js = (
+        '<!-- ui-v2-js:start -->\n'
+        f'<script src="{prefix}/ui-v2.js"></script>\n'
+        f'<script src="{prefix}/kimi-effects.js"></script>\n'
+        '<!-- ui-v2-js:end -->'
+    )
 
     site_css_pattern = re.compile(r'<link rel="stylesheet" href="(?:\.\./)?assets/site\.css">')
     match = site_css_pattern.search(text)
