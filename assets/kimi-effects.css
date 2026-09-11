@@ -1,0 +1,184 @@
+/* Kianirad — Kimi visual interaction styles. Loaded after ui-v2.css. */
+:root{--spot:color-mix(in srgb, var(--accent) 9%, transparent);}
+:root[data-theme="dark"],:root:not([data-theme="light"]){--spot:color-mix(in srgb, var(--accent) 13%, transparent);}
+
+html,body{overflow-x:clip;}
+
+/* ---------- hero particle canvas ---------- */
+.hero-canvas{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+}
+.hero>*:not(.hero-canvas){position:relative;z-index:1;}
+
+/* ---------- word-by-word headline reveal ---------- */
+.hw-wrap{
+  display:inline-block;
+  overflow:hidden;
+  vertical-align:bottom;
+  padding-block-end:.08em;
+  margin-block-end:-.08em;
+}
+.hw{
+  display:inline-block;
+  transform:translateY(110%);
+  transition:transform .6s cubic-bezier(.2,.75,.25,1);
+}
+.hw-in .hw{transform:translateY(0);}
+
+/* ---------- scroll-spy ---------- */
+.railnav a.active{
+  color:var(--ink);
+  border-block-end-color:var(--accent);
+}
+.railnav a.active::before{
+  content:"";
+  display:inline-block;
+  width:6px;height:6px;
+  border-radius:50%;
+  background:var(--accent);
+  margin-inline-end:7px;
+  vertical-align:middle;
+}
+
+/* ---------- cursor spotlight ---------- */
+.cursor-spot{
+  position:fixed;
+  top:0;left:0;
+  width:500px;height:500px;
+  margin:-250px 0 0 -250px;
+  border-radius:50%;
+  background:radial-gradient(circle, var(--spot) 0%, transparent 62%);
+  pointer-events:none;
+  z-index:3;
+  will-change:transform;
+}
+
+/* ---------- magnetic buttons / tilt ---------- */
+.btn{will-change:translate;}
+.case{will-change:transform;transform-style:preserve-3d;}
+
+/* ---------- principles strip ---------- */
+.principles-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+  margin-block-start:26px;
+}
+.principle-card{
+  border:1px solid var(--line);
+  border-block-start:3px solid var(--accent);
+  border-radius:var(--ui-radius);
+  background:var(--surface);
+  padding:24px;
+  box-shadow:var(--ui-shadow-soft);
+}
+.principle-card h3{font-size:1.12rem;margin:0 0 9px;}
+.principle-card p{margin:0;color:var(--muted);}
+@media (min-width:760px){.principles-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (min-width:1180px){.principles-grid{grid-template-columns:repeat(4,minmax(0,1fr));}}
+
+/* ---------- FAQ accordion ---------- */
+.faq-list{margin-block-start:26px;max-width:820px;}
+.faq-item{
+  border:1px solid var(--line);
+  border-radius:var(--ui-radius-sm);
+  background:var(--surface);
+  margin-block:10px;
+  overflow:hidden;
+  transition:border-color .2s ease;
+}
+.faq-item.open{border-color:color-mix(in srgb,var(--accent) 50%,var(--line));}
+.faq-q{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  width:100%;
+  padding:18px 20px;
+  background:transparent;
+  border:0;
+  color:var(--ink);
+  font:inherit;
+  font-weight:600;
+  text-align:start;
+  cursor:pointer;
+}
+.faq-icon{position:relative;flex:none;width:16px;height:16px;}
+.faq-icon::before,.faq-icon::after{
+  content:"";
+  position:absolute;
+  inset-block-start:7px;
+  inset-inline-start:0;
+  width:16px;height:2px;
+  background:var(--accent);
+  transition:transform .25s ease;
+}
+.faq-icon::after{transform:rotate(90deg);}
+.faq-item.open .faq-icon::after{transform:rotate(0deg);}
+.faq-a{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .32s ease;
+}
+.faq-a-inner{
+  padding:0 20px 18px;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* ---------- sticky mobile CTA + back-to-top ---------- */
+.mobile-cta{
+  position:fixed;
+  inset-inline:0;
+  inset-block-end:0;
+  z-index:40;
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+  background:color-mix(in srgb, var(--surface) 92%, transparent);
+  border-block-start:1px solid var(--line);
+  backdrop-filter:blur(12px);
+  transform:translateY(110%);
+  transition:transform .3s ease;
+  display:none;
+}
+.mobile-cta .mobile-cta-btn{
+  display:block;
+  width:100%;
+  text-align:center;
+}
+.mobile-cta.show{transform:translateY(0);}
+@media (max-width:1019px){.mobile-cta{display:block;}}
+
+.back-top{
+  position:fixed;
+  inset-block-end:22px;
+  inset-inline-end:22px;
+  z-index:41;
+  width:46px;height:46px;
+  border-radius:50%;
+  border:1px solid var(--line-strong);
+  background:var(--surface);
+  color:var(--ink);
+  font-size:1.1rem;
+  cursor:pointer;
+  box-shadow:var(--ui-shadow-soft);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+  transition:opacity .25s ease,transform .25s ease,visibility .25s;
+}
+.back-top.show{opacity:1;visibility:visible;transform:translateY(0);}
+.back-top.above-cta{inset-block-end:calc(78px + env(safe-area-inset-bottom, 0px));}
+
+@media (prefers-reduced-motion:reduce){
+  .btn,.build .item,.case,.chip{transition:none;}
+  .btn:hover,.build .item:hover,.case:hover,.chip:hover{transform:none;}
+  .tech-marquee{animation:none;flex-wrap:wrap;width:auto;justify-content:center;}
+  .kr-reveal{opacity:1;transform:none;transition:none;}
+  .hw{transform:none;transition:none;}
+  .faq-a,.faq-icon::before,.faq-icon::after{transition:none;}
+  .mobile-cta,.back-top{transition:none;}
+  .cursor-spot{display:none;}
+}
