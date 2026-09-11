@@ -97,7 +97,9 @@ a{color:inherit;}
   font-weight:800;font-size:1.5rem;line-height:1.05;letter-spacing:-.02em;
   margin:0;text-decoration:none;display:block;
 }
-.mark span{display:block;color:var(--accent);}
+.mark span{display:block;}
+.mark .mark-name{color:inherit;}
+.mark .mark-sub{color:var(--accent);}
 .role{color:var(--muted);font-size:.9rem;margin:8px 0 0;max-width:26ch;}
 
 .pulse{

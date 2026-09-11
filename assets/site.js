@@ -40,49 +40,64 @@ var KR = (function () {
 
   /* ---------- 2. Shared strings (rail, nav, footer) ---------- */
   var BASE = {
-    en: {
-      markSub: "Systems that keep running",
-      role: "Backend and automation engineer. Istanbul.",
-      pulse: "14+ systems in production",
-      navHome: "Home",
-      navBuild: "What I build",
-      navProjects: "Projects",
-      navConsult: "Consultancy",
-      navAbout: "About",
-      navContact: "Contact",
-      navPrivacy: "Privacy",
-      ctaMain: "Book a 20-minute call",
-      foot: "Kiani Limited Liability Company · Istanbul · English, Türkçe, فارسی"
-    },
-    tr: {
-      markSub: "Çalışmaya devam eden sistemler",
-      role: "Backend ve otomasyon mühendisi. İstanbul.",
-      pulse: "14+ sistem canlıda",
-      navHome: "Ana sayfa",
-      navBuild: "Neler yapıyorum",
-      navProjects: "Projeler",
-      navConsult: "Danışmanlık",
-      navAbout: "Hakkımda",
-      navContact: "İletişim",
-      navPrivacy: "Gizlilik",
-      ctaMain: "20 dakikalık görüşme ayarla",
-      foot: "Kiani Limited Liability Company · İstanbul · English, Türkçe, فارسی"
-    },
-    fa: {
-      markSub: "سیستم‌هایی که از کار نمی‌افتند",
-      role: "مهندس بک‌اند و اتوماسیون. استانبول.",
-      pulse: "بیش از ۱۴ سیستم در حال اجرا",
-      navHome: "خانه",
-      navBuild: "چه می‌سازم",
-      navProjects: "پروژه‌ها",
-      navConsult: "مشاوره",
-      navAbout: "درباره من",
-      navContact: "تماس",
-      navPrivacy: "حریم خصوصی",
-      ctaMain: "رزرو گفت‌وگوی ۲۰ دقیقه‌ای",
-      foot: "شرکت کیانی · استانبول · English, Türkçe, فارسی"
-    }
-  };
+  "en": {
+    "markName": "Hadi Kianirad",
+    "markSub": "Systems that keep running",
+    "role": "Backend and automation engineer. Istanbul.",
+    "pulse": "14+ systems in production",
+    "navHome": "Home",
+    "navBuild": "What I build",
+    "navProjects": "Projects",
+    "navConsult": "Consultancy",
+    "navAbout": "About",
+    "navContact": "Contact",
+    "navPrivacy": "Privacy",
+    "ctaMain": "Book a 20-minute call",
+    "foot": "Kiani Limited Liability Company · Istanbul · English, Türkçe, فارسی",
+    "skipContent": "Skip to content",
+    "languageLabel": "Language",
+    "themeLight": "Switch to light mode",
+    "themeDark": "Switch to dark mode"
+  },
+  "tr": {
+    "markName": "Hadi Kianirad",
+    "markSub": "Çalışmaya devam eden sistemler",
+    "role": "Backend ve otomasyon mühendisi. İstanbul.",
+    "pulse": "14+ sistem canlıda",
+    "navHome": "Ana sayfa",
+    "navBuild": "Neler yapıyorum",
+    "navProjects": "Projeler",
+    "navConsult": "Danışmanlık",
+    "navAbout": "Hakkımda",
+    "navContact": "İletişim",
+    "navPrivacy": "Gizlilik",
+    "ctaMain": "20 dakikalık görüşme ayarla",
+    "foot": "Kiani Limited Liability Company · İstanbul · English, Türkçe, فارسی",
+    "skipContent": "İçeriğe geç",
+    "languageLabel": "Dil",
+    "themeLight": "Açık temaya geç",
+    "themeDark": "Koyu temaya geç"
+  },
+  "fa": {
+    "markName": "هادی کیانی‌راد",
+    "markSub": "سیستم‌هایی که از کار نمی‌افتند",
+    "role": "مهندس بک‌اند و اتوماسیون — استانبول",
+    "pulse": "بیش از ۱۴ سیستم، همین حالا در حال کار",
+    "navHome": "خانه",
+    "navBuild": "چه می‌سازم",
+    "navProjects": "پروژه‌ها",
+    "navConsult": "مشاوره",
+    "navAbout": "درباره من",
+    "navContact": "تماس",
+    "navPrivacy": "حریم خصوصی",
+    "ctaMain": "یک تماس ۲۰ دقیقه‌ای داشته باشیم",
+    "foot": "شرکت کیانی · استانبول · فارسی · Türkçe · English",
+    "skipContent": "رفتن به محتوای اصلی",
+    "languageLabel": "زبان",
+    "themeLight": "تغییر به حالت روشن",
+    "themeDark": "تغییر به حالت تیره"
+  }
+};
 
   /* ---------- 3. Machinery ---------- */
   var LANGS = ["en", "tr", "fa"];
@@ -121,6 +136,11 @@ var KR = (function () {
   }
 
   function money(n) { return "$" + fmtNum(n); }
+
+  function moneyRange(lo, hi) {
+    if (lang === "fa") return fmtNum(lo) + "–" + fmtNum(hi) + " دلار";
+    return money(lo) + "–" + money(hi);
+  }
 
   function prefersDark() {
     return !!(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
@@ -236,7 +256,7 @@ var KR = (function () {
     if (b) {
       b.textContent = (theme === "dark") ? "☀" : "☾";
       b.setAttribute("aria-pressed", String(theme === "dark"));
-      b.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+      b.setAttribute("aria-label", theme === "dark" ? t("themeLight") : t("themeDark"));
       b.title = b.getAttribute("aria-label");
     }
     try { localStorage.setItem("kr-theme", theme); } catch (e) {}
@@ -299,6 +319,7 @@ var KR = (function () {
     config: CONFIG,
     t: t,
     money: money,
+    moneyRange: moneyRange,
     fmtNum: fmtNum,
     reduce: reduce,
     get lang() { return lang; },

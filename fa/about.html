@@ -36,14 +36,14 @@
 <!-- ui-v2-css:end -->
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main" data-i18n="skipContent">رفتن به محتوای اصلی</a>
 <div class="shell">
 
   <aside class="rail">
     <div>
-      <a class="mark" href="index.html">Hadi Kianirad<span data-i18n="markSub">سیستم‌هایی که از کار نمی‌افتند</span></a>
-      <p class="role" data-i18n="role">مهندس بک‌اند و اتوماسیون. استانبول.</p>
-      <span class="pulse"><span class="dot"></span><span data-i18n="pulse">بیش از ۱۴ سیستم در حال اجرا</span></span>
+      <a class="mark" href="index.html"><span class="mark-name" data-i18n="markName">هادی کیانی‌راد</span><span class="mark-sub" data-i18n="markSub">سیستم‌هایی که از کار نمی‌افتند</span></a>
+      <p class="role" data-i18n="role">مهندس بک‌اند و اتوماسیون — استانبول</p>
+      <span class="pulse"><span class="dot"></span><span data-i18n="pulse">بیش از ۱۴ سیستم، همین حالا در حال کار</span></span>
     </div>
     <nav class="railnav">
       <a href="index.html" data-i18n="navHome">خانه</a>
@@ -54,9 +54,9 @@
       <a href="contact.html" data-i18n="navContact">تماس</a>
     </nav>
     <div class="railfoot">
-      <a class="btn" href="contact.html" data-i18n="ctaMain">رزرو گفت‌وگوی ۲۰ دقیقه‌ای</a>
+      <a class="btn" href="contact.html" data-i18n="ctaMain">یک تماس ۲۰ دقیقه‌ای داشته باشیم</a>
       <div class="toolrow">
-        <div class="lang" role="group" aria-label="Language">
+        <div class="lang" role="group" aria-label="زبان" data-i18n-attr="aria-label:languageLabel">
           <button type="button" data-lang="en" aria-pressed="true">EN</button>
           <button type="button" data-lang="tr" aria-pressed="false">TR</button>
           <button type="button" data-lang="fa" aria-pressed="false">FA</button>
@@ -68,27 +68,27 @@
 
   <main id="main">
     <section class="pagehead">
-      <h1 class="pagetitle" data-i18n="aTitle">من یک آژانس نیستم. نکته دقیقاً همین است.</h1>
+      <h1 class="pagetitle" data-i18n="aTitle">آژانس نیستم؛ و این عمدی است.</h1>
       <div class="prose">
-        <p data-i18n="a1">با همان کسی حرف می‌زنید که کد را می‌نویسد. مدیر حسابی در کار نیست که حرف شما را به یک تیکت ترجمه کند و هیچ چیزی بی‌سروصدا به یک نیروی تازه‌کار سپرده نمی‌شود. یعنی پروژه‌های کمتری از یک آژانس می‌گیرم، و یعنی کسی که در ماه ششم سیستم شما را می‌فهمد همان کسی است که در ماه اول ساخته است.</p>
-        <p data-i18n="a2">مهندس پایتون هستم و در استانبول کار می‌کنم. بیشتر کارم بک‌اند است: سرویس‌های ناهم‌زمان FastAPI، ربات‌های تلگرام، خطوط داده و همان لایه‌ی اتوماسیونی که میان یک کسب‌وکار و بسترهایی که به آن‌ها وابسته است می‌نشیند. بیش از چهارده سیستم در حال اجرا دارم و نگهداری‌شان هم با خودم است؛ این نظمی متفاوت از راه‌اندازی اولیه می‌خواهد.</p>
+        <p data-i18n="a1">مستقیم با همان کسی حرف می‌زنید که کد را می‌نویسد. اکانت‌منیجری وسط نیست که حرف شما را به یک تیکت تبدیل کند و کار هم بی‌سروصدا به نیروی تازه‌کار سپرده نمی‌شود. در نتیجه پروژه‌های کمتری از یک آژانس می‌گیرم، اما کسی که شش ماه بعد سیستم‌تان را می‌شناسد همان کسی است که روز اول آن را ساخته است.</p>
+        <p data-i18n="a2">مهندس پایتونم و در استانبول کار می‌کنم. بیشتر کار من بک‌اند است: سرویس‌های async با FastAPI، ربات‌های تلگرام، مسیرهای پردازش داده و اتوماسیون‌هایی که کسب‌وکار را به سرویس‌های مختلف وصل می‌کنند. بیش از ۱۴ سیستم در حال اجرا دارم و نگهداری‌شان هم با خودم است؛ نگهداری یک سیستم زنده با صرفاً راه‌اندازی آن فرق دارد.</p>
       </div>
     </section>
 
     <section>
-      <h2 data-i18n="whyH">چرا متفاوت از بیشتر فریلنسرها می‌سازم</h2>
+      <h2 data-i18n="whyH">چرا رویکردم با خیلی از فریلنسرها فرق دارد</h2>
       <div class="prose">
-        <p data-i18n="why1">چون در کنار کار مشتری، محصولات خودم را هم می‌گردانم. یک پلتفرم داده‌ی رمزارز، یک ربات پذیرش دانشجو و یک کانال فارسی‌زبان با حدود هجده هزار عضو. وقتی چیزی که ساخته‌ام ساعت دو بامداد خراب می‌شود، این تلفن من است که زنگ می‌خورد.</p>
-        <p data-i18n="why2">این نحوه‌ی نوشتن نرم‌افزار را عوض می‌کند. دیگر چیز باهوشانه منتشر نمی‌کنی؛ چیزی منتشر می‌کنی که خودش را جمع کند. همان بار اول درست لاگ می‌گیری. فرض می‌کنی API طرف سوم از کار می‌افتد، چون یک بار سمت بازنده‌ی ماجرا بوده‌ای. مشتری سودِ سیستمی را می‌برد که کسی ساخته که مجبور است با سیستم‌ها زندگی کند.</p>
-        <p data-i18n="why3">یعنی وقتی پروژه‌ای ارزش انجام دادن نداشته باشد هم می‌گویم. کار خودم را دارم که به آن برگردم، پس دنبال پر کردن ظرفیت نیستم.</p>
+        <p data-i18n="why1">چون در کنار پروژه‌های مشتری، سیستم‌های خودم را هم اداره می‌کنم: یک پلتفرم داده‌ی رمزارز، یک ربات پذیرش دانشجو و یک کانال فارسی با حدود ۱۸ هزار عضو. اگر چیزی که ساخته‌ام ساعت دو صبح از کار بیفتد، تلفن خود من زنگ می‌خورد.</p>
+        <p data-i18n="why2">این تجربه روی شیوه‌ی کدنویسی‌ام اثر گذاشته است. دنبال راه‌حل نمایشی نیستم؛ سیستمی می‌سازم که لاگ درست داشته باشد، بعد از خطا بتواند خودش برگردد و برای خرابی سرویس‌های دیگر آماده باشد. وقتی بارها با APIهای شخص ثالث در محیط واقعی کار کرده باشید، از اول فرض می‌کنید یک روز از دسترس خارج می‌شوند. مشتری هم نتیجه‌ی همین تجربه را می‌گیرد.</p>
+        <p data-i18n="why3">از طرف دیگر، اگر پروژه‌ای ارزش انجام دادن نداشته باشد هم صریح می‌گویم. کارهای خودم را دارم و لازم نیست فقط برای پر کردن زمان، هر پروژه‌ای را قبول کنم.</p>
       </div>
     </section>
 
     <section>
-      <h2 data-i18n="langH">کار کردن به سه زبان</h2>
+      <h2 data-i18n="langH">کار به سه زبان</h2>
       <div class="prose">
-        <p data-i18n="lang1">زبان اولم فارسی است، کارم را به انگلیسی پیش می‌برم و ترکی صحبت می‌کنم. این مهم‌تر از آن است که به‌نظر می‌رسد. اگر مشتری‌های شما فارسی یا ترکی می‌نویسند، من می‌توانم بخوانم واقعاً چه گفته‌اند، تست کنم که پاسخ‌های ربات طبیعی باشد نه ترجمه‌ی ماشینی، و رابطی راست‌به‌چپ بچینم که خواننده‌ی بومی حس نکند جایی‌اش می‌لنگد.</p>
-        <p data-i18n="lang2">بیشتر برنامه‌نویس‌ها این بخش را برون‌سپاری می‌کنند و امیدوار می‌مانند. رایج‌ترین دلیل آماتور به‌نظر رسیدن پروژه‌های چندزبانه همین است.</p>
+        <p data-i18n="lang1">زبان مادری‌ام فارسی است، کار حرفه‌ای‌ام را به انگلیسی پیش می‌برم و ترکی هم صحبت می‌کنم. این موضوع در پروژه‌های چندزبانه واقعاً مهم است. اگر مشتری‌های شما فارسی یا ترکی می‌نویسند، می‌توانم بفهمم دقیقاً چه می‌گویند، طبیعی بودن جواب‌های ربات را بررسی کنم و رابط راست‌به‌چپی بسازم که برای یک فارسی‌زبان واقعاً درست به نظر برسد، نه ترجمه‌ی ماشینی.</p>
+        <p data-i18n="lang2">خیلی از برنامه‌نویس‌ها این بخش را برون‌سپاری می‌کنند و امیدوارند نتیجه خوب از آب دربیاید. همین موضوع یکی از رایج‌ترین دلایلی است که یک محصول چندزبانه غیرحرفه‌ای به نظر می‌رسد.</p>
       </div>
     </section>
 
@@ -96,96 +96,38 @@
       <h2 data-i18n="stackH">ابزارهایی که واقعاً استفاده می‌کنم</h2>
       <div class="build">
         <div class="item">
-          <div><h3 data-i18n="st1t">بک‌اند</h3><p data-i18n="st1d">پایتون، ناهم‌زمان، FastAPI. هرجا SQLite جواب درست است همان، و هرجا نیست، Postgres.</p></div>
+          <div><h3 data-i18n="st1t">بک‌اند</h3><p data-i18n="st1d">Python، async و FastAPI. جایی که SQLite انتخاب درست است از همان استفاده می‌کنم؛ وقتی کافی نیست، Postgres.</p></div>
           <div class="stack">FastAPI · asyncio · SQLAlchemy</div>
         </div>
         <div class="item">
-          <div><h3 data-i18n="st2t">پیام‌رسانی</h3><p data-i18n="st2d">Telegram Bot API و مینی‌اپ‌ها، شامل پرداخت، پنل مدیریت و ارسال انبوه در مقیاس.</p></div>
+          <div><h3 data-i18n="st2t">پیام‌رسانی</h3><p data-i18n="st2d">Telegram Bot API و مینی‌اپ‌های تلگرام؛ از پرداخت و پنل مدیریت تا ارسال انبوه در مقیاس بالا.</p></div>
           <div class="stack">aiogram · Telegram Gateway · webhooks</div>
         </div>
         <div class="item">
-          <div><h3 data-i18n="st3t">زیرساخت</h3><p data-i18n="st3d">GCP و DigitalOcean، Supervisor برای مدیریت فرایندها؛ پایش و پشتیبان‌گیری خودکار به‌عنوان استاندارد، نه فروش اضافه.</p></div>
+          <div><h3 data-i18n="st3t">زیرساخت</h3><p data-i18n="st3d">GCP و DigitalOcean، با Supervisor برای مدیریت سرویس‌ها. پایش و بک‌آپ خودکار را جزو کار استاندارد می‌دانم، نه یک گزینه‌ی اضافه برای فروش.</p></div>
           <div class="stack">GCP · DigitalOcean · Supervisor · Cloudflare</div>
         </div>
         <div class="item">
-          <div><h3 data-i18n="st4t">فرانت‌اند</h3><p data-i18n="st4d">HTML، CSS و جاوااسکریپت دست‌نویس. سریع، دسترس‌پذیر و بدون فریم‌ورکی که برای نگهداری‌اش به من نیاز داشته باشید.</p></div>
+          <div><h3 data-i18n="st4t">فرانت‌اند</h3><p data-i18n="st4d">HTML، CSS و JavaScript دست‌نویس؛ سریع، قابل دسترس و بدون فریم‌ورکی که بعداً برای نگهداری‌اش مجبور باشید به من وابسته بمانید.</p></div>
           <div class="stack">HTML · CSS · vanilla JS · i18n · RTL</div>
         </div>
       </div>
     </section>
 
     <section>
-      <h2 data-i18n="outH">بیرون از ترمینال</h2>
+      <h2 data-i18n="outH">بیرون از دنیای کد</h2>
       <div class="prose">
-        <p data-i18n="out1">در استانبول یک گروه دویدن با بیش از چهل‌وپنج عضو را سازمان‌دهی می‌کنم. معلوم شد جمع کردن چهل‌وپنج نفر در یک صبح سرد سر یک قرار، تمرین بدی برای مدیریت پروژه نیست.</p>
+        <p data-i18n="out1">در استانبول یک گروه دویدن با بیش از ۴۵ عضو را سازمان‌دهی می‌کنم. اینکه ۴۵ نفر در یک صبح سرد، سر ساعت و در یک جای مشخص جمع شوند، تمرین بدی برای مدیریت پروژه نیست.</p>
       </div>
-      <p style="margin-block-start:26px;"><a class="btn" href="contact.html" data-i18n="ctaMain">رزرو گفت‌وگوی ۲۰ دقیقه‌ای</a></p>
+      <p style="margin-block-start:26px;"><a class="btn" href="contact.html" data-i18n="ctaMain">یک تماس ۲۰ دقیقه‌ای داشته باشیم</a></p>
     </section>
   </main>
 </div>
 
-<footer><span data-i18n="foot">شرکت کیانی · استانبول · English, Türkçe, فارسی</span><span dir="ltr"> · ©2026</span> · <a class="privacy-link" href="/privacy.html" data-i18n="navPrivacy">حریم خصوصی</a></footer>
+<footer><span data-i18n="foot">شرکت کیانی · استانبول · فارسی · Türkçe · English</span><span dir="ltr"> · ©2026</span> · <a class="privacy-link" href="privacy.html" data-i18n="navPrivacy">حریم خصوصی</a></footer>
 
 <script>
-window.PAGE_STRINGS = {
-en:{
-  aTitle:"I'm not an agency. That's the point.",
-  a1:"You will talk to the person who writes the code. There is no account manager translating what you said into a ticket, and nothing gets quietly passed to a junior. It means I take fewer projects than an agency would, and it means the person who understands your system in month six is the same one who built it in month one.",
-  a2:"I'm a Python engineer based in Istanbul. Most of my work is backend: async FastAPI services, Telegram bots, data pipelines, the automation layer that sits between a business and the platforms it depends on. I've got more than fourteen systems in production and I maintain them, which is a different discipline from launching them.",
-  whyH:"Why I build differently from most freelancers",
-  why1:"Because I run my own products as well as client work. I operate a crypto data platform, a student admissions bot, and a Persian-language channel with around eighteen thousand subscribers. When something I built breaks at two in the morning, it's my phone that goes off.",
-  why2:"That changes how you write software. You stop shipping things that are clever and start shipping things that recover on their own. You log properly the first time. You assume the third-party API will fail, because you've been on the wrong side of it. Clients get the benefit of a system built by someone who has to live with systems.",
-  why3:"It also means I'll tell you when a project isn't worth doing. I have my own work to go back to, so I'm not trying to fill a bench.",
-  langH:"Working in three languages",
-  lang1:"Persian is my first language, I work in English, and I speak Turkish. That matters more than it sounds. If your customers write to you in Persian or Turkish, I can read what they actually said, test that the bot's replies sound natural rather than machine-translated, and lay out a right-to-left interface that a native reader doesn't find subtly wrong.",
-  lang2:"Most developers outsource that and hope. It's the single most common reason multilingual projects come out looking amateur.",
-  stackH:"The stack I actually use",
-  st1t:"Backend", st1d:"Python, async, FastAPI. SQLite where it's the right answer, Postgres where it isn't.",
-  st2t:"Messaging", st2d:"Telegram Bot API and mini-apps, including payments, admin panels and broadcast at scale.",
-  st3t:"Infrastructure", st3d:"GCP and DigitalOcean, Supervisor for process management, monitoring and automated backups as standard rather than as an upsell.",
-  st4t:"Front end", st4d:"Hand-written HTML, CSS and JavaScript. Fast, accessible, and no framework you'll need me to maintain.",
-  outH:"Outside the terminal",
-  out1:"I organise a running community in Istanbul with more than forty-five members. Getting forty-five people to show up at the same place on a cold morning turns out to be reasonable practice for project management."
-},
-tr:{
-  aTitle:"Ben bir ajans değilim. Mesele de bu.",
-  a1:"Kodu yazan kişiyle konuşacaksınız. Söylediğinizi bir talebe çeviren müşteri temsilcisi yok; hiçbir iş sessizce bir juniora devredilmiyor. Bu, bir ajanstan daha az proje aldığım anlamına geliyor ve altıncı ayda sisteminizi anlayan kişinin, birinci ayda onu kuran kişiyle aynı olduğu anlamına geliyor.",
-  a2:"İstanbul'da çalışan bir Python mühendisiyim. İşimin çoğu backend: asenkron FastAPI servisleri, Telegram botları, veri hatları ve bir işletmeyle bağımlı olduğu platformlar arasında duran otomasyon katmanı. Canlıda on dörtten fazla sistemim var ve bakımlarını da ben yapıyorum; bu, onları yayına almaktan farklı bir disiplin.",
-  whyH:"Çoğu serbest çalışandan neden farklı geliştiriyorum",
-  why1:"Çünkü müşteri işinin yanında kendi ürünlerimi de işletiyorum. Bir kripto veri platformu, bir öğrenci başvuru botu ve yaklaşık on sekiz bin aboneli Farsça bir kanal yönetiyorum. Kurduğum bir şey gece ikide bozulduğunda çalan telefon benimki oluyor.",
-  why2:"Bu, yazılım yazma biçiminizi değiştirir. Zekice şeyler yayınlamayı bırakır, kendi kendini toparlayan şeyler yayınlamaya başlarsınız. Loglamayı ilk seferde düzgün yaparsınız. Üçüncü taraf API'nin çökeceğini varsayarsınız, çünkü bunun yanlış tarafında kalmışsınızdır. Müşteriler, sistemlerle yaşamak zorunda olan birinin kurduğu bir sistemin faydasını görür.",
-  why3:"Ayrıca bir projenin yapılmaya değmediğini de söylerim. Dönebileceğim kendi işim var, boş masa doldurmaya çalışmıyorum.",
-  langH:"Üç dilde çalışmak",
-  lang1:"Ana dilim Farsça, işlerimi İngilizce yürütüyorum ve Türkçe konuşuyorum. Bu kulağa geldiğinden daha önemli. Müşterileriniz size Farsça veya Türkçe yazıyorsa, gerçekte ne dediklerini okuyabilir, botun cevaplarının makine çevirisi gibi değil doğal durduğunu test edebilir ve ana dili o olan birinin garipsemeyeceği bir sağdan sola arayüz kurabilirim.",
-  lang2:"Çoğu geliştirici bunu dışarıya verip en iyisini umuyor. Çok dilli projelerin amatör görünmesinin en yaygın nedeni bu.",
-  stackH:"Gerçekten kullandığım teknolojiler",
-  st1t:"Backend", st1d:"Python, asenkron, FastAPI. Doğru cevap olduğu yerde SQLite, olmadığı yerde Postgres.",
-  st2t:"Mesajlaşma", st2d:"Telegram Bot API ve mini uygulamalar; ödemeler, yönetim panelleri ve büyük ölçekli yayın dâhil.",
-  st3t:"Altyapı", st3d:"GCP ve DigitalOcean, süreç yönetimi için Supervisor; izleme ve otomatik yedekleme ek satış değil, standart.",
-  st4t:"Ön yüz", st4d:"Elle yazılmış HTML, CSS ve JavaScript. Hızlı, erişilebilir ve bakımı için bana muhtaç olacağınız bir framework yok.",
-  outH:"Terminalin dışında",
-  out1:"İstanbul'da kırk beşten fazla üyesi olan bir koşu topluluğu düzenliyorum. Kırk beş kişiyi soğuk bir sabah aynı yerde toplayabilmek, proje yönetimi için fena bir antrenman değilmiş."
-},
-fa:{
-  aTitle:"من یک آژانس نیستم. نکته دقیقاً همین است.",
-  a1:"با همان کسی حرف می‌زنید که کد را می‌نویسد. مدیر حسابی در کار نیست که حرف شما را به یک تیکت ترجمه کند و هیچ چیزی بی‌سروصدا به یک نیروی تازه‌کار سپرده نمی‌شود. یعنی پروژه‌های کمتری از یک آژانس می‌گیرم، و یعنی کسی که در ماه ششم سیستم شما را می‌فهمد همان کسی است که در ماه اول ساخته است.",
-  a2:"مهندس پایتون هستم و در استانبول کار می‌کنم. بیشتر کارم بک‌اند است: سرویس‌های ناهم‌زمان FastAPI، ربات‌های تلگرام، خطوط داده و همان لایه‌ی اتوماسیونی که میان یک کسب‌وکار و بسترهایی که به آن‌ها وابسته است می‌نشیند. بیش از چهارده سیستم در حال اجرا دارم و نگهداری‌شان هم با خودم است؛ این نظمی متفاوت از راه‌اندازی اولیه می‌خواهد.",
-  whyH:"چرا متفاوت از بیشتر فریلنسرها می‌سازم",
-  why1:"چون در کنار کار مشتری، محصولات خودم را هم می‌گردانم. یک پلتفرم داده‌ی رمزارز، یک ربات پذیرش دانشجو و یک کانال فارسی‌زبان با حدود هجده هزار عضو. وقتی چیزی که ساخته‌ام ساعت دو بامداد خراب می‌شود، این تلفن من است که زنگ می‌خورد.",
-  why2:"این نحوه‌ی نوشتن نرم‌افزار را عوض می‌کند. دیگر چیز باهوشانه منتشر نمی‌کنی؛ چیزی منتشر می‌کنی که خودش را جمع کند. همان بار اول درست لاگ می‌گیری. فرض می‌کنی API طرف سوم از کار می‌افتد، چون یک بار سمت بازنده‌ی ماجرا بوده‌ای. مشتری سودِ سیستمی را می‌برد که کسی ساخته که مجبور است با سیستم‌ها زندگی کند.",
-  why3:"یعنی وقتی پروژه‌ای ارزش انجام دادن نداشته باشد هم می‌گویم. کار خودم را دارم که به آن برگردم، پس دنبال پر کردن ظرفیت نیستم.",
-  langH:"کار کردن به سه زبان",
-  lang1:"زبان اولم فارسی است، کارم را به انگلیسی پیش می‌برم و ترکی صحبت می‌کنم. این مهم‌تر از آن است که به‌نظر می‌رسد. اگر مشتری‌های شما فارسی یا ترکی می‌نویسند، من می‌توانم بخوانم واقعاً چه گفته‌اند، تست کنم که پاسخ‌های ربات طبیعی باشد نه ترجمه‌ی ماشینی، و رابطی راست‌به‌چپ بچینم که خواننده‌ی بومی حس نکند جایی‌اش می‌لنگد.",
-  lang2:"بیشتر برنامه‌نویس‌ها این بخش را برون‌سپاری می‌کنند و امیدوار می‌مانند. رایج‌ترین دلیل آماتور به‌نظر رسیدن پروژه‌های چندزبانه همین است.",
-  stackH:"ابزارهایی که واقعاً استفاده می‌کنم",
-  st1t:"بک‌اند", st1d:"پایتون، ناهم‌زمان، FastAPI. هرجا SQLite جواب درست است همان، و هرجا نیست، Postgres.",
-  st2t:"پیام‌رسانی", st2d:"Telegram Bot API و مینی‌اپ‌ها، شامل پرداخت، پنل مدیریت و ارسال انبوه در مقیاس.",
-  st3t:"زیرساخت", st3d:"GCP و DigitalOcean، Supervisor برای مدیریت فرایندها؛ پایش و پشتیبان‌گیری خودکار به‌عنوان استاندارد، نه فروش اضافه.",
-  st4t:"فرانت‌اند", st4d:"HTML، CSS و جاوااسکریپت دست‌نویس. سریع، دسترس‌پذیر و بدون فریم‌ورکی که برای نگهداری‌اش به من نیاز داشته باشید.",
-  outH:"بیرون از ترمینال",
-  out1:"در استانبول یک گروه دویدن با بیش از چهل‌وپنج عضو را سازمان‌دهی می‌کنم. معلوم شد جمع کردن چهل‌وپنج نفر در یک صبح سرد سر یک قرار، تمرین بدی برای مدیریت پروژه نیست."
-}
-};
+window.PAGE_STRINGS = {"en":{"aTitle":"I'm not an agency. That's the point.","a1":"You will talk to the person who writes the code. There is no account manager translating what you said into a ticket, and nothing gets quietly passed to a junior. It means I take fewer projects than an agency would, and it means the person who understands your system in month six is the same one who built it in month one.","a2":"I'm a Python engineer based in Istanbul. Most of my work is backend: async FastAPI services, Telegram bots, data pipelines, the automation layer that sits between a business and the platforms it depends on. I've got more than fourteen systems in production and I maintain them, which is a different discipline from launching them.","whyH":"Why I build differently from most freelancers","why1":"Because I run my own products as well as client work. I operate a crypto data platform, a student admissions bot, and a Persian-language channel with around eighteen thousand subscribers. When something I built breaks at two in the morning, it's my phone that goes off.","why2":"That changes how you write software. You stop shipping things that are clever and start shipping things that recover on their own. You log properly the first time. You assume the third-party API will fail, because you've been on the wrong side of it. Clients get the benefit of a system built by someone who has to live with systems.","why3":"It also means I'll tell you when a project isn't worth doing. I have my own work to go back to, so I'm not trying to fill a bench.","langH":"Working in three languages","lang1":"Persian is my first language, I work in English, and I speak Turkish. That matters more than it sounds. If your customers write to you in Persian or Turkish, I can read what they actually said, test that the bot's replies sound natural rather than machine-translated, and lay out a right-to-left interface that a native reader doesn't find subtly wrong.","lang2":"Most developers outsource that and hope. It's the single most common reason multilingual projects come out looking amateur.","stackH":"The stack I actually use","st1t":"Backend","st1d":"Python, async, FastAPI. SQLite where it's the right answer, Postgres where it isn't.","st2t":"Messaging","st2d":"Telegram Bot API and mini-apps, including payments, admin panels and broadcast at scale.","st3t":"Infrastructure","st3d":"GCP and DigitalOcean, Supervisor for process management, monitoring and automated backups as standard rather than as an upsell.","st4t":"Front end","st4d":"Hand-written HTML, CSS and JavaScript. Fast, accessible, and no framework you'll need me to maintain.","outH":"Outside the terminal","out1":"I organise a running community in Istanbul with more than forty-five members. Getting forty-five people to show up at the same place on a cold morning turns out to be reasonable practice for project management."},"tr":{"aTitle":"Ben bir ajans değilim. Mesele de bu.","a1":"Kodu yazan kişiyle konuşacaksınız. Söylediğinizi bir talebe çeviren müşteri temsilcisi yok; hiçbir iş sessizce bir juniora devredilmiyor. Bu, bir ajanstan daha az proje aldığım anlamına geliyor ve altıncı ayda sisteminizi anlayan kişinin, birinci ayda onu kuran kişiyle aynı olduğu anlamına geliyor.","a2":"İstanbul'da çalışan bir Python mühendisiyim. İşimin çoğu backend: asenkron FastAPI servisleri, Telegram botları, veri hatları ve bir işletmeyle bağımlı olduğu platformlar arasında duran otomasyon katmanı. Canlıda on dörtten fazla sistemim var ve bakımlarını da ben yapıyorum; bu, onları yayına almaktan farklı bir disiplin.","whyH":"Çoğu serbest çalışandan neden farklı geliştiriyorum","why1":"Çünkü müşteri işinin yanında kendi ürünlerimi de işletiyorum. Bir kripto veri platformu, bir öğrenci başvuru botu ve yaklaşık on sekiz bin aboneli Farsça bir kanal yönetiyorum. Kurduğum bir şey gece ikide bozulduğunda çalan telefon benimki oluyor.","why2":"Bu, yazılım yazma biçiminizi değiştirir. Zekice şeyler yayınlamayı bırakır, kendi kendini toparlayan şeyler yayınlamaya başlarsınız. Loglamayı ilk seferde düzgün yaparsınız. Üçüncü taraf API'nin çökeceğini varsayarsınız, çünkü bunun yanlış tarafında kalmışsınızdır. Müşteriler, sistemlerle yaşamak zorunda olan birinin kurduğu bir sistemin faydasını görür.","why3":"Ayrıca bir projenin yapılmaya değmediğini de söylerim. Dönebileceğim kendi işim var, boş masa doldurmaya çalışmıyorum.","langH":"Üç dilde çalışmak","lang1":"Ana dilim Farsça, işlerimi İngilizce yürütüyorum ve Türkçe konuşuyorum. Bu kulağa geldiğinden daha önemli. Müşterileriniz size Farsça veya Türkçe yazıyorsa, gerçekte ne dediklerini okuyabilir, botun cevaplarının makine çevirisi gibi değil doğal durduğunu test edebilir ve ana dili o olan birinin garipsemeyeceği bir sağdan sola arayüz kurabilirim.","lang2":"Çoğu geliştirici bunu dışarıya verip en iyisini umuyor. Çok dilli projelerin amatör görünmesinin en yaygın nedeni bu.","stackH":"Gerçekten kullandığım teknolojiler","st1t":"Backend","st1d":"Python, asenkron, FastAPI. Doğru cevap olduğu yerde SQLite, olmadığı yerde Postgres.","st2t":"Mesajlaşma","st2d":"Telegram Bot API ve mini uygulamalar; ödemeler, yönetim panelleri ve büyük ölçekli yayın dâhil.","st3t":"Altyapı","st3d":"GCP ve DigitalOcean, süreç yönetimi için Supervisor; izleme ve otomatik yedekleme ek satış değil, standart.","st4t":"Ön yüz","st4d":"Elle yazılmış HTML, CSS ve JavaScript. Hızlı, erişilebilir ve bakımı için bana muhtaç olacağınız bir framework yok.","outH":"Terminalin dışında","out1":"İstanbul'da kırk beşten fazla üyesi olan bir koşu topluluğu düzenliyorum. Kırk beş kişiyi soğuk bir sabah aynı yerde toplayabilmek, proje yönetimi için fena bir antrenman değilmiş."},"fa":{"aTitle":"آژانس نیستم؛ و این عمدی است.","a1":"مستقیم با همان کسی حرف می‌زنید که کد را می‌نویسد. اکانت‌منیجری وسط نیست که حرف شما را به یک تیکت تبدیل کند و کار هم بی‌سروصدا به نیروی تازه‌کار سپرده نمی‌شود. در نتیجه پروژه‌های کمتری از یک آژانس می‌گیرم، اما کسی که شش ماه بعد سیستم‌تان را می‌شناسد همان کسی است که روز اول آن را ساخته است.","a2":"مهندس پایتونم و در استانبول کار می‌کنم. بیشتر کار من بک‌اند است: سرویس‌های async با FastAPI، ربات‌های تلگرام، مسیرهای پردازش داده و اتوماسیون‌هایی که کسب‌وکار را به سرویس‌های مختلف وصل می‌کنند. بیش از ۱۴ سیستم در حال اجرا دارم و نگهداری‌شان هم با خودم است؛ نگهداری یک سیستم زنده با صرفاً راه‌اندازی آن فرق دارد.","whyH":"چرا رویکردم با خیلی از فریلنسرها فرق دارد","why1":"چون در کنار پروژه‌های مشتری، سیستم‌های خودم را هم اداره می‌کنم: یک پلتفرم داده‌ی رمزارز، یک ربات پذیرش دانشجو و یک کانال فارسی با حدود ۱۸ هزار عضو. اگر چیزی که ساخته‌ام ساعت دو صبح از کار بیفتد، تلفن خود من زنگ می‌خورد.","why2":"این تجربه روی شیوه‌ی کدنویسی‌ام اثر گذاشته است. دنبال راه‌حل نمایشی نیستم؛ سیستمی می‌سازم که لاگ درست داشته باشد، بعد از خطا بتواند خودش برگردد و برای خرابی سرویس‌های دیگر آماده باشد. وقتی بارها با APIهای شخص ثالث در محیط واقعی کار کرده باشید، از اول فرض می‌کنید یک روز از دسترس خارج می‌شوند. مشتری هم نتیجه‌ی همین تجربه را می‌گیرد.","why3":"از طرف دیگر، اگر پروژه‌ای ارزش انجام دادن نداشته باشد هم صریح می‌گویم. کارهای خودم را دارم و لازم نیست فقط برای پر کردن زمان، هر پروژه‌ای را قبول کنم.","langH":"کار به سه زبان","lang1":"زبان مادری‌ام فارسی است، کار حرفه‌ای‌ام را به انگلیسی پیش می‌برم و ترکی هم صحبت می‌کنم. این موضوع در پروژه‌های چندزبانه واقعاً مهم است. اگر مشتری‌های شما فارسی یا ترکی می‌نویسند، می‌توانم بفهمم دقیقاً چه می‌گویند، طبیعی بودن جواب‌های ربات را بررسی کنم و رابط راست‌به‌چپی بسازم که برای یک فارسی‌زبان واقعاً درست به نظر برسد، نه ترجمه‌ی ماشینی.","lang2":"خیلی از برنامه‌نویس‌ها این بخش را برون‌سپاری می‌کنند و امیدوارند نتیجه خوب از آب دربیاید. همین موضوع یکی از رایج‌ترین دلایلی است که یک محصول چندزبانه غیرحرفه‌ای به نظر می‌رسد.","stackH":"ابزارهایی که واقعاً استفاده می‌کنم","st1t":"بک‌اند","st1d":"Python، async و FastAPI. جایی که SQLite انتخاب درست است از همان استفاده می‌کنم؛ وقتی کافی نیست، Postgres.","st2t":"پیام‌رسانی","st2d":"Telegram Bot API و مینی‌اپ‌های تلگرام؛ از پرداخت و پنل مدیریت تا ارسال انبوه در مقیاس بالا.","st3t":"زیرساخت","st3d":"GCP و DigitalOcean، با Supervisor برای مدیریت سرویس‌ها. پایش و بک‌آپ خودکار را جزو کار استاندارد می‌دانم، نه یک گزینه‌ی اضافه برای فروش.","st4t":"فرانت‌اند","st4d":"HTML، CSS و JavaScript دست‌نویس؛ سریع، قابل دسترس و بدون فریم‌ورکی که بعداً برای نگهداری‌اش مجبور باشید به من وابسته بمانید.","outH":"بیرون از دنیای کد","out1":"در استانبول یک گروه دویدن با بیش از ۴۵ عضو را سازمان‌دهی می‌کنم. اینکه ۴۵ نفر در یک صبح سرد، سر ساعت و در یک جای مشخص جمع شوند، تمرین بدی برای مدیریت پروژه نیست."}};
 </script>
 <script src="../assets/site.js"></script>
 <!-- ui-v2-js:start -->

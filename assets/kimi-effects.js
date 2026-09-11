@@ -6,73 +6,160 @@
   var reduce = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
 
   var PRINCIPLES = {
-    en: {
-      h: "Principles",
-      cards: [
-        ["Fixed price before work","Agreed in writing. It doesn't change mid-project."],
-        ["Half up front, half on delivery","You never pay for something you haven't seen."],
-        ["You own the code and the docs","Repositories, credentials and documentation are yours from day one."],
-        ["I stay after launch","Monitoring, backups, and a human who answers."]
+  "en": {
+    "h": "Principles",
+    "cards": [
+      [
+        "Fixed price before work",
+        "Agreed in writing. It doesn't change mid-project."
+      ],
+      [
+        "Half up front, half on delivery",
+        "You never pay for something you haven't seen."
+      ],
+      [
+        "You own the code and the docs",
+        "Repositories, credentials and documentation are yours from day one."
+      ],
+      [
+        "I stay after launch",
+        "Monitoring, backups, and a human who answers."
       ]
-    },
-    tr: {
-      h: "İlkeler",
-      cards: [
-        ["İşe başlamadan sabit fiyat","Yazılı olarak anlaşılır. Proje ortasında değişmez."],
-        ["Yarısı başta, yarısı teslimde","Görmediğiniz bir şey için asla ödeme yapmazsınız."],
-        ["Kod ve dokümanlar sizindir","Depolar, erişim bilgileri ve dokümantasyon ilk günden sizin."],
-        ["Yayından sonra da kalırım","İzleme, yedekleme ve cevap veren bir insan."]
+    ]
+  },
+  "tr": {
+    "h": "İlkeler",
+    "cards": [
+      [
+        "İşe başlamadan sabit fiyat",
+        "Yazılı olarak anlaşılır. Proje ortasında değişmez."
+      ],
+      [
+        "Yarısı başta, yarısı teslimde",
+        "Görmediğiniz bir şey için asla ödeme yapmazsınız."
+      ],
+      [
+        "Kod ve dokümanlar sizindir",
+        "Depolar, erişim bilgileri ve dokümantasyon ilk günden sizin."
+      ],
+      [
+        "Yayından sonra da kalırım",
+        "İzleme, yedekleme ve cevap veren bir insan."
       ]
-    },
-    fa: {
-      h: "اصول کار",
-      cards: [
-        ["قیمت ثابت قبل از شروع","مکتوب توافق می‌شود. وسط پروژه تغییر نمی‌کند."],
-        ["نیمی اول، نیمی هنگام تحویل","برای چیزی که ندیده‌اید هرگز پول نمی‌دهید."],
-        ["کد و مستندات مال شماست","مخزن‌ها، دسترسی‌ها و مستندات از روز اول متعلق به شماست."],
-        ["بعد از انتشار هم می‌مانم","پایش، پشتیبان‌گیری و یک انسان که جواب می‌دهد."]
+    ]
+  },
+  "fa": {
+    "h": "اصول همکاری",
+    "cards": [
+      [
+        "قیمت از قبل مشخص است",
+        "قبل از شروع مکتوب توافق می‌کنیم و وسط پروژه بدون توافق تغییر نمی‌کند."
+      ],
+      [
+        "نصف اول، نصف موقع تحویل",
+        "نصف دوم را وقتی می‌پردازید که نتیجه‌ی کار را دیده‌اید."
+      ],
+      [
+        "کد و مستندات برای شماست",
+        "مخزن کد، دسترسی‌ها و مستندات از روز اول برای شماست."
+      ],
+      [
+        "بعد از راه‌اندازی هم هستم",
+        "پایش، بک‌آپ و یک آدم واقعی که جواب می‌دهد."
       ]
-    }
-  };
+    ]
+  }
+};
 
   var FAQS = {
-    en: {
-      h: "Common questions, straight answers",
-      items: [
-        ["How long does a typical project take?","A website is about three weeks, a bot around four, larger backends six. You get the timeline in writing with the quote."],
-        ["How do payments work?","Half up front, half on delivery. Fixed price agreed before work starts — the number doesn't move."],
-        ["Do you work in Turkish and Persian?","Yes — including proper right-to-left layout. This page is the demo: switch language in the sidebar."],
-        ["What happens after launch?","I stay: monitoring, backups, security updates. Monthly care plan, cancel any time."],
-        ["What if my project isn't a fit?","I'll say so on the first call and point you somewhere better. That call costs you nothing."]
+  "en": {
+    "h": "Common questions, straight answers",
+    "items": [
+      [
+        "How long does a typical project take?",
+        "A website is about three weeks, a bot around four, larger backends six. You get the timeline in writing with the quote."
+      ],
+      [
+        "How do payments work?",
+        "Half up front, half on delivery. Fixed price agreed before work starts — the number doesn't move."
+      ],
+      [
+        "Do you work in Turkish and Persian?",
+        "Yes — including proper right-to-left layout. This page is the demo: switch language in the sidebar."
+      ],
+      [
+        "What happens after launch?",
+        "I stay: monitoring, backups, security updates. Monthly care plan, cancel any time."
+      ],
+      [
+        "What if my project isn't a fit?",
+        "I'll say so on the first call and point you somewhere better. That call costs you nothing."
       ]
-    },
-    tr: {
-      h: "Sık sorulan sorular, net cevaplar",
-      items: [
-        ["Tipik bir proje ne kadar sürer?","Bir web sitesi yaklaşık üç hafta, bir bot dört, daha büyük backend'ler altı hafta sürer. Takvimi teklifle birlikte yazılı alırsınız."],
-        ["Ödemeler nasıl işliyor?","Yarısı başta, yarısı teslimde. İşe başlamadan sabit fiyat anlaşılır — rakam oynamaz."],
-        ["Türkçe ve Farsça çalışıyor musunuz?","Evet — düzgün sağdan sola düzen dâhil. Bu sayfa zaten demosu: kenar çubuğundan dili değiştirin."],
-        ["Yayından sonra ne oluyor?","Kalmaya devam ederim: izleme, yedekleme, güvenlik güncellemeleri. Aylık bakım planı, istediğinizde iptal."],
-        ["Proje bana uygun değilse?","İlk görüşmede açıkça söylerim ve sizi daha iyi bir yere yönlendiririm. O görüşme size hiçbir şeye mal olmaz."]
+    ]
+  },
+  "tr": {
+    "h": "Sık sorulan sorular, net cevaplar",
+    "items": [
+      [
+        "Tipik bir proje ne kadar sürer?",
+        "Bir web sitesi yaklaşık üç hafta, bir bot dört, daha büyük backend'ler altı hafta sürer. Takvimi teklifle birlikte yazılı alırsınız."
+      ],
+      [
+        "Ödemeler nasıl işliyor?",
+        "Yarısı başta, yarısı teslimde. İşe başlamadan sabit fiyat anlaşılır — rakam oynamaz."
+      ],
+      [
+        "Türkçe ve Farsça çalışıyor musunuz?",
+        "Evet — düzgün sağdan sola düzen dâhil. Bu sayfa zaten demosu: kenar çubuğundan dili değiştirin."
+      ],
+      [
+        "Yayından sonra ne oluyor?",
+        "Kalmaya devam ederim: izleme, yedekleme, güvenlik güncellemeleri. Aylık bakım planı, istediğinizde iptal."
+      ],
+      [
+        "Proje bana uygun değilse?",
+        "İlk görüşmede açıkça söylerim ve sizi daha iyi bir yere yönlendiririm. O görüşme size hiçbir şeye mal olmaz."
       ]
-    },
-    fa: {
-      h: "پرسش‌های رایج، پاسخ‌های رک",
-      items: [
-        ["یک پروژه معمولی چقدر طول می‌کشد؟","یک وب‌سایت حدود سه هفته، یک ربات چهار هفته و بک‌اندهای بزرگ‌تر شش هفته. زمان‌بندی را مکتوب همراه پیش‌فاکتور دریافت می‌کنید."],
-        ["پرداخت‌ها چطور انجام می‌شود؟","نیمی اول، نیمی هنگام تحویل. قیمت ثابت قبل از شروع کار توافق می‌شود — عدد تکان نمی‌خورد."],
-        ["به ترکی و فارسی هم کار می‌کنید؟","بله — شامل چیدمان درست راست‌به‌چپ. همین صفحه خودش نمونه است: زبان را از کنار صفحه عوض کنید."],
-        ["بعد از انتشار چه اتفاقی می‌افتد؟","من می‌مانم: پایش، پشتیبان‌گیری، به‌روزرسانی‌های امنیتی. طرح نگهداری ماهانه، هر وقت خواستید لغو کنید."],
-        ["اگر پروژه‌ام برای شما مناسب نباشد چه؟","همان تماس اول صادقانه می‌گویم و جای بهتری معرفی می‌کنم. آن تماس برای شما هزینه‌ای ندارد."]
+    ]
+  },
+  "fa": {
+    "h": "سؤال‌های رایج، جواب‌های روشن",
+    "items": [
+      [
+        "یک پروژه معمولاً چقدر زمان می‌برد؟",
+        "یک وب‌سایت حدود ۳ هفته، یک ربات حدود ۴ هفته و بک‌اندهای بزرگ‌تر حدود ۶ هفته. زمان‌بندی را همراه با پیشنهاد قیمت، مکتوب دریافت می‌کنید."
+      ],
+      [
+        "پرداخت به چه شکل است؟",
+        "نصف مبلغ اول کار و نصف موقع تحویل. قیمت قبل از شروع مشخص می‌شود و وسط پروژه بدون توافق تغییر نمی‌کند."
+      ],
+      [
+        "فارسی و ترکی هم کار می‌کنید؟",
+        "بله، از جمله چیدمان درست راست‌به‌چپ. همین صفحه نمونه‌اش است؛ زبان را از کنار صفحه عوض کنید."
+      ],
+      [
+        "بعد از راه‌اندازی چه می‌شود؟",
+        "می‌مانم: پایش، بک‌آپ و به‌روزرسانی‌های امنیتی. نگهداری ماهانه است و هر وقت بخواهید می‌توانید لغوش کنید."
+      ],
+      [
+        "اگر پروژه‌ام مناسب شما نباشد چه؟",
+        "همان تماس اول صریح می‌گویم و اگر بتوانم مسیر یا فرد مناسب‌تری پیشنهاد می‌کنم. آن تماس هم رایگان است."
       ]
-    }
-  };
+    ]
+  }
+};
 
   var UI = {
-    en: { backTop: "Back to top" },
-    tr: { backTop: "Yukarı dön" },
-    fa: { backTop: "بازگشت به بالا" }
-  };
+  "en": {
+    "backTop": "Back to top"
+  },
+  "tr": {
+    "backTop": "Yukarı dön"
+  },
+  "fa": {
+    "backTop": "برگشت به بالا"
+  }
+};
 
   function lang() {
     var l = (window.KR && KR.lang) || document.documentElement.lang || "en";

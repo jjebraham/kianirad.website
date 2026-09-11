@@ -36,14 +36,14 @@
 <!-- ui-v2-css:end -->
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main" data-i18n="skipContent">رفتن به محتوای اصلی</a>
 <div class="shell">
 
   <aside class="rail">
     <div>
-      <a class="mark" href="index.html">Hadi Kianirad<span data-i18n="markSub">سیستم‌هایی که از کار نمی‌افتند</span></a>
-      <p class="role" data-i18n="role">مهندس بک‌اند و اتوماسیون. استانبول.</p>
-      <span class="pulse"><span class="dot"></span><span data-i18n="pulse">بیش از ۱۴ سیستم در حال اجرا</span></span>
+      <a class="mark" href="index.html"><span class="mark-name" data-i18n="markName">هادی کیانی‌راد</span><span class="mark-sub" data-i18n="markSub">سیستم‌هایی که از کار نمی‌افتند</span></a>
+      <p class="role" data-i18n="role">مهندس بک‌اند و اتوماسیون — استانبول</p>
+      <span class="pulse"><span class="dot"></span><span data-i18n="pulse">بیش از ۱۴ سیستم، همین حالا در حال کار</span></span>
     </div>
     <nav class="railnav">
       <a href="index.html" data-i18n="navHome">خانه</a>
@@ -55,7 +55,7 @@
     </nav>
     <div class="railfoot">
       <div class="toolrow">
-        <div class="lang" role="group" aria-label="Language">
+        <div class="lang" role="group" aria-label="زبان" data-i18n-attr="aria-label:languageLabel">
           <button type="button" data-lang="en" aria-pressed="true">EN</button>
           <button type="button" data-lang="tr" aria-pressed="false">TR</button>
           <button type="button" data-lang="fa" aria-pressed="false">FA</button>
@@ -67,15 +67,15 @@
 
   <main id="main">
     <section class="pagehead">
-      <h1 class="pagetitle" data-i18n="kTitle">بگویید چه چیزی هفته‌ی شما را می‌بلعد.</h1>
-      <p class="lede" data-i18n="kLede">به همه‌ی پیام‌ها ظرف یک روز کاری پاسخ می‌دهم، به انگلیسی، ترکی یا فارسی. اگر پروژه‌تان با من جور نباشد همان را می‌گویم و جای بهتری معرفی می‌کنم؛ آن پاسخ هم برای شما هزینه‌ای ندارد.</p>
+      <h1 class="pagetitle" data-i18n="kTitle">بگویید چه کاری هر هفته وقت‌تان را می‌گیرد.</h1>
+      <p class="lede" data-i18n="kLede">به همه‌ی پیام‌ها حداکثر ظرف یک روز کاری جواب می‌دهم؛ به فارسی، انگلیسی یا ترکی. اگر پروژه‌تان مناسب من نباشد، همان اول می‌گویم و اگر بتوانم فرد یا مسیر بهتری پیشنهاد می‌کنم.</p>
     </section>
 
     <section>
-      <h2 data-i18n="fastH">سریع‌ترین راه‌های تماس</h2>
+      <h2 data-i18n="fastH">سریع‌ترین راه‌های ارتباط</h2>
       <div class="contactgrid">
         <a href="https://t.me/amirkiaaani" data-kr="telegram" style="text-decoration:none;">
-          <span class="k" data-i18n="kTg">تلگرام — سریع‌ترین</span>
+          <span class="k" data-i18n="kTg">تلگرام — سریع‌ترین راه</span>
           <span class="v">@amirkiaaani</span>
         </a>
         <a href="mailto:kianirad2020@gmail.com" data-kr="email">
@@ -83,7 +83,7 @@
           <span class="v">kianirad2020@gmail.com</span>
         </a>
         <a href="https://github.com/jjebraham" data-kr="github" target="_blank" rel="noopener">
-          <span class="k" data-i18n="kGh">کد</span>
+          <span class="k" data-i18n="kGh">کد و گیت‌هاب</span>
           <span class="v">github.com/jjebraham</span>
         </a>
       </div>
@@ -91,32 +91,28 @@
 
     <section>
       <h2 data-i18n="formH">یا همین‌جا بنویسید</h2>
-      <p class="lede" data-i18n="formLede">سه فیلد. هرچه آخری مشخص‌تر باشد، اولین پاسخ من به‌دردبخورتر خواهد بود.</p>
+      <p class="lede" data-i18n="formLede">سه فیلد بیشتر نیست. هرچه در بخش آخر دقیق‌تر توضیح بدهید، اولین جواب من هم کاربردی‌تر خواهد بود.</p>
 
       <div class="form">
-        <div class="field"><label for="name" data-i18n="lName">نام شما</label><input id="name" type="text" autocomplete="name"></div>
-        <div class="field"><label for="reply" data-i18n="lReply">ایمیل یا تلگرام — هرطور که دوست دارید جواب بدهم</label><input id="reply" type="text" autocomplete="email"></div>
+        <div class="field"><label for="name" data-i18n="lName">نام</label><input id="name" type="text" autocomplete="name"></div>
+        <div class="field"><label for="reply" data-i18n="lReply">ایمیل یا تلگرام — هرجا ترجیح می‌دهید جواب بدهم</label><input id="reply" type="text" autocomplete="email"></div>
         <div class="field"><label for="need" data-i18n="lNeed">به چه چیزی نیاز دارید؟</label><select id="need"><option value="bot" data-i18n="oBot">ربات تلگرام</option><option value="api" data-i18n="oApi">بک‌اند یا API</option><option value="ai" data-i18n="oAi">اتوماسیون هوش مصنوعی</option><option value="site" data-i18n="oSite">وب‌سایت</option><option value="care" data-i18n="oCare">میزبانی و نگهداری</option><option value="other" data-i18n="oOther">چیز دیگری</option></select></div>
-        <div class="field"><label for="msg" data-i18n="lMsg">کدام کار مدام وقت شما را می‌گیرد؟</label><textarea id="msg" data-i18n-attr="placeholder:phMsg" placeholder="مثلاً: هفته‌ای حدود ۶۰ پیام می‌گیریم که همه همان پنج سؤال قیمت و ظرفیت را می‌پرسند و دو نفر صبح‌هایشان را صرف جواب دادن می‌کنند."></textarea></div>
+        <div class="field"><label for="msg" data-i18n="lMsg">کدام کار تکراری مدام وقت‌تان را می‌گیرد؟</label><textarea id="msg" data-i18n-attr="placeholder:phMsg" placeholder="مثلاً: هفته‌ای حدود ۶۰ پیام در اینستاگرام و تلگرام می‌گیریم که بیشترشان همان چند سؤال درباره‌ی قیمت و ظرفیت است و دو نفر هر صبح وقت زیادی صرف جواب دادن می‌کنند."></textarea></div>
         <div aria-hidden="true" style="position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;"><input id="website" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true"></div>
         <div><button type="button" class="btn" id="send" data-i18n="btnSend">ارسال</button><p class="formstatus" id="status" role="status"></p></div>
-        <p class="formnote" data-i18n="formNote">نه خبرنامه‌ای، نه دنباله‌ی ایمیل خودکاری، نه جلسه‌ی فروشی که خودتان نخواسته باشید.</p>
+        <p class="formnote" data-i18n="formNote">نه خبرنامه‌ای در کار است، نه ایمیل خودکار پشت سر هم و نه تماس فروشی که خودتان درخواست نکرده باشید.</p>
       </div>
     </section>
 
     <section>
-      <h2 data-i18n="timeH">جزئیات عملی</h2>
-      <div class="prose"><p data-i18n="time1">من در استانبول هستم، GMT+3 — همان روز کاری اروپا، خلیج و بیشتر آسیای میانه. گفت‌وگو روی همان بستری انجام می‌شود که خودتان استفاده می‌کنید: تلگرام، گوگل میت، واتساپ یا تلفن.</p><p data-i18n="time2">اولین گفت‌وگو بیست دقیقه و رایگان است. جز خود مسئله لازم نیست چیزی آماده کنید.</p></div>
+      <h2 data-i18n="timeH">چند نکته‌ی عملی</h2>
+      <div class="prose"><p data-i18n="time1">من در استانبول هستم (GMT+3)، بنابراین ساعت کاری‌ام با اروپا، کشورهای حاشیه‌ی خلیج فارس و بخش زیادی از آسیای میانه هم‌پوشانی دارد. برای تماس هم از همان چیزی استفاده می‌کنیم که برایتان راحت‌تر است: تلگرام، Google Meet، WhatsApp یا تلفن.</p><p data-i18n="time2">تماس اول ۲۰ دقیقه و رایگان است. لازم نیست چیزی آماده کنید؛ فقط مسئله‌ای را که می‌خواهید حل شود توضیح بدهید.</p></div>
     </section>
   </main>
 </div>
-<footer><span data-i18n="foot">شرکت کیانی · استانبول · English, Türkçe, فارسی</span><span dir="ltr"> · ©2026</span> · <a class="privacy-link" href="/privacy.html" data-i18n="navPrivacy">حریم خصوصی</a></footer>
+<footer><span data-i18n="foot">شرکت کیانی · استانبول · فارسی · Türkçe · English</span><span dir="ltr"> · ©2026</span> · <a class="privacy-link" href="privacy.html" data-i18n="navPrivacy">حریم خصوصی</a></footer>
 <script>
-window.PAGE_STRINGS = {
-en:{kTitle:"Tell me what's eating your week.",kLede:"I reply to everything within one working day, in English, Turkish or Persian. If your project isn't a fit for me I'll say so and point you somewhere better — that reply costs you nothing either.",fastH:"Fastest ways to reach me",kTg:"Telegram — quickest",kEmail:"Email",kGh:"Code",formH:"Or write it here",formLede:"Three fields. The more concrete the last one, the more useful my first reply will be.",lName:"Your name",lReply:"Email or Telegram — however you'd like me to answer",lNeed:"What do you need?",lMsg:"What's the task that keeps costing you time?",phMsg:"For example: we get about 60 enquiries a week on Instagram and Telegram, all asking the same five questions about price and availability, and two people spend their mornings answering them.",oBot:"A Telegram bot",oApi:"A backend or API",oAi:"AI automation",oSite:"A website",oCare:"Hosting and maintenance",oOther:"Something else",btnSend:"Send it",formNote:"No newsletter, no automated sequence, no sales call booked without you asking for one.",stMissing:"Add your name, a way to reach you, and a line about the task.",stSending:"Sending…",stSent:"Sent. You'll hear from me within one working day.",stMail:"Opening your email app with the message ready to send.",stFail:"That didn't send. Please email or Telegram me instead — both are above.",timeH:"Practical details",time1:"I'm in Istanbul, GMT+3 — the same working day as Europe, the Gulf and most of Central Asia. Calls happen on whatever you already use: Telegram, Google Meet, WhatsApp or a phone line.",time2:"The first call is twenty minutes and free. You don't need to prepare anything except the problem.",pfSummary:"Estimator selection: {services}. Indicative range: {range}.",pfSite:"website",pfApi:"backend/API",pfBot:"Telegram bot",pfAi:"AI automation",pfMulti:"multilingual/RTL",pfCare:"hosting and care"},
-tr:{kTitle:"Haftanızı neyin yediğini anlatın.",kLede:"Her mesaja bir iş günü içinde İngilizce, Türkçe veya Farsça cevap veriyorum. Projeniz bana uygun değilse bunu söyler ve sizi daha iyi bir yere yönlendiririm; o cevap da size hiçbir şeye mal olmaz.",fastH:"Bana en hızlı ulaşma yolları",kTg:"Telegram — en hızlısı",kEmail:"E-posta",kGh:"Kod",formH:"Ya da buradan yazın",formLede:"Üç alan. Sonuncusu ne kadar somut olursa, ilk cevabım o kadar işinize yarar.",lName:"Adınız",lReply:"E-posta veya Telegram — size nasıl dönmemi isterseniz",lNeed:"Neye ihtiyacınız var?",lMsg:"Sürekli vaktinizi alan iş ne?",phMsg:"Örneğin: haftada yaklaşık 60 mesaj geliyor, hepsi fiyat ve müsaitlik hakkında aynı beş soruyu soruyor ve iki kişi sabahlarını bunları cevaplayarak geçiriyor.",oBot:"Telegram botu",oApi:"Backend veya API",oAi:"Yapay zekâ otomasyonu",oSite:"Web sitesi",oCare:"Barındırma ve bakım",oOther:"Başka bir şey",btnSend:"Gönder",formNote:"Bülten yok, otomatik e-posta dizisi yok, siz istemeden ayarlanan satış görüşmesi yok.",stMissing:"Adınızı, size ulaşabileceğim bir yolu ve işi anlatan bir satır ekleyin.",stSending:"Gönderiliyor…",stSent:"Gönderildi. Bir iş günü içinde size döneceğim.",stMail:"E-posta uygulamanız mesaj hazır hâlde açılıyor.",stFail:"Gönderilemedi. Lütfen yukarıdaki e-posta veya Telegram üzerinden yazın.",timeH:"Pratik bilgiler",time1:"İstanbul'dayım, GMT+3 — Avrupa, Körfez ve Orta Asya'nın büyük kısmıyla aynı iş günü. Görüşmeler zaten kullandığınız yerde olur: Telegram, Google Meet, WhatsApp ya da telefon.",time2:"İlk görüşme yirmi dakika ve ücretsiz. Sorunun dışında hazırlamanız gereken bir şey yok.",pfSummary:"Hesaplayıcı seçimi: {services}. Yaklaşık aralık: {range}.",pfSite:"web sitesi",pfApi:"backend/API",pfBot:"Telegram botu",pfAi:"yapay zekâ otomasyonu",pfMulti:"çok dillilik/RTL",pfCare:"barındırma ve bakım"},
-fa:{kTitle:"بگویید چه چیزی هفته‌ی شما را می‌بلعد.",kLede:"به همه‌ی پیام‌ها ظرف یک روز کاری پاسخ می‌دهم، به انگلیسی، ترکی یا فارسی. اگر پروژه‌تان با من جور نباشد همان را می‌گویم و جای بهتری معرفی می‌کنم؛ آن پاسخ هم برای شما هزینه‌ای ندارد.",fastH:"سریع‌ترین راه‌های تماس",kTg:"تلگرام — سریع‌ترین",kEmail:"ایمیل",kGh:"کد",formH:"یا همین‌جا بنویسید",formLede:"سه فیلد. هرچه آخری مشخص‌تر باشد، اولین پاسخ من به‌دردبخورتر خواهد بود.",lName:"نام شما",lReply:"ایمیل یا تلگرام — هرطور که دوست دارید جواب بدهم",lNeed:"به چه چیزی نیاز دارید؟",lMsg:"کدام کار مدام وقت شما را می‌گیرد؟",phMsg:"مثلاً: هفته‌ای حدود ۶۰ پیام می‌گیریم که همه همان پنج سؤال قیمت و ظرفیت را می‌پرسند و دو نفر صبح‌هایشان را صرف جواب دادن می‌کنند.",oBot:"ربات تلگرام",oApi:"بک‌اند یا API",oAi:"اتوماسیون هوش مصنوعی",oSite:"وب‌سایت",oCare:"میزبانی و نگهداری",oOther:"چیز دیگری",btnSend:"ارسال",formNote:"نه خبرنامه‌ای، نه دنباله‌ی ایمیل خودکاری، نه جلسه‌ی فروشی که خودتان نخواسته باشید.",stMissing:"نام، یک راه تماس و یک خط درباره‌ی کار را بنویسید.",stSending:"در حال ارسال…",stSent:"ارسال شد. ظرف یک روز کاری از من خبر می‌گیرید.",stMail:"برنامه‌ی ایمیل شما با پیام آماده باز می‌شود.",stFail:"ارسال نشد. لطفاً از راه ایمیل یا تلگرام بالا بنویسید.",timeH:"جزئیات عملی",time1:"من در استانبول هستم، GMT+3 — همان روز کاری اروپا، خلیج و بیشتر آسیای میانه. گفت‌وگو روی همان بستری انجام می‌شود که خودتان استفاده می‌کنید: تلگرام، گوگل میت، واتساپ یا تلفن.",time2:"اولین گفت‌وگو بیست دقیقه و رایگان است. جز خود مسئله لازم نیست چیزی آماده کنید.",pfSummary:"انتخاب برآوردگر: {services}. بازه‌ی تقریبی: {range}.",pfSite:"وب‌سایت",pfApi:"بک‌اند/API",pfBot:"ربات تلگرام",pfAi:"اتوماسیون هوش مصنوعی",pfMulti:"چندزبانه/راست‌به‌چپ",pfCare:"میزبانی و نگهداری"}
-};
+window.PAGE_STRINGS = {"en":{"kTitle":"Tell me what's eating your week.","kLede":"I reply to everything within one working day, in English, Turkish or Persian. If your project isn't a fit for me I'll say so and point you somewhere better — that reply costs you nothing either.","fastH":"Fastest ways to reach me","kTg":"Telegram — quickest","kEmail":"Email","kGh":"Code","formH":"Or write it here","formLede":"Three fields. The more concrete the last one, the more useful my first reply will be.","lName":"Your name","lReply":"Email or Telegram — however you'd like me to answer","lNeed":"What do you need?","lMsg":"What's the task that keeps costing you time?","phMsg":"For example: we get about 60 enquiries a week on Instagram and Telegram, all asking the same five questions about price and availability, and two people spend their mornings answering them.","oBot":"A Telegram bot","oApi":"A backend or API","oAi":"AI automation","oSite":"A website","oCare":"Hosting and maintenance","oOther":"Something else","btnSend":"Send it","formNote":"No newsletter, no automated sequence, no sales call booked without you asking for one.","stMissing":"Add your name, a way to reach you, and a line about the task.","stSending":"Sending…","stSent":"Sent. You'll hear from me within one working day.","stMail":"Opening your email app with the message ready to send.","stFail":"That didn't send. Please email or Telegram me instead — both are above.","timeH":"Practical details","time1":"I'm in Istanbul, GMT+3 — the same working day as Europe, the Gulf and most of Central Asia. Calls happen on whatever you already use: Telegram, Google Meet, WhatsApp or a phone line.","time2":"The first call is twenty minutes and free. You don't need to prepare anything except the problem.","pfSummary":"Estimator selection: {services}. Indicative range: {range}.","pfSite":"website","pfApi":"backend/API","pfBot":"Telegram bot","pfAi":"AI automation","pfMulti":"multilingual/RTL","pfCare":"hosting and care"},"tr":{"kTitle":"Haftanızı neyin yediğini anlatın.","kLede":"Her mesaja bir iş günü içinde İngilizce, Türkçe veya Farsça cevap veriyorum. Projeniz bana uygun değilse bunu söyler ve sizi daha iyi bir yere yönlendiririm; o cevap da size hiçbir şeye mal olmaz.","fastH":"Bana en hızlı ulaşma yolları","kTg":"Telegram — en hızlısı","kEmail":"E-posta","kGh":"Kod","formH":"Ya da buradan yazın","formLede":"Üç alan. Sonuncusu ne kadar somut olursa, ilk cevabım o kadar işinize yarar.","lName":"Adınız","lReply":"E-posta veya Telegram — size nasıl dönmemi isterseniz","lNeed":"Neye ihtiyacınız var?","lMsg":"Sürekli vaktinizi alan iş ne?","phMsg":"Örneğin: haftada yaklaşık 60 mesaj geliyor, hepsi fiyat ve müsaitlik hakkında aynı beş soruyu soruyor ve iki kişi sabahlarını bunları cevaplayarak geçiriyor.","oBot":"Telegram botu","oApi":"Backend veya API","oAi":"Yapay zekâ otomasyonu","oSite":"Web sitesi","oCare":"Barındırma ve bakım","oOther":"Başka bir şey","btnSend":"Gönder","formNote":"Bülten yok, otomatik e-posta dizisi yok, siz istemeden ayarlanan satış görüşmesi yok.","stMissing":"Adınızı, size ulaşabileceğim bir yolu ve işi anlatan bir satır ekleyin.","stSending":"Gönderiliyor…","stSent":"Gönderildi. Bir iş günü içinde size döneceğim.","stMail":"E-posta uygulamanız mesaj hazır hâlde açılıyor.","stFail":"Gönderilemedi. Lütfen yukarıdaki e-posta veya Telegram üzerinden yazın.","timeH":"Pratik bilgiler","time1":"İstanbul'dayım, GMT+3 — Avrupa, Körfez ve Orta Asya'nın büyük kısmıyla aynı iş günü. Görüşmeler zaten kullandığınız yerde olur: Telegram, Google Meet, WhatsApp ya da telefon.","time2":"İlk görüşme yirmi dakika ve ücretsiz. Sorunun dışında hazırlamanız gereken bir şey yok.","pfSummary":"Hesaplayıcı seçimi: {services}. Yaklaşık aralık: {range}.","pfSite":"web sitesi","pfApi":"backend/API","pfBot":"Telegram botu","pfAi":"yapay zekâ otomasyonu","pfMulti":"çok dillilik/RTL","pfCare":"barındırma ve bakım"},"fa":{"kTitle":"بگویید چه کاری هر هفته وقت‌تان را می‌گیرد.","kLede":"به همه‌ی پیام‌ها حداکثر ظرف یک روز کاری جواب می‌دهم؛ به فارسی، انگلیسی یا ترکی. اگر پروژه‌تان مناسب من نباشد، همان اول می‌گویم و اگر بتوانم فرد یا مسیر بهتری پیشنهاد می‌کنم.","fastH":"سریع‌ترین راه‌های ارتباط","kTg":"تلگرام — سریع‌ترین راه","kEmail":"ایمیل","kGh":"کد و گیت‌هاب","formH":"یا همین‌جا بنویسید","formLede":"سه فیلد بیشتر نیست. هرچه در بخش آخر دقیق‌تر توضیح بدهید، اولین جواب من هم کاربردی‌تر خواهد بود.","lName":"نام","lReply":"ایمیل یا تلگرام — هرجا ترجیح می‌دهید جواب بدهم","lNeed":"به چه چیزی نیاز دارید؟","lMsg":"کدام کار تکراری مدام وقت‌تان را می‌گیرد؟","phMsg":"مثلاً: هفته‌ای حدود ۶۰ پیام در اینستاگرام و تلگرام می‌گیریم که بیشترشان همان چند سؤال درباره‌ی قیمت و ظرفیت است و دو نفر هر صبح وقت زیادی صرف جواب دادن می‌کنند.","oBot":"ربات تلگرام","oApi":"بک‌اند یا API","oAi":"اتوماسیون هوش مصنوعی","oSite":"وب‌سایت","oCare":"میزبانی و نگهداری","oOther":"چیز دیگری","btnSend":"ارسال","formNote":"نه خبرنامه‌ای در کار است، نه ایمیل خودکار پشت سر هم و نه تماس فروشی که خودتان درخواست نکرده باشید.","stMissing":"نام، یک راه تماس و یک توضیح کوتاه درباره‌ی کار را وارد کنید.","stSending":"در حال ارسال…","stSent":"ارسال شد. حداکثر ظرف یک روز کاری جواب می‌دهم.","stMail":"برنامه‌ی ایمیل‌تان با متن آماده باز می‌شود.","stFail":"پیام ارسال نشد. لطفاً از تلگرام یا ایمیل بالا استفاده کنید.","timeH":"چند نکته‌ی عملی","time1":"من در استانبول هستم (GMT+3)، بنابراین ساعت کاری‌ام با اروپا، کشورهای حاشیه‌ی خلیج فارس و بخش زیادی از آسیای میانه هم‌پوشانی دارد. برای تماس هم از همان چیزی استفاده می‌کنیم که برایتان راحت‌تر است: تلگرام، Google Meet، WhatsApp یا تلفن.","time2":"تماس اول ۲۰ دقیقه و رایگان است. لازم نیست چیزی آماده کنید؛ فقط مسئله‌ای را که می‌خواهید حل شود توضیح بدهید.","pfSummary":"انتخاب‌های برآوردگر: {services}. بازه‌ی تقریبی: {range}.","pfSite":"وب‌سایت","pfApi":"بک‌اند/API","pfBot":"ربات تلگرام","pfAi":"اتوماسیون هوش مصنوعی","pfMulti":"چندزبانه/راست‌به‌چپ","pfCare":"میزبانی و نگهداری"}};
 </script>
 <script src="../assets/site.js"></script>
 <script>

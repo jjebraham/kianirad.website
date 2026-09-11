@@ -6,40 +6,76 @@
   var TECH = ["Python","FastAPI","aiogram","Telegram Bot API","Postgres","SQLite","Docker","GCP","DigitalOcean","LLM APIs","Webhooks","Nginx"];
 
   var PROCESS = {
-    en: {
-      h: "How we work",
-      d: "A small, visible process: understand the task, agree the risk, build in the open, then keep it healthy.",
-      steps: [
-        ["Discover","A 20-minute call to identify the repetitive job and whether software should solve it."],
-        ["Fixed quote","Scope, price, responsibilities and boundaries are written down before work starts."],
-        ["Build","You see a working version every week, not just a status report."],
-        ["Launch & care","Handover, monitoring, backups and optional maintenance after launch."]
+  "en": {
+    "h": "How we work",
+    "d": "A small, visible process: understand the task, agree the risk, build in the open, then keep it healthy.",
+    "steps": [
+      [
+        "Discover",
+        "A 20-minute call to identify the repetitive job and whether software should solve it."
       ],
-      tech: "Technology stack"
-    },
-    tr: {
-      h: "Nasıl çalışıyoruz",
-      d: "Küçük ve görünür bir süreç: işi anlayın, riski netleştirin, açık şekilde geliştirin ve sonrasında sistemi sağlıklı tutun.",
-      steps: [
-        ["Keşif","20 dakikalık görüşmede tekrarlanan işi ve yazılımın gerçekten çözüm olup olmadığını netleştiririz."],
-        ["Sabit teklif","Kapsam, fiyat, sorumluluklar ve sınırlar işe başlamadan önce yazılı hâle gelir."],
-        ["Geliştirme","Durum raporu yerine her hafta çalışan bir sürüm görürsünüz."],
-        ["Yayın ve bakım","Devir, izleme, yedekleme ve isterseniz yayın sonrası bakım."]
+      [
+        "Fixed quote",
+        "Scope, price, responsibilities and boundaries are written down before work starts."
       ],
-      tech: "Teknoloji yığını"
-    },
-    fa: {
-      h: "چطور با هم کار می‌کنیم",
-      d: "فرایندی کوتاه و شفاف: مسئله را بفهمیم، ریسک را مشخص کنیم، جلوی چشم شما بسازیم و بعد از انتشار سالم نگهش داریم.",
-      steps: [
-        ["شناخت","در یک گفت‌وگوی ۲۰ دقیقه‌ای کار تکراری و این‌که آیا واقعاً باید با نرم‌افزار حل شود را مشخص می‌کنیم."],
-        ["قیمت ثابت","محدوده، قیمت، مسئولیت‌ها و مرزهای کار قبل از شروع به‌صورت مکتوب مشخص می‌شود."],
-        ["ساخت","هر هفته یک نسخه‌ی قابل استفاده می‌بینید، نه فقط گزارش وضعیت."],
-        ["انتشار و نگهداری","تحویل کامل، پایش، پشتیبان‌گیری و در صورت نیاز نگهداری پس از انتشار."]
+      [
+        "Build",
+        "You see a working version every week, not just a status report."
       ],
-      tech: "فناوری‌ها"
-    }
-  };
+      [
+        "Launch & care",
+        "Handover, monitoring, backups and optional maintenance after launch."
+      ]
+    ],
+    "tech": "Technology stack"
+  },
+  "tr": {
+    "h": "Nasıl çalışıyoruz",
+    "d": "Küçük ve görünür bir süreç: işi anlayın, riski netleştirin, açık şekilde geliştirin ve sonrasında sistemi sağlıklı tutun.",
+    "steps": [
+      [
+        "Keşif",
+        "20 dakikalık görüşmede tekrarlanan işi ve yazılımın gerçekten çözüm olup olmadığını netleştiririz."
+      ],
+      [
+        "Sabit teklif",
+        "Kapsam, fiyat, sorumluluklar ve sınırlar işe başlamadan önce yazılı hâle gelir."
+      ],
+      [
+        "Geliştirme",
+        "Durum raporu yerine her hafta çalışan bir sürüm görürsünüz."
+      ],
+      [
+        "Yayın ve bakım",
+        "Devir, izleme, yedekleme ve isterseniz yayın sonrası bakım."
+      ]
+    ],
+    "tech": "Teknoloji yığını"
+  },
+  "fa": {
+    "h": "چطور با هم کار می‌کنیم",
+    "d": "روند کار کوتاه و روشن است: مسئله را دقیق می‌فهمیم، محدوده و ریسک را مشخص می‌کنیم، مرحله‌به‌مرحله می‌سازیم و بعد از راه‌اندازی هم سالم نگهش می‌داریم.",
+    "steps": [
+      [
+        "شناخت مسئله",
+        "در یک تماس ۲۰ دقیقه‌ای مشخص می‌کنیم کدام کار تکراری وقت‌تان را می‌گیرد و آیا نرم‌افزار واقعاً راه‌حل مناسبی است یا نه."
+      ],
+      [
+        "قیمت و محدوده‌ی مشخص",
+        "قبل از شروع، محدوده‌ی کار، قیمت، مسئولیت‌ها و چیزهایی را که خارج از پروژه است مکتوب می‌کنیم."
+      ],
+      [
+        "ساخت",
+        "هر هفته یک نسخه‌ی قابل استفاده می‌بینید، نه فقط گزارش پیشرفت."
+      ],
+      [
+        "راه‌اندازی و نگهداری",
+        "تحویل کامل، پایش، بک‌آپ و در صورت نیاز نگهداری بعد از راه‌اندازی."
+      ]
+    ],
+    "tech": "فناوری‌های مورد استفاده"
+  }
+};
 
   function lang() {
     var l = (window.KR && KR.lang) || document.documentElement.lang || "en";
@@ -53,7 +89,7 @@
     section.querySelector("h2").textContent = t.h;
     section.querySelector(".lede").textContent = t.d;
     section.querySelectorAll(".process-card").forEach(function (card, i) {
-      card.querySelector(".n").textContent = String(i + 1).padStart(2, "0");
+      card.querySelector(".n").textContent = lang() === "fa" ? new Intl.NumberFormat("fa-IR", {minimumIntegerDigits:2, useGrouping:false}).format(i + 1) : String(i + 1).padStart(2, "0");
       card.querySelector("h3").textContent = t.steps[i][0];
       card.querySelector("p").textContent = t.steps[i][1];
     });
@@ -117,7 +153,8 @@
   function animateStat(el) {
     if (el.dataset.krCounted === "1") return;
     var raw = el.textContent.trim();
-    var m = raw.match(/^([~≈]?)([\d,]+)(\+?)$/);
+    var normalized = raw.replace(/[۰-۹]/g, function (d) { return String("۰۱۲۳۴۵۶۷۸۹".indexOf(d)); }).replace(/٬/g, ",");
+    var m = normalized.match(/^([~≈]?)([\d,]+)(\+?)$/);
     if (!m) return;
     var target = Number(m[2].replace(/,/g, ""));
     if (!Number.isFinite(target)) return;

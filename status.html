@@ -34,12 +34,12 @@
 <!-- ui-v2-css:end -->
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main" data-i18n="skipContent">Skip to content</a>
 <div class="shell">
   <aside class="rail">
-    <div><a class="mark" href="index.html">Hadi Kianirad<span data-i18n="markSub">Systems that keep running</span></a><p class="role" data-i18n="role">Backend and automation engineer. Istanbul.</p><span class="pulse"><span class="dot"></span><span data-i18n="pulse">14+ systems in production</span></span></div>
+    <div><a class="mark" href="index.html"><span class="mark-name" data-i18n="markName">Hadi Kianirad</span><span class="mark-sub" data-i18n="markSub">Systems that keep running</span></a><p class="role" data-i18n="role">Backend and automation engineer. Istanbul.</p><span class="pulse"><span class="dot"></span><span data-i18n="pulse">14+ systems in production</span></span></div>
     <nav class="railnav"><a href="index.html" data-i18n="navHome">Home</a><a href="projects.html" data-i18n="navProjects">Projects</a><a href="consultancy.html" data-i18n="navConsult">Consultancy</a><a href="about.html" data-i18n="navAbout">About</a><a href="contact.html" data-i18n="navContact">Contact</a></nav>
-    <div class="railfoot"><a class="btn" href="contact.html" data-i18n="ctaMain">Book a 20-minute call</a><div class="toolrow"><div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="tr" aria-pressed="false">TR</button><button type="button" data-lang="fa" aria-pressed="false">FA</button></div><button type="button" class="themebtn" id="themebtn">☾</button></div></div>
+    <div class="railfoot"><a class="btn" href="contact.html" data-i18n="ctaMain">Book a 20-minute call</a><div class="toolrow"><div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:languageLabel"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="tr" aria-pressed="false">TR</button><button type="button" data-lang="fa" aria-pressed="false">FA</button></div><button type="button" class="themebtn" id="themebtn">☾</button></div></div>
   </aside>
   <main id="main">
     <section class="pagehead"><h1 class="pagetitle" data-i18n="sTitle">System status.</h1><p class="lede" data-i18n="sLede">Public status monitoring is being configured. I’m not publishing automated uptime claims until the production checks are connected and verified.</p></section>
@@ -52,13 +52,9 @@
     </section>
   </main>
 </div>
-<footer><span data-i18n="foot">Kiani Limited Liability Company · Istanbul · English, Türkçe, فارسی</span><span dir="ltr"> · ©2026</span> · <a class="privacy-link" href="/privacy.html" data-i18n="navPrivacy">Privacy</a></footer>
+<footer><span data-i18n="foot">Kiani Limited Liability Company · Istanbul · English, Türkçe, فارسی</span><span dir="ltr"> · ©2026</span> · <a class="privacy-link" href="privacy.html" data-i18n="navPrivacy">Privacy</a></footer>
 <script>
-window.PAGE_STRINGS={
-en:{sTitle:"System status.",sLede:"Public status monitoring is being configured. I’m not publishing automated uptime claims until the production checks are connected and verified.",sSystemsH:"Public monitoring",sUnavailable:"No production status is currently published. If you are experiencing an issue with a service, contact me directly.",sContact:"Report a service issue"},
-tr:{sTitle:"Sistem durumu.",sLede:"Herkese açık durum izleme hazırlanıyor. Üretim kontrolleri bağlanıp doğrulanana kadar otomatik çalışma süresi iddiası yayınlamıyorum.",sSystemsH:"Herkese açık izleme",sUnavailable:"Şu anda herkese açık üretim durumu yayınlanmıyor. Bir hizmette sorun yaşıyorsanız benimle doğrudan iletişime geçin.",sContact:"Hizmet sorununu bildir"},
-fa:{sTitle:"وضعیت سیستم‌ها.",sLede:"پایش عمومی وضعیت در حال آماده‌سازی است. تا زمانی که بررسی‌های تولید متصل و تأیید نشوند، ادعای خودکار دربارهٔ آپ‌تایم منتشر نمی‌کنم.",sSystemsH:"پایش عمومی",sUnavailable:"در حال حاضر وضعیت تولید به‌صورت عمومی منتشر نمی‌شود. اگر در یکی از سرویس‌ها مشکلی دارید، مستقیماً با من تماس بگیرید.",sContact:"گزارش مشکل سرویس"}
-};
+window.PAGE_STRINGS={"en":{"sTitle":"System status.","sLede":"Public status monitoring is being configured. I’m not publishing automated uptime claims until the production checks are connected and verified.","sSystemsH":"Public monitoring","sUnavailable":"No production status is currently published. If you are experiencing an issue with a service, contact me directly.","sContact":"Report a service issue"},"tr":{"sTitle":"Sistem durumu.","sLede":"Herkese açık durum izleme hazırlanıyor. Üretim kontrolleri bağlanıp doğrulanana kadar otomatik çalışma süresi iddiası yayınlamıyorum.","sSystemsH":"Herkese açık izleme","sUnavailable":"Şu anda herkese açık üretim durumu yayınlanmıyor. Bir hizmette sorun yaşıyorsanız benimle doğrudan iletişime geçin.","sContact":"Hizmet sorununu bildir"},"fa":{"sTitle":"وضعیت سرویس‌ها","sLede":"صفحه‌ی وضعیت عمومی هنوز در حال راه‌اندازی است. تا وقتی بررسی‌های مستقیم روی سرویس‌های واقعی وصل و تأیید نشوند، عدد یا ادعای خودکاری درباره‌ی آپ‌تایم منتشر نمی‌کنم.","sSystemsH":"وضعیت عمومی","sUnavailable":"در حال حاضر وضعیت لحظه‌ای سرویس‌ها به‌صورت عمومی منتشر نمی‌شود. اگر در یکی از سرویس‌ها مشکلی دارید، مستقیم با من تماس بگیرید.","sContact":"گزارش مشکل سرویس"}};
 </script>
 <script src="assets/site.js"></script>
 <!-- ui-v2-js:start -->
