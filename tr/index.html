@@ -51,38 +51,51 @@
   }
 ]
 </script>
-<!-- FAQPage structured data. The visible FAQ is injected client-side by
-     assets/kimi-effects.js; these questions/answers mirror its EN strings exactly.
-     Keep this block in sync with the FAQS dict in assets/kimi-effects.js. -->
+<!-- FAQPage structured data. Mirrors the localized visible FAQ in assets/kimi-effects.js. -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@type":"Question",
-      "name":"How long does a typical project take?",
-      "acceptedAnswer":{"@type":"Answer","text":"A website is about three weeks, a bot around four, larger backends six. You get the timeline in writing with the quote."}
+      "@type": "Question",
+      "name": "Tipik bir proje ne kadar sürer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bir web sitesi yaklaşık üç hafta, bir bot dört, daha büyük backend'ler altı hafta sürer. Takvimi teklifle birlikte yazılı alırsınız."
+      }
     },
     {
-      "@type":"Question",
-      "name":"How do payments work?",
-      "acceptedAnswer":{"@type":"Answer","text":"Half up front, half on delivery. Fixed price agreed before work starts — the number doesn't move."}
+      "@type": "Question",
+      "name": "Ödemeler nasıl işliyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yarısı başta, yarısı teslimde. İşe başlamadan sabit fiyat anlaşılır — rakam oynamaz."
+      }
     },
     {
-      "@type":"Question",
-      "name":"Do you work in Turkish and Persian?",
-      "acceptedAnswer":{"@type":"Answer","text":"Yes — including proper right-to-left layout. This page is the demo: switch language in the sidebar."}
+      "@type": "Question",
+      "name": "Türkçe ve Farsça çalışıyor musunuz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet — düzgün sağdan sola düzen dâhil. Bu sayfa zaten demosu: kenar çubuğundan dili değiştirin."
+      }
     },
     {
-      "@type":"Question",
-      "name":"What happens after launch?",
-      "acceptedAnswer":{"@type":"Answer","text":"I stay: monitoring, backups, security updates. Monthly care plan, cancel any time."}
+      "@type": "Question",
+      "name": "Yayından sonra ne oluyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kalmaya devam ederim: izleme, yedekleme, güvenlik güncellemeleri. Aylık bakım planı, istediğinizde iptal."
+      }
     },
     {
-      "@type":"Question",
-      "name":"What if my project isn't a fit?",
-      "acceptedAnswer":{"@type":"Answer","text":"I'll say so on the first call and point you somewhere better. That call costs you nothing."}
+      "@type": "Question",
+      "name": "Proje bana uygun değilse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "İlk görüşmede açıkça söylerim ve sizi daha iyi bir yere yönlendiririm. O görüşme size hiçbir şeye mal olmaz."
+      }
     }
   ]
 }
