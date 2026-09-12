@@ -47,48 +47,77 @@ SEO = {
             "Gizlilik ve KVKK | Hadi Kianirad",
             "kianirad.website iletişim taleplerini ve kişisel verileri nasıl işler.",
         ),
+        "status.html": (
+            "Sistem Durumu | Hadi Kianirad",
+            "Hadi Kianirad'ın bakımını üstlendiği üretim sistemlerinin güncel durumu ve son kontrol zamanı.",
+            "Sistem Durumu | Hadi Kianirad",
+            "Canlı üretim sistemlerinin durumu ve son kontrol zamanı.",
+        ),
     },
     "fa": {
         "index.html": (
-            "هادی کیانی‌راد — بک‌اند، ربات تلگرام و اتوماسیون در استانبول",
-            "بک‌اند پایتون، ربات تلگرام و اتوماسیون هوش مصنوعی برای کسب‌وکارها؛ بیش از ۱۴ سیستم در حال اجرا، به فارسی، ترکی و انگلیسی.",
-            "هادی کیانی‌راد — بک‌اند، ربات و اتوماسیون",
-            "بک‌اند پایتون، ربات تلگرام و اتوماسیون هوش مصنوعی برای کسب‌وکارها؛ سیستم‌هایی که از کار نمی‌افتند.",
+            "هادی کیانی‌راد — بک‌اند، ربات تلگرام و اتوماسیون | استانبول",
+            "طراحی و توسعه‌ی بک‌اند پایتون، ربات تلگرام و اتوماسیون هوش مصنوعی برای کسب‌وکارها؛ بیش از ۱۴ سیستم فعال، به فارسی، ترکی و انگلیسی.",
+            "هادی کیانی‌راد — بک‌اند، ربات تلگرام و اتوماسیون | استانبول",
+            "بک‌اند، ربات تلگرام و اتوماسیون برای کسب‌وکارهایی که می‌خواهند سیستم‌هایشان شبانه‌روز کار کند.",
         ),
         "projects.html": (
             "پروژه‌ها | هادی کیانی‌راد",
-            "سیستم‌های زنده ساخته‌شده توسط هادی کیانی‌راد: داده بلادرنگ، ربات تلگرام، عملیات صرافی و ابزارهای اعتبارسنجی.",
+            "پروژه‌ها و سیستم‌های فعال هادی کیانی‌راد؛ از پلتفرم داده و ربات تلگرام تا عملیات صرافی، احراز هویت و وب‌سایت چندزبانه.",
             "پروژه‌ها | هادی کیانی‌راد",
-            "سیستم‌های واقعی در حال اجرا: داده بلادرنگ، ربات تلگرام، عملیات صرافی و ابزارهای تولیدی.",
+            "نمونه‌هایی از سیستم‌های واقعی در حال کار؛ داده، ربات تلگرام، فین‌تک، احراز هویت و ابزارهای عملیاتی.",
         ),
         "consultancy.html": (
-            "مشاوره اتوماسیون | هادی کیانی‌راد",
-            "مشاوره برای حذف کارهای تکراری با پایتون، ربات تلگرام و اتوماسیون هوش مصنوعی؛ محدوده و قیمت ثابت پیش از شروع مکتوب می‌شود.",
-            "مشاوره اتوماسیون | هادی کیانی‌راد",
-            "کار تکراری‌ای را که وقت تیم شما را می‌گیرد پیدا کنید، اتوماسیون مناسب را بسازید و هر هفته نسخه‌ای قابل استفاده ببینید.",
+            "مشاوره‌ی اتوماسیون | هادی کیانی‌راد",
+            "مشاوره و اجرای اتوماسیون با پایتون، ربات تلگرام و هوش مصنوعی برای کم‌کردن کارهای تکراری؛ محدوده و قیمت پیش از شروع مشخص می‌شود.",
+            "مشاوره‌ی اتوماسیون | هادی کیانی‌راد",
+            "کار تکراری‌ای را که وقت تیم‌تان را می‌گیرد پیدا کنید، اول همان را خودکار کنید و نتیجه را قبل از بزرگ‌تر کردن پروژه ببینید.",
         ),
         "about.html": (
             "درباره من | هادی کیانی‌راد",
-            "هادی کیانی‌راد، مهندس بک‌اند و اتوماسیون در استانبول؛ با سابقه پایتون، مدیریت سیستم، ربات تلگرام و سامانه‌های تولیدی.",
+            "هادی کیانی‌راد، مهندس بک‌اند و اتوماسیون در استانبول؛ با تجربه‌ی Python، مدیریت سیستم، ربات تلگرام و نگهداری سیستم‌های واقعی.",
             "درباره من | هادی کیانی‌راد",
-            "سابقه هادی کیانی‌راد در بک‌اند، اتوماسیون، پایتون و سیستم‌های تولیدی.",
+            "درباره‌ی تجربه‌ی هادی کیانی‌راد در بک‌اند، اتوماسیون، Python و ساخت و نگهداری سیستم‌های واقعی.",
         ),
         "contact.html": (
             "تماس | هادی کیانی‌راد",
-            "برای پروژه بک‌اند، ربات تلگرام یا اتوماسیون هوش مصنوعی با هادی کیانی‌راد تماس بگیرید؛ به فارسی، ترکی یا انگلیسی.",
+            "برای پروژه‌ی بک‌اند، ربات تلگرام، وب‌سایت یا اتوماسیون هوش مصنوعی با هادی کیانی‌راد تماس بگیرید؛ به فارسی، انگلیسی یا ترکی.",
             "تماس | هادی کیانی‌راد",
-            "کاری را که وقت کسب‌وکار شما را می‌گیرد توضیح دهید؛ به فارسی، ترکی یا انگلیسی.",
+            "کاری را که هر هفته وقت‌تان را می‌گیرد توضیح دهید؛ به فارسی، انگلیسی یا ترکی.",
         ),
         "privacy.html": (
             "حریم خصوصی | هادی کیانی‌راد",
-            "توضیح ساده درباره اطلاعات فرم تماس kianirad.website، نحوه استفاده از آن و حقوق مرتبط با داده‌های شخصی.",
+            "توضیح روشن درباره‌ی اطلاعاتی که فرم تماس kianirad.website دریافت می‌کند، نحوه‌ی استفاده از آن و حقوق شما درباره‌ی داده‌های شخصی.",
             "حریم خصوصی | هادی کیانی‌راد",
-            "kianirad.website چگونه درخواست‌های تماس و اطلاعات شخصی را پردازش می‌کند.",
+            "نحوه‌ی دریافت، استفاده و نگهداری اطلاعات تماس و درخواست‌های حریم خصوصی در kianirad.website.",
+        ),
+        "status.html": (
+            "وضعیت سرویس‌ها | هادی کیانی‌راد",
+            "صفحه‌ی وضعیت عمومی سرویس‌ها در حال راه‌اندازی است؛ تا اتصال و تأیید بررسی‌های واقعی، آمار خودکار آپ‌تایم منتشر نمی‌شود.",
+            "وضعیت سرویس‌ها | هادی کیانی‌راد",
+            "وضعیت عمومی سرویس‌ها در حال راه‌اندازی است و فعلاً آمار خودکار آپ‌تایم منتشر نمی‌شود.",
         ),
     },
 }
 
 LOCALE = {"tr": "tr_TR", "fa": "fa_IR"}
+
+HOME_FAQ = {
+    "tr": [
+        ("Tipik bir proje ne kadar sürer?", "Bir web sitesi yaklaşık üç hafta, bir bot dört, daha büyük backend'ler altı hafta sürer. Takvimi teklifle birlikte yazılı alırsınız."),
+        ("Ödemeler nasıl işliyor?", "Yarısı başta, yarısı teslimde. İşe başlamadan sabit fiyat anlaşılır — rakam oynamaz."),
+        ("Türkçe ve Farsça çalışıyor musunuz?", "Evet — düzgün sağdan sola düzen dâhil. Bu sayfa zaten demosu: kenar çubuğundan dili değiştirin."),
+        ("Yayından sonra ne oluyor?", "Kalmaya devam ederim: izleme, yedekleme, güvenlik güncellemeleri. Aylık bakım planı, istediğinizde iptal."),
+        ("Proje bana uygun değilse?", "İlk görüşmede açıkça söylerim ve sizi daha iyi bir yere yönlendiririm. O görüşme size hiçbir şeye mal olmaz."),
+    ],
+    "fa": [
+        ("یک پروژه معمولاً چقدر زمان می‌برد؟", "یک وب‌سایت حدود ۳ هفته، یک ربات حدود ۴ هفته و بک‌اندهای بزرگ‌تر حدود ۶ هفته. زمان‌بندی را همراه با پیشنهاد قیمت، مکتوب دریافت می‌کنید."),
+        ("پرداخت به چه شکل است؟", "نصف مبلغ اول کار و نصف موقع تحویل. قیمت قبل از شروع مشخص می‌شود و وسط پروژه بدون توافق تغییر نمی‌کند."),
+        ("فارسی و ترکی هم کار می‌کنید؟", "بله، از جمله چیدمان درست راست‌به‌چپ. همین صفحه نمونه‌اش است؛ زبان را از کنار صفحه عوض کنید."),
+        ("بعد از راه‌اندازی چه می‌شود؟", "می‌مانم: پایش، بک‌آپ و به‌روزرسانی‌های امنیتی. نگهداری ماهانه است و هر وقت بخواهید می‌توانید لغوش کنید."),
+        ("اگر پروژه‌ام مناسب شما نباشد چه؟", "همان تماس اول صریح می‌گویم و اگر بتوانم مسیر یا فرد مناسب‌تری پیشنهاد می‌کنم. آن تماس هم رایگان است."),
+    ],
+}
 
 
 def replace_tag(text: str, pattern: str, replacement: str) -> str:
@@ -150,6 +179,31 @@ def faq_schema(path: Path) -> None:
     path.write_text(text, encoding="utf-8")
 
 
+def localize_home_faq_schema(path: Path, lang: str) -> None:
+    """Keep homepage FAQ structured data in the same language as the visible FAQ."""
+    text = path.read_text(encoding="utf-8")
+    entities = [
+        {
+            "@type": "Question",
+            "name": question,
+            "acceptedAnswer": {"@type": "Answer", "text": answer},
+        }
+        for question, answer in HOME_FAQ[lang]
+    ]
+    payload = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": entities}
+    block = (
+        "<!-- FAQPage structured data. Mirrors the localized visible FAQ in assets/kimi-effects.js. -->\n"
+        '<script type="application/ld+json">\n'
+        + json.dumps(payload, ensure_ascii=False, indent=2)
+        + "\n</script>"
+    )
+    pattern = r"<!-- FAQPage structured data\..*?</script>"
+    if not re.search(pattern, text, flags=re.S):
+        raise ValueError(f"homepage FAQ schema block not found in {path}")
+    text = re.sub(pattern, block, text, count=1, flags=re.S)
+    path.write_text(text, encoding="utf-8")
+
+
 def main() -> None:
     for lang, pages in SEO.items():
         for filename, data in pages.items():
@@ -157,6 +211,11 @@ def main() -> None:
             if path.exists():
                 localize_head(path, lang, data)
                 print(f"localized head: {path.relative_to(ROOT)}")
+        homepage = ROOT / lang / "index.html"
+        if homepage.exists():
+            localize_home_faq_schema(homepage, lang)
+            print(f"homepage FAQ schema: {homepage.relative_to(ROOT)}")
+
     for path in (ROOT / "consultancy.html", ROOT / "tr" / "consultancy.html", ROOT / "fa" / "consultancy.html"):
         faq_schema(path)
         print(f"FAQ schema: {path.relative_to(ROOT)}")
